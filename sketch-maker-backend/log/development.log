@@ -75,3 +75,19 @@ Processing by SketchesController#index as HTML
 Completed 200 OK in 41ms (Views: 25.2ms | ActiveRecord: 10.4ms | Allocations: 4324)
 
 
+Started GET "/sketches" for ::1 at 2020-12-14 16:01:57 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SketchesController#index as HTML
+  [1m[36mSketch Load (1.7ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ app/controllers/sketches_controller.rb:5:in `index'
+Completed 200 OK in 102ms (Views: 66.8ms | ActiveRecord: 11.1ms | Allocations: 6282)
+
+
+Started GET "/sketches/1" for ::1 at 2020-12-14 16:02:00 -0500
+Processing by SketchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSketch Load (0.8ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" WHERE "sketches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:9:in `show'
+Completed 200 OK in 70ms (Views: 1.1ms | ActiveRecord: 1.2ms | Allocations: 1094)
+
+
