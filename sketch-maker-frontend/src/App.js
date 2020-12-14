@@ -5,7 +5,11 @@ import Sketch from './components/sketch'
 function App() {
   return (
     <div className="App">
-      < Sketch />
+      <h1>This is a header</h1>
+      <div className="p5_sketch">
+        < Sketch angle={0} rotateRate={0.5}/>
+      </div>
+      <button >button</button>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

@@ -3,13 +3,12 @@ import Sketch from "react-p5";
 import urls from "./data" /*just testing importing data from other components*/
  
 export default (props) => {
-    let angle = 0;
+    let angle = props.angle;
  
     const setup = (p5, canvasParentRef) => {
-        console.log(urls)
         // use parent to render the canvas in this ref
         // (without that p5 will render the canvas outside of your component)
-        p5.createCanvas(p5.windowWidth, p5.windowHeight*0.995).parent(canvasParentRef);
+        p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
         let canvas = document.querySelector("#defaultCanvas0")
         canvas.toBlob(b => {
             console.log(blobToFile(b, "img"))
@@ -27,12 +26,12 @@ export default (props) => {
         p5.rotate(angle)
         p5.textAlign(p5.CENTER, p5.CENTER);
         p5.textSize(30)
-        p5.text("Hello", 0, 0);
-        angle++;
+        p5.text("Hello from p5.js", 0, 0);
+        angle+= props.rotateRate;
     };
 
     const windowResized = (p5) => {
-        p5.resizeCanvas(p5.windowWidth, p5.windowHeight*0.995);
+        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     }
 
 

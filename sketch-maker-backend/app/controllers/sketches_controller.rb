@@ -1,0 +1,2 @@
+class SketchesController < ApplicationController
+end
