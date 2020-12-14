@@ -17,3 +17,61 @@ Migrating to CreateSketches (20201214201325)
   [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6390308508746435595)[0m
   [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-12-14 15:42:18 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.1.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 53.5ms | Allocations: 480)
+Completed 200 OK in 242ms (Views: 154.9ms | ActiveRecord: 0.0ms | Allocations: 4133)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-14 15:42:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mSketch Load (12.9ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6390308508746435595)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6390308508746435595)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mSketch Load (10.2ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Create (2.0ms)[0m  [1m[32mINSERT INTO "sketches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Vulcan V'ger"], ["created_at", "2020-12-14 20:47:38.978954"], ["updated_at", "2020-12-14 20:47:38.978954"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "sketches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ferengi Nero"], ["created_at", "2020-12-14 20:47:38.994324"], ["updated_at", "2020-12-14 20:47:38.994324"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "sketches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Romulan Maltz"], ["created_at", "2020-12-14 20:47:39.003786"], ["updated_at", "2020-12-14 20:47:39.003786"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Create (0.9ms)[0m  [1m[32mINSERT INTO "sketches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Q Martia"], ["created_at", "2020-12-14 20:47:39.011015"], ["updated_at", "2020-12-14 20:47:39.011015"]]
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Create (0.8ms)[0m  [1m[32mINSERT INTO "sketches" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Vulcan Borg Queen"], ["created_at", "2020-12-14 20:47:39.028868"], ["updated_at", "2020-12-14 20:47:39.028868"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSketch Load (1.2ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.1ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  [1m[36mSketch Load (0.8ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-12-14 15:49:24 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.1.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 19.1ms | Allocations: 317)
+Completed 200 OK in 60ms (Views: 37.4ms | ActiveRecord: 0.0ms | Allocations: 2454)
+
+
+Started GET "/index" for ::1 at 2020-12-14 15:49:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/sketches" for ::1 at 2020-12-14 15:49:34 -0500
+Processing by SketchesController#index as HTML
+  [1m[36mSketch Load (1.6ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ app/controllers/sketches_controller.rb:5:in `index'
+Completed 200 OK in 41ms (Views: 25.2ms | ActiveRecord: 10.4ms | Allocations: 4324)
+
+

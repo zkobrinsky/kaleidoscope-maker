@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Sketch.destroy_all
+
+5.times do
+    Sketch.create(name: Faker::TvShows::StarTrek.specie + " " + Faker::TvShows::StarTrek.villain)
+end
