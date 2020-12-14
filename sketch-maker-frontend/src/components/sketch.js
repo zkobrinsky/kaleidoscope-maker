@@ -13,7 +13,14 @@ export default (props) => {
         canvas.toBlob(b => {
             console.log(blobToFile(b, "img"))
             // fetch post request with blobToFile(b, "img") as obj
-            // fetch("http://http://localhost:3001").
+            fetch("http://localhost:3001/sketches", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(blobToFile(b, "img"))
+            })
+                // .then(resp => resp.json())
         })
         p5.angleMode(p5.DEGREES)
         p5.rectMode(p5.CENTER)

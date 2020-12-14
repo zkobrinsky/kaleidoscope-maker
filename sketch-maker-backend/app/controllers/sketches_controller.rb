@@ -9,4 +9,8 @@ class SketchesController < ApplicationController
         sketch = Sketch.find_by_id(params[:id])
         render:json => sketch
     end
+
+    def create
+        byebug
+    end
 end

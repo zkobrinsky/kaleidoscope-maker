@@ -21,6 +21,6 @@
 
 /sketch-maker-backend/.env
 
-/sketch-maker-backend\tmp\cache
+# /sketch-maker-backend/tmp/cache
 
 notes.md
