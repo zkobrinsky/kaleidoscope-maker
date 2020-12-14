@@ -10,21 +10,25 @@ export default (props) => {
         // (without that p5 will render the canvas outside of your component)
         p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
         let canvas = document.querySelector("#defaultCanvas0")
+
         canvas.toBlob(b => {
-            console.log(blobToFile(b, "img"))
-            // fetch post request with blobToFile(b, "img") as obj
+            const reader = new FileReader();
+            reader.readAsBinaryString(blobToFile(b, "img"))
+
+            reader.onload = () => {
             fetch("http://localhost:3001/sketches", {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/binary'
                 },
-                body: JSON.stringify(blobToFile(b, "img"))
+                // body: JSON.stringify({name: "name", imgBlob: blobToFile(b, "img")})
+                body: reader.result
             })
-                // .then(resp => resp.json())
+        }
         })
+
         p5.angleMode(p5.DEGREES)
         p5.rectMode(p5.CENTER)
-        // debugger;
     };
  
     const draw = (p5) => {
