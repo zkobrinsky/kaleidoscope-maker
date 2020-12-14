@@ -1,10 +1,12 @@
 import React from "react";
 import Sketch from "react-p5";
+import urls from "./data" /*just testing importing data from other components*/
  
 export default (props) => {
     let angle = 0;
  
     const setup = (p5, canvasParentRef) => {
+        console.log(urls)
         // use parent to render the canvas in this ref
         // (without that p5 will render the canvas outside of your component)
         p5.createCanvas(p5.windowWidth, p5.windowHeight*0.995).parent(canvasParentRef);
@@ -12,6 +14,7 @@ export default (props) => {
         canvas.toBlob(b => {
             console.log(blobToFile(b, "img"))
             // fetch post request with blobToFile(b, "img") as obj
+            // fetch("http://http://localhost:3001").
         })
         p5.angleMode(p5.DEGREES)
         p5.rectMode(p5.CENTER)
@@ -28,6 +31,11 @@ export default (props) => {
         angle++;
     };
 
+    const windowResized = (p5) => {
+        p5.resizeCanvas(p5.windowWidth, p5.windowHeight*0.995);
+    }
+
+
 
 
     const blobToFile = (blob, fileName) => {
@@ -36,5 +44,5 @@ export default (props) => {
         return blob
     }
  
-    return <Sketch setup={setup} draw={draw} />;
+    return <Sketch setup={setup} draw={draw} windowResized={windowResized}/>;
 };
