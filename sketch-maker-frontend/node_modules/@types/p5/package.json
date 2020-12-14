@@ -1,0 +1,29 @@
+{
+    "name": "@types/p5",
+    "version": "0.9.1",
+    "description": "TypeScript definitions for p5",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "p5-types",
+            "url": "https://github.com/p5-types",
+            "githubUsername": "p5-types"
+        },
+        {
+            "name": "Pierre Krafft",
+            "url": "https://github.com/Zalastax",
+            "githubUsername": "Zalastax"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/p5"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "typesPublisherContentHash": "6c15d97e9baf72987af55adfc46e85728792ef9c1a8448200a63e515b8149e15",
+    "typeScriptVersion": "3.0"
+}
