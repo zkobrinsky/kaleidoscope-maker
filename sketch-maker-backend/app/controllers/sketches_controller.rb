@@ -11,6 +11,9 @@ class SketchesController < ApplicationController
     end
 
     def create
+        sketch = Sketch.last
+        # blob = params[:image].split("/").last
         byebug
+        # sketch.image.attach(blob)
     end
 end
