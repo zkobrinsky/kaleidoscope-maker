@@ -12,8 +12,14 @@ class SketchesController < ApplicationController
 
     def create
         sketch = Sketch.last
-        # blob = params[:image].split("/").last
+        # blob = params[:image].split("/").last.gsub("-","")
+        File.open('mysketch.png', 'wb') {|f| f.puts params[:image].read}
         byebug
         # sketch.image.attach(blob)
     end
+
+    # private
+    #     def image_params
+    #         require(:image).permit()
+    #     end
 end

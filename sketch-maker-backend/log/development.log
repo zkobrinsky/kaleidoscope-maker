@@ -1450,3 +1450,413 @@ SystemExit (exit):
 (byebug):1:in `exit'
 (byebug):1:in `create'
 app/controllers/sketches_controller.rb:18:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 19:50:25 -0500
+  [1m[35m (17.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/3e4cb3b4-7c31-4b04-b1dd-2ecd0079e150"}
+  [1m[36mSketch Load (4.9ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 1937594ms (ActiveRecord: 25.6ms | Allocations: 233503)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 20:22:46 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 20:22:46 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 20:22:47 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/79693a0d-6394-4c2f-b84e-c86b54f39380"}
+Processing by SketchesController#create as */*
+Started POST "/sketches" for ::1 at 2020-12-15 20:22:47 -0500
+  Parameters: {"image"=>"blob:http://localhost:3000/48fb46b9-51ee-4236-8e9d-c7e7932b349b"}
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/36d444fa-8419-45c9-ba88-26bc292242c5"}
+Started POST "/sketches" for ::1 at 2020-12-15 20:22:48 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/306d241f-3f13-43be-9ab1-dea1b56786bd"}
+  [1m[36mSketch Load (52.2ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/f0b7cb9e-b953-495a-963d-4372cad1b7d6"}
+Completed 500 Internal Server Error in 448466ms (ActiveRecord: 52.2ms | Allocations: 1816891)
+
+
+  [1m[36mSketch Load (34.6ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 460973ms (ActiveRecord: 7181.9ms | Allocations: 9079593)
+
+
+  [1m[36mSketch Load (8.1ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+  [1m[36mSketch Load (252.8ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 462114ms (ActiveRecord: 256846.1ms | Allocations: 8822653)
+
+
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 20:35:48 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 20:35:48 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 20:35:49 -0500
+  [1m[35m (13.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SketchesController#create as */*
+Processing by SketchesController#create as */*
+Processing by SketchesController#create as */*
+  [1m[36mSketch Load (19.0ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  [1m[36mSketch Load (8.8ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (19.8ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 201104ms (ActiveRecord: 301.6ms | Allocations: 96889)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+Completed 500 Internal Server Error in 201710ms (ActiveRecord: 128.4ms | Allocations: 417307)
+
+
+Completed 500 Internal Server Error in 201217ms (ActiveRecord: 729.3ms | Allocations: 122897)
+
+
+Started POST "/sketches" for ::1 at 2020-12-15 20:39:13 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 20:39:13 -0500
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 20:39:22 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 20:39:23 -0500
+Processing by SketchesController#create as */*
+Processing by SketchesController#create as */*
+Processing by SketchesController#create as */*
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/57472468-d159-4822-8ca2-50371910697d"}
+  Parameters: {"image"=>"blob:http://localhost:3000/6a90e1cd-d7c5-45e8-b813-e764afbf28e3"}
+  Parameters: {"image"=>"blob:http://localhost:3000/def94603-21a1-4cc7-9562-44877512d7a8"}
+  Parameters: {"image"=>"blob:http://localhost:3000/f20bba4c-e8d9-4830-bed5-232facce76f2"}
+  [1m[36mSketch Load (21.7ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (60.7ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (41.6ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 20:42:34 -0500
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/4567e312-9daf-4f89-b939-c5a64fc8ef0b"}
+  [1m[36mSketch Load (2.4ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6390308508746435595)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(6390308508746435595)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6390308508746435595)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20201215211614)
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (104.8ms)[0m  [1m[35mDROP TABLE "active_storage_variant_records"[0m
+  [1m[35m (48.7ms)[0m  [1m[35mDROP TABLE "active_storage_attachments"[0m
+  [1m[35m (15.5ms)[0m  [1m[35mDROP TABLE "active_storage_blobs"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (3.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201215211614"]]
+  [1m[36mTRANSACTION (49.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6390308508746435595)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6390308508746435595)[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20201215211614)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.2ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (20.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201215211614"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6390308508746435595)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Completed 500 Internal Server Error in 121118ms (ActiveRecord: 75.6ms | Allocations: 137821)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+  [1m[36mSketch Load (1.4ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.3ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.9ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/sketches" for ::1 at 2020-12-15 20:46:37 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/70c7ac41-b8db-4479-8c07-00f5d73836d7"}
+  [1m[36mSketch Load (5.5ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.0ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.9ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.1ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (5.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mSketch Load (1.1ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.5ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1254299ms (ActiveRecord: 24.2ms | Allocations: 59519)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 21:07:32 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 21:07:33 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 21:07:33 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 21:07:44 -0500
+Processing by SketchesController#create as */*
+Processing by SketchesController#create as */*
+Processing by SketchesController#create as */*
+  [1m[36mSketch Load (8.4ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 555729ms (ActiveRecord: 55.9ms | Allocations: 3298921)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+  [1m[36mSketch Load (846.5ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (204.0ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 560148ms (ActiveRecord: 556115.1ms | Allocations: 10887441)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+Completed 500 Internal Server Error in 561871ms (ActiveRecord: 556065.9ms | Allocations: 12704729)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:18:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 21:17:15 -0500
+Processing by SketchesController#create as */*
+Processing by SketchesController#create as */*
+  [1m[36mSketch Load (64.3ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  [1m[36mSketch Load (29.6ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 34614ms (ActiveRecord: 29.6ms | Allocations: 1401112)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+Completed 500 Internal Server Error in 35951ms (ActiveRecord: 475.5ms | Allocations: 2909229)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 21:22:51 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 21:22:51 -0500
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/66548036-0521-4d67-a6e5-baccc0891a58"}
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>"blob:http://localhost:3000/a13d1a3d-64ec-410e-a569-fac1bb578764"}
+  [1m[36mSketch Load (15.2ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  [1m[36mSketch Load (6.5ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 54411ms (ActiveRecord: 39.8ms | Allocations: 47353)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+Completed 500 Internal Server Error in 57569ms (ActiveRecord: 29.0ms | Allocations: 144532)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 21:23:51 -0500
+Started POST "/sketches" for ::1 at 2020-12-15 21:23:52 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe488b99d70 @tempfile=#<Tempfile:/tmp/RackMultipart20201215-738-uji5un>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe488c46ac0 @tempfile=#<Tempfile:/tmp/RackMultipart20201215-738-1b4yyjq>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (24.3ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+  [1m[36mSketch Load (13.7ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 21:35:07 -0500
+Completed 500 Internal Server Error in 672619ms (ActiveRecord: 1265.8ms | Allocations: 7734420)
+
+
+Completed 500 Internal Server Error in 671891ms (ActiveRecord: 1322.0ms | Allocations: 6242717)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 21:35:08 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe488c246f0 @tempfile=#<Tempfile:/tmp/RackMultipart20201215-738-c0h8j3>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (7.2ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 3878ms (ActiveRecord: 928.6ms | Allocations: 9255296)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fffd1145950 @tempfile=#<Tempfile:/tmp/RackMultipart20201215-738-1psbl27>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (2.5ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 2563ms (ActiveRecord: 78.4ms | Allocations: 1619459)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 21:35:35 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe48947ec38 @tempfile=#<Tempfile:/tmp/RackMultipart20201215-738-1uf4jww>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (18.2ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 114012ms (ActiveRecord: 18.2ms | Allocations: 354828)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 21:37:29 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fffd0fcf210 @tempfile=#<Tempfile:/tmp/RackMultipart20201215-738-1wb43u>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (190.3ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 17789ms (ActiveRecord: 190.3ms | Allocations: 2942980)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
+Started POST "/sketches" for ::1 at 2020-12-15 21:37:58 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe48912f050 @tempfile=#<Tempfile:/tmp/RackMultipart20201215-738-t8ytdf>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (15.5ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 204 No Content in 906ms (ActiveRecord: 47.1ms | Allocations: 1573304)
+
+
+Started POST "/sketches" for ::1 at 2020-12-15 21:38:16 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe489348418 @tempfile=#<Tempfile:/tmp/RackMultipart20201215-738-13z4cin>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (5.2ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 204 No Content in 308ms (ActiveRecord: 5.2ms | Allocations: 334558)
+
+
+Started POST "/sketches" for ::1 at 2020-12-15 21:39:51 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe488a88f58 @tempfile=#<Tempfile:/tmp/RackMultipart20201215-738-1gt2tny>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (23.8ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 34050ms (ActiveRecord: 89.4ms | Allocations: 1593973)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sketches_controller.rb:19:in `create'
