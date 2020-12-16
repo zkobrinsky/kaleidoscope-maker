@@ -12,14 +12,19 @@ class SketchesController < ApplicationController
 
     def create
         sketch = Sketch.last
-        # blob = params[:image].split("/").last.gsub("-","")
-        File.open('mysketch.png', 'wb') {|f| f.puts params[:image].read}
-        byebug
-        # sketch.image.attach(blob)
+
+        # http object way (sent url variable)
+        image = params[:image]
+        # image = params[:image].split("/").last.gsub("-","")
+        # sketch.image.attach(image)
+        
+        debugger;
+        # # method for sending actual blob (not url):
+        # File.open('mysketch.png', 'wb') {|f| f.puts params[:image].read}
+        # sketch.image.attach(io: File.open("./mysketch.png"), filename: "mysketch.png", content_type: "image/png")
+
+        # byebug
+        
     end
 
-    # private
-    #     def image_params
-    #         require(:image).permit()
-    #     end
 end

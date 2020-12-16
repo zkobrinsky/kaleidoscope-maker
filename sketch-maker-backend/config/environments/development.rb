@@ -9,7 +9,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   # save active storage files locally
-  config.active_storage.service = :local
+  # config.active_storage.service = :local
 
   # Do not eager load code on boot.
   config.eager_load = false

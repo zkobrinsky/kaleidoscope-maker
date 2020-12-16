@@ -7,19 +7,8 @@ export default (props) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
     p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
-    let canvas = document.querySelector("#defaultCanvas0");
-    canvas.toBlob((b) => {
-      //   const reader = new FileReader();
-      //   reader.readAsBinaryString(blobToFile(b, "img"));
-      var url = URL.createObjectURL(b);
-      console.log(url);
-      var formData = new FormData();
-      formData.append("image", url);
-      fetch("http://localhost:3001/sketches", {
-        method: "POST",
-        // body: JSON.stringify({name: "name", imgBlob: blobToFile(b, "img")})
-        body: formData,
-      });
+    
+    
       //   reader.onload = () => {
       //     console.log(reader.result);
       //     fetch("http://localhost:3001/sketches", {
@@ -31,7 +20,7 @@ export default (props) => {
       //       body: reader.result,
       //     });
       //   };
-    });
+    // });
     p5.angleMode(p5.DEGREES);
     p5.rectMode(p5.CENTER);
   };
@@ -44,13 +33,38 @@ export default (props) => {
     p5.text("Hello from p5.js", 0, 0);
     angle += props.rotateRate;
   };
+
   const windowResized = (p5) => {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
   };
+
+  const mouseClicked = (p5) => {
+    postImage()
+  }
+
+
   const blobToFile = (blob, fileName) => {
     blob.lastModifiedDate = new Date();
     blob.name = fileName;
     return blob;
   };
-  return <Sketch setup={setup} draw={draw} windowResized={windowResized} />;
+
+
+  const postImage = () => {
+    // note to self: install mini_magick gem
+    let canvas = document.querySelector("#defaultCanvas0");
+    canvas.toBlob((b) => {
+      var formData = new FormData();
+      formData.append("image", b); /* url as second argument for activestorage (in theory) */
+      fetch("http://localhost:3001/users", {
+        method: "POST",
+        // body: JSON.stringify({name: "name", imgBlob: blobToFile(b, "img")})
+        body: formData,
+      })
+      .then(resp => {
+        debugger;
+      });
+    })
+  }
+  return <Sketch setup={setup} draw={draw} windowResized={windowResized} mouseClicked={mouseClicked} />;
 };
