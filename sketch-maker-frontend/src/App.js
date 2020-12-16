@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Sketch from './components/sketch'
+import Button from 'react-bootstrap/Button';
+
+
 
 function App() {
   return (
@@ -9,7 +12,7 @@ function App() {
       <div className="p5_sketch">
         < Sketch angle={0} rotateRate={0.5}/>
       </div>
-      <button >button</button>
+      <Button variant="primary">Bootstrap button</Button>{' '}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

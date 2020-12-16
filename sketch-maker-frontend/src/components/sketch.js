@@ -1,8 +1,21 @@
 import React from "react";
 import Sketch from "react-p5";
-import urls from "./data"; /*just testing importing data from other components*/
+
+const { Faker } = require('fakergem');
+
+let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toLowerCase(), 
+    Faker.Hipster.words(1).join(" ")+" "+Faker.Space.star().toLowerCase(), 
+    Faker.Hipster.words(1).join(" ")+" "+Faker.Space.constellation().toLowerCase(),
+    Faker.Hipster.words(1).join(" ")+" "+Faker.Space.starCluster().toLowerCase()]
+
+
+
 export default (props) => {
+
+  let placeHolder = wordChoices[parseInt(Math.random()*wordChoices.length)]
   let angle = props.angle;
+  console.log(placeHolder)
+
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
