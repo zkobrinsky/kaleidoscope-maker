@@ -6239,3 +6239,15 @@ Processing by SketchesController#index as HTML
 Completed 200 OK in 1037ms (Views: 942.7ms | ActiveRecord: 85.6ms)
 
 
+  [1m[36mSketch Load (1.5ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (5.8ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mColor Load (1.7ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1 LIMIT $2[0m  [["sketch_id", 10], ["LIMIT", 11]]
+  [1m[36mSketch Load (1.1ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mColor Load (0.9ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" ORDER BY "colors"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.7ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.9ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.2ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (9.3ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (3.6ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
