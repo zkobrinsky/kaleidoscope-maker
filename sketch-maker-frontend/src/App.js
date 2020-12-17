@@ -1,6 +1,8 @@
 
 import './App.css';
 import Sketch from './components/sketch'
+import Sketches from './components/sketches'
+import CreateSketch from './components/CreateSketch'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 
@@ -15,9 +17,9 @@ function App() {
           render={(props) => (
             <Sketch {...props} angle={0} rotateRate={0.5} />
           )} 
-          />
-          {/* <Route path="sketches" /> */}
-          {/* <Route path="sketches/new" /> */}
+            />
+          <Route path="/sketches" component={Sketches}/>
+          <Route path="sketches/new" component={CreateSketch}/>
         </Switch>
       </Router>
       {/* <div className="p5_sketch">
