@@ -23,6 +23,7 @@ export default (props) => {
     p5.angleMode(p5.DEGREES);
     p5.rectMode(p5.CENTER);
   };
+  
   const draw = (p5) => {
     p5.background(200, 60, 60);
     p5.translate(p5.width * 0.5, p5.height * 0.5);
