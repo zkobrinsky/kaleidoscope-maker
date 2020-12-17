@@ -5,7 +5,6 @@ const sketchReducer = (state = {sketches: []}, action) => {
         default:
         return state
     }
-
 }
 
 export default sketchReducer

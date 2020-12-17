@@ -12536,3 +12536,318 @@ app/controllers/sketches_controller.rb:13:in `create'
 [ActiveJob] [ActiveStorage::AnalyzeJob] [10c1cf63-9e53-4ca2-9d93-2addbf444fb6]   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
 [ActiveJob] [ActiveStorage::AnalyzeJob] [10c1cf63-9e53-4ca2-9d93-2addbf444fb6]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
 [ActiveJob] [ActiveStorage::AnalyzeJob] [10c1cf63-9e53-4ca2-9d93-2addbf444fb6] Performed ActiveStorage::AnalyzeJob (Job ID: 10c1cf63-9e53-4ca2-9d93-2addbf444fb6) from Async(default) in 353.1ms
+Started POST "/sketches" for ::1 at 2020-12-17 15:31:58 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f20eca5af00 @tempfile=#<Tempfile:/tmp/RackMultipart20201217-2240-wxuv3h>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (5.0ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:9
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 59], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+[36m  Disk Storage (3.1ms) [0m[32mUploaded file to key: rQ4hT2HUzJT3krrSYKZJFUL4 (checksum: 5wn8lkXekHPkhGUHuuCVVQ==)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Create (2.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "rQ4hT2HUzJT3krrSYKZJFUL4"], ["filename", "blob"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 25745], ["checksum", "5wn8lkXekHPkhGUHuuCVVQ=="], ["created_at", "2020-12-17 20:31:58.774610"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Create (2.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Sketch"], ["record_id", 59], ["blob_id", 18], ["created_at", "2020-12-17 20:31:58.823102"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mSketch Update (0.4ms)[0m  [1m[33mUPDATE "sketches" SET "updated_at" = $1 WHERE "sketches"."id" = $2[0m  [["updated_at", "2020-12-17 20:31:58.838391"], ["id", 59]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63) to Async(default) with arguments: #<GlobalID:0x00007f20e88b1bd0 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/18>>
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 72dad33a-1c1c-41e7-93b0-e8a7ec873bfe) to Async(default) with arguments: #<GlobalID:0x00007f20e88f3418 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/17>>
+Completed 500 Internal Server Error in 444ms (ActiveRecord: 17.7ms)
+
+
+  
+NameError (undefined local variable or method `sketches' for #<SketchesController:0x00007f20eca9c9f0>
+Did you mean?  sketch):
+  
+app/controllers/sketches_controller.rb:13:in `create'
+  [1m[36mActiveStorage::Blob Load (2.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (3.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe] Performing ActiveStorage::PurgeJob (Job ID: 72dad33a-1c1c-41e7-93b0-e8a7ec873bfe) from Async(default) with arguments: #<GlobalID:0x00007f20e00ad888 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/17>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63] Performing ActiveStorage::AnalyzeJob (Job ID: ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63) from Async(default) with arguments: #<GlobalID:0x00007f20e00ac460 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/18>>
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63] [36m  Disk Storage (2.7ms) [0m[34mDownloaded file from key: rQ4hT2HUzJT3krrSYKZJFUL4[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   [1m[36mActiveStorage::Attachment Exists (8.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 17], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   [1m[36mActiveStorage::Blob Destroy (1.7ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 17]]
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe] [36m  Disk Storage (1.4ms) [0m[31mDeleted file from key: NMu6CnvA9qJ9D2Ldy4kyt5Ad[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/NMu6CnvA9qJ9D2Ldy4kyt5Ad/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [72dad33a-1c1c-41e7-93b0-e8a7ec873bfe] Performed ActiveStorage::PurgeJob (Job ID: 72dad33a-1c1c-41e7-93b0-e8a7ec873bfe) from Async(default) in 72.19ms
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63]   [1m[36mActiveStorage::Blob Update (0.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":1155,\"height\":1155,\"analyzed\":true}"], ["id", 18]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63]   [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63] Performed ActiveStorage::AnalyzeJob (Job ID: ef92a191-4465-4a8d-bdb2-dd8b8b6a8c63) from Async(default) in 285.53ms
+Started POST "/sketches" for ::1 at 2020-12-17 15:32:12 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f20f02e0190 @tempfile=#<Tempfile:/tmp/RackMultipart20201217-2240-105dv3>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:9
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 59], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+[36m  Disk Storage (4.0ms) [0m[32mUploaded file to key: mzwknEXHsxeLeyrMxL4T6V1R (checksum: 5wn8lkXekHPkhGUHuuCVVQ==)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "mzwknEXHsxeLeyrMxL4T6V1R"], ["filename", "blob"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 25745], ["checksum", "5wn8lkXekHPkhGUHuuCVVQ=="], ["created_at", "2020-12-17 20:32:12.421952"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Destroy (2.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Sketch"], ["record_id", 59], ["blob_id", 19], ["created_at", "2020-12-17 20:32:12.450964"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mSketch Update (0.5ms)[0m  [1m[33mUPDATE "sketches" SET "updated_at" = $1 WHERE "sketches"."id" = $2[0m  [["updated_at", "2020-12-17 20:32:12.476240"], ["id", 59]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: be2162f3-a1d4-43ac-8f12-c9c7d17e304d) to Async(default) with arguments: #<GlobalID:0x00007f20d808cb68 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/19>>
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 28efabb0-2f57-434a-aa17-2cdabc0484b5) to Async(default) with arguments: #<GlobalID:0x00007f20d809ba78 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/18>>
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2162f3-a1d4-43ac-8f12-c9c7d17e304d] Performing ActiveStorage::AnalyzeJob (Job ID: be2162f3-a1d4-43ac-8f12-c9c7d17e304d) from Async(default) with arguments: #<GlobalID:0x00007f20ecb23630 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/19>>
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 9.5ms)
+
+
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5] Performing ActiveStorage::PurgeJob (Job ID: 28efabb0-2f57-434a-aa17-2cdabc0484b5) from Async(default) with arguments: #<GlobalID:0x00007f20f1d16258 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/18>>
+NameError (undefined local variable or method `sketches' for #<SketchesController:0x00007f20f02e1ba8>
+Did you mean?  sketch):
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2162f3-a1d4-43ac-8f12-c9c7d17e304d] [36m  Disk Storage (95.9ms) [0m[34mDownloaded file from key: mzwknEXHsxeLeyrMxL4T6V1R[0m
+  
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+app/controllers/sketches_controller.rb:13:in `create'
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   [1m[36mActiveStorage::Attachment Exists (56.5ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 18], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   [1m[36mActiveStorage::Blob Destroy (2.8ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 18]]
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5] [36m  Disk Storage (0.3ms) [0m[31mDeleted file from key: rQ4hT2HUzJT3krrSYKZJFUL4[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5] [36m  Disk Storage (0.2ms) [0m[31mDeleted files by key prefix: variants/rQ4hT2HUzJT3krrSYKZJFUL4/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [28efabb0-2f57-434a-aa17-2cdabc0484b5] Performed ActiveStorage::PurgeJob (Job ID: 28efabb0-2f57-434a-aa17-2cdabc0484b5) from Async(default) in 261.09ms
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2162f3-a1d4-43ac-8f12-c9c7d17e304d]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2162f3-a1d4-43ac-8f12-c9c7d17e304d]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2162f3-a1d4-43ac-8f12-c9c7d17e304d]   [1m[36mActiveStorage::Blob Update (1.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":1155,\"height\":1155,\"analyzed\":true}"], ["id", 19]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2162f3-a1d4-43ac-8f12-c9c7d17e304d]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2162f3-a1d4-43ac-8f12-c9c7d17e304d]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2162f3-a1d4-43ac-8f12-c9c7d17e304d]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2162f3-a1d4-43ac-8f12-c9c7d17e304d] Performed ActiveStorage::AnalyzeJob (Job ID: be2162f3-a1d4-43ac-8f12-c9c7d17e304d) from Async(default) in 348.7ms
+Started POST "/sketches" for ::1 at 2020-12-17 15:32:16 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f20e00b6a00 @tempfile=#<Tempfile:/tmp/RackMultipart20201217-2240-1yvp160>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (2.8ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 59], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+[36m  Disk Storage (3.6ms) [0m[32mUploaded file to key: JTDG2EjdS7La7wDkf1EYCeoG (checksum: i4RzyLBJxsDGo4cgM1/Jeg==)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Create (2.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "JTDG2EjdS7La7wDkf1EYCeoG"], ["filename", "blob"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 44590], ["checksum", "i4RzyLBJxsDGo4cgM1/Jeg=="], ["created_at", "2020-12-17 20:32:16.448179"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Destroy (0.7ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 19]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Create (1.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Sketch"], ["record_id", 59], ["blob_id", 20], ["created_at", "2020-12-17 20:32:16.486914"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mSketch Update (1.0ms)[0m  [1m[33mUPDATE "sketches" SET "updated_at" = $1 WHERE "sketches"."id" = $2[0m  [["updated_at", "2020-12-17 20:32:16.500665"], ["id", 59]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 290af796-8963-4039-a41a-f3cbf5a39edd) to Async(default) with arguments: #<GlobalID:0x00007f20f02ef028 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/20>>
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: f187e7d9-b9d3-4ae8-aff1-8d805b192e06) to Async(default) with arguments: #<GlobalID:0x00007f20f8025178 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/19>>
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 313ms (ActiveRecord: 11.2ms)
+
+
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  
+[ActiveJob] [ActiveStorage::AnalyzeJob] [290af796-8963-4039-a41a-f3cbf5a39edd] Performing ActiveStorage::AnalyzeJob (Job ID: 290af796-8963-4039-a41a-f3cbf5a39edd) from Async(default) with arguments: #<GlobalID:0x00007f20eccda5f0 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/20>>
+NameError (undefined local variable or method `sketches' for #<SketchesController:0x00007f20e00ac438>
+Did you mean?  sketch):
+  
+app/controllers/sketches_controller.rb:13:in `create'
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06] Performing ActiveStorage::PurgeJob (Job ID: f187e7d9-b9d3-4ae8-aff1-8d805b192e06) from Async(default) with arguments: #<GlobalID:0x00007f20ec923f88 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/19>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [290af796-8963-4039-a41a-f3cbf5a39edd] [36m  Disk Storage (3.9ms) [0m[34mDownloaded file from key: JTDG2EjdS7La7wDkf1EYCeoG[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   [1m[35m (18.6ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   [1m[36mActiveStorage::Attachment Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 19], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   [1m[36mActiveStorage::Blob Destroy (1.3ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 19]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06] [36m  Disk Storage (0.5ms) [0m[31mDeleted file from key: mzwknEXHsxeLeyrMxL4T6V1R[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/mzwknEXHsxeLeyrMxL4T6V1R/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f187e7d9-b9d3-4ae8-aff1-8d805b192e06] Performed ActiveStorage::PurgeJob (Job ID: f187e7d9-b9d3-4ae8-aff1-8d805b192e06) from Async(default) in 116.39ms
+[ActiveJob] [ActiveStorage::AnalyzeJob] [290af796-8963-4039-a41a-f3cbf5a39edd]   [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [290af796-8963-4039-a41a-f3cbf5a39edd]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [290af796-8963-4039-a41a-f3cbf5a39edd]   [1m[36mActiveStorage::Blob Update (1.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":1155,\"height\":1155,\"analyzed\":true}"], ["id", 20]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [290af796-8963-4039-a41a-f3cbf5a39edd]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [290af796-8963-4039-a41a-f3cbf5a39edd]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [290af796-8963-4039-a41a-f3cbf5a39edd]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [290af796-8963-4039-a41a-f3cbf5a39edd] Performed ActiveStorage::AnalyzeJob (Job ID: 290af796-8963-4039-a41a-f3cbf5a39edd) from Async(default) in 320.58ms
+Started POST "/sketches" for ::1 at 2020-12-17 15:32:19 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f20e0036440 @tempfile=#<Tempfile:/tmp/RackMultipart20201217-2240-j6xx2k>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (0.4ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 59], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+[36m  Disk Storage (3.9ms) [0m[32mUploaded file to key: vcujN8LaUmb2kMh4jUSXU271 (checksum: ySJfIKOb9wXg1U1pgDif6Q==)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "vcujN8LaUmb2kMh4jUSXU271"], ["filename", "blob"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 45388], ["checksum", "ySJfIKOb9wXg1U1pgDif6Q=="], ["created_at", "2020-12-17 20:32:20.036033"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Destroy (0.8ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Create (1.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Sketch"], ["record_id", 59], ["blob_id", 21], ["created_at", "2020-12-17 20:32:20.068904"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mSketch Update (1.0ms)[0m  [1m[33mUPDATE "sketches" SET "updated_at" = $1 WHERE "sketches"."id" = $2[0m  [["updated_at", "2020-12-17 20:32:20.079340"], ["id", 59]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 36b98f95-e0c4-4a42-a23e-223684abd347) to Async(default) with arguments: #<GlobalID:0x00007f20ec8f5ca0 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/21>>
+  [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 2f15120f-fb29-4fb8-8de9-52937249906d) to Async(default) with arguments: #<GlobalID:0x00007f20ec6c7190 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/20>>
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36b98f95-e0c4-4a42-a23e-223684abd347] Performing ActiveStorage::AnalyzeJob (Job ID: 36b98f95-e0c4-4a42-a23e-223684abd347) from Async(default) with arguments: #<GlobalID:0x00007f20d8009b50 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/21>>
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 10.9ms)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d] Performing ActiveStorage::PurgeJob (Job ID: 2f15120f-fb29-4fb8-8de9-52937249906d) from Async(default) with arguments: #<GlobalID:0x00007f20ecaad2a0 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/20>>
+  
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+NameError (undefined local variable or method `sketches' for #<SketchesController:0x00007f20e0037e30>
+Did you mean?  sketch):
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36b98f95-e0c4-4a42-a23e-223684abd347] [36m  Disk Storage (5.0ms) [0m[34mDownloaded file from key: vcujN8LaUmb2kMh4jUSXU271[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  
+app/controllers/sketches_controller.rb:13:in `create'
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   [1m[36mActiveStorage::Attachment Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 20], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   [1m[36mActiveStorage::Blob Destroy (1.4ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 20]]
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d] [36m  Disk Storage (0.4ms) [0m[31mDeleted file from key: JTDG2EjdS7La7wDkf1EYCeoG[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d] [36m  Disk Storage (0.2ms) [0m[31mDeleted files by key prefix: variants/JTDG2EjdS7La7wDkf1EYCeoG/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2f15120f-fb29-4fb8-8de9-52937249906d] Performed ActiveStorage::PurgeJob (Job ID: 2f15120f-fb29-4fb8-8de9-52937249906d) from Async(default) in 377.14ms
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36b98f95-e0c4-4a42-a23e-223684abd347]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36b98f95-e0c4-4a42-a23e-223684abd347]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36b98f95-e0c4-4a42-a23e-223684abd347]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":1155,\"height\":1155,\"analyzed\":true}"], ["id", 21]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36b98f95-e0c4-4a42-a23e-223684abd347]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36b98f95-e0c4-4a42-a23e-223684abd347]   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36b98f95-e0c4-4a42-a23e-223684abd347]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36b98f95-e0c4-4a42-a23e-223684abd347] Performed ActiveStorage::AnalyzeJob (Job ID: 36b98f95-e0c4-4a42-a23e-223684abd347) from Async(default) in 448.44ms
+Started POST "/sketches" for ::1 at 2020-12-17 15:32:25 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f20ecc4b5d0 @tempfile=#<Tempfile:/tmp/RackMultipart20201217-2240-iqvnge>, @original_filename="blob", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"blob\"\r\nContent-Type: image/png\r\n">}
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 59], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:12
+[36m  Disk Storage (9.7ms) [0m[32mUploaded file to key: pMrVgLPDypHpJwDUZsmoRmV2 (checksum: XEB1aB4qo1eMLAIPrzm+BA==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "pMrVgLPDypHpJwDUZsmoRmV2"], ["filename", "blob"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 38081], ["checksum", "XEB1aB4qo1eMLAIPrzm+BA=="], ["created_at", "2020-12-17 20:32:25.900877"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Destroy (1.5ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 21]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Sketch"], ["record_id", 59], ["blob_id", 22], ["created_at", "2020-12-17 20:32:25.930377"]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[36mSketch Update (0.7ms)[0m  [1m[33mUPDATE "sketches" SET "updated_at" = $1 WHERE "sketches"."id" = $2[0m  [["updated_at", "2020-12-17 20:32:25.947290"], ["id", 59]]
+  ↳ app/controllers/sketches_controller.rb:12
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sketches_controller.rb:12
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0) to Async(default) with arguments: #<GlobalID:0x00007f20ecca0828 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/22>>
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 2b6db3f5-e621-4ceb-949e-69bc5ce226a2) to Async(default) with arguments: #<GlobalID:0x00007f20eccacad8 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/21>>
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0] Performing ActiveStorage::AnalyzeJob (Job ID: fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0) from Async(default) with arguments: #<GlobalID:0x00007f20d8095420 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/22>>
+  [1m[36mActiveStorage::Blob Load (101.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 8.0ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0] [36m  Disk Storage (2.7ms) [0m[34mDownloaded file from key: pMrVgLPDypHpJwDUZsmoRmV2[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2] Performing ActiveStorage::PurgeJob (Job ID: 2b6db3f5-e621-4ceb-949e-69bc5ce226a2) from Async(default) with arguments: #<GlobalID:0x00007f20f0167e58 @uri=#<URI::GID gid://backend/ActiveStorage::Blob/21>>
+  
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   [1m[35m (61.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `sketches' for #<SketchesController:0x00007f20ecc41170>
+Did you mean?  sketch):
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   [1m[36mActiveStorage::Attachment Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 21], ["LIMIT", 1]]
+  
+app/controllers/sketches_controller.rb:13:in `create'
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   [1m[36mActiveStorage::Blob Destroy (87.9ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 21]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0]   [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":1155,\"height\":1155,\"analyzed\":true}"], ["id", 22]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0]   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0] Performed ActiveStorage::AnalyzeJob (Job ID: fd4e59af-3b5c-4dd7-b47e-f111c7fd71b0) from Async(default) in 381.11ms
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2]   ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2] [36m  Disk Storage (0.4ms) [0m[31mDeleted file from key: vcujN8LaUmb2kMh4jUSXU271[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/vcujN8LaUmb2kMh4jUSXU271/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [2b6db3f5-e621-4ceb-949e-69bc5ce226a2] Performed ActiveStorage::PurgeJob (Job ID: 2b6db3f5-e621-4ceb-949e-69bc5ce226a2) from Async(default) in 371.91ms
