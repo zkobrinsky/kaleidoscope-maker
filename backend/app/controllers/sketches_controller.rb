@@ -8,7 +8,7 @@ class SketchesController < ApplicationController
     def create
         sketch = Sketch.last #for debugging only
         # sketch = Sketch.create(sketch_params) # will be actual create method
-        byebug  
+        # byebug
         sketch.image.attach(params[:image])
         render json: sketches, methods: :image_url, include: {:colors => {only: [:value]}}
     end
