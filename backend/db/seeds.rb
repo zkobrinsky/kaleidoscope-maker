@@ -15,7 +15,8 @@ Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.constellation.downcas
 Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.star_cluster.downcase]
 
 20.times do
-    Color.create(value: Faker::Color.hsl_color)
+    # creates random hsb values
+    Color.create(value: [rand(0..360), rand(0..360), rand(0..360)])
 end
 
 10.times do
