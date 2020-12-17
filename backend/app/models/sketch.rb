@@ -6,6 +6,8 @@ class Sketch < ApplicationRecord
 
 
     def image_url
-        url_for(self.image)
+        if self.image.attached?
+            url_for(self.image)
+        end
     end
 end

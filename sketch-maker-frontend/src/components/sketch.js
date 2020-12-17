@@ -47,7 +47,7 @@ export default (props) => {
     canvas.toBlob((b) => {
       var formData = new FormData();
       formData.append("image", b);
-      fetch("http://localhost:3001/users", {
+      fetch("http://localhost:3001/sketches", {
         method: "POST",
         body: formData,
       })

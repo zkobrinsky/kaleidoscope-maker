@@ -20,11 +20,9 @@ Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.star_cluster.downcase
 end
 
 10.times do
-    sketch = Sketch.new(title: word_choices.sample)
+    sketch = Sketch.new(title: word_choices.sample, reflections: rand(0..9))
     5.times do 
         sketch.colors << Color.all.sample
     end
     sketch.save
 end
-
-    # byebug
