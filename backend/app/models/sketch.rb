@@ -4,7 +4,7 @@ class Sketch < ApplicationRecord
     # try to set up bg color laters
     
     # has_one :bg_color, through: :colors_sketches, class_name: "ColorsSketch", :foreign_key => "color_id"
-    # has_one_attached :image
+    has_one_attached :image
     
     has_many :colors_sketches
     has_many :colors, through: :colors_sketches
