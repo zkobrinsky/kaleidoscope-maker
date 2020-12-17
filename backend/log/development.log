@@ -6033,3 +6033,209 @@ Migrating to RemoveBgColorFromSketches (20201217145653)
   [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:27
   [1m[36mColor Load (1.0ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" ORDER BY "colors"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (2.6ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.4ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.8ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.5ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mColor Load (2.5ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1 LIMIT $2[0m  [["sketch_id", 10], ["LIMIT", 11]]
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.9ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.2ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.3ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.8ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.2ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.4ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/sketches" for 127.0.0.1 at 2020-12-17 11:31:52 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by SketchesController#index as HTML
+  [1m[36mSketch Load (3.0ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (19.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (2.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 1]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 2]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (1.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 3]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (3.0ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 4]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.9ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 5]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (2.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 6]]
+  ↳ app/controllers/sketches_controller.rb:5
+Started GET "/sketches" for ::1 at 2020-12-17 11:31:54 -0500
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (3.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 7]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (9.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+Processing by SketchesController#index as HTML
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 8]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mSketch Load (10.1ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mColor Load (2.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 9]]
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:5
+  ↳ app/models/sketch.rb:14
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mColor Load (4.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 1]]
+  ↳ app/controllers/sketches_controller.rb:5
+  ↳ app/models/sketch.rb:14
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mColor Load (2.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 10]]
+  ↳ app/controllers/sketches_controller.rb:5
+  ↳ app/models/sketch.rb:14
+Completed 200 OK in 1419ms (Views: 1304.9ms | ActiveRecord: 85.0ms)
+
+
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 2]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (3.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (1.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 3]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (3.1ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 4]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 5]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (1.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 6]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (1.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 7]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 8]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 9]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 10]]
+  ↳ app/controllers/sketches_controller.rb:5
+Completed 200 OK in 867ms (Views: 828.9ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/sketches" for ::1 at 2020-12-17 11:32:39 -0500
+Processing by SketchesController#index as HTML
+  [1m[36mSketch Load (3.2ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 1]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (1.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 2]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 3]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 4]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 5]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 6]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (1.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 7]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (2.0ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 8]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 9]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 10]]
+  ↳ app/controllers/sketches_controller.rb:5
+Completed 200 OK in 656ms (Views: 591.3ms | ActiveRecord: 43.1ms)
+
+
+Started GET "/sketches" for ::1 at 2020-12-17 11:33:50 -0500
+Processing by SketchesController#index as HTML
+  [1m[36mSketch Load (1.6ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 1]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (10.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 2]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (4.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 3]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (4.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 4]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (1.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 5]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 6]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (1.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 7]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.9ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 8]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 9]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:14
+  [1m[36mColor Load (1.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 10]]
+  ↳ app/controllers/sketches_controller.rb:5
+Completed 200 OK in 1037ms (Views: 942.7ms | ActiveRecord: 85.6ms)
+
+
