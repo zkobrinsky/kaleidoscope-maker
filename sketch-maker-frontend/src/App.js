@@ -3,6 +3,7 @@ import './App.css';
 import Sketch from './components/Sketch'
 import Sketches from './components/Sketches'
 import CreateSketch from './components/CreateSketch'
+import Nav from './components/Nav'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Router >
+      <Nav />
         <Switch>
           <Route exact path="/"
           render={(props) => (
