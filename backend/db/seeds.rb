@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
  
-
+Sketch.destroy_all
+Color.destroy_all
 
 word_choices = [Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.planet.downcase, 
 Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.star.downcase,
@@ -14,11 +15,15 @@ Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.constellation.downcas
 Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.star_cluster.downcase]
 
 20.times do
-    Color.new(value: Faker::Color.hsl_color)
+    Color.create(value: Faker::Color.hsl_color)
 end
 
 10.times do
-    Sketch.new
+    sketch = Sketch.new(title: word_choices.sample)
+    5.times do 
+        sketch.colors << Color.all.sample
+    end
+    sketch.save
 end
 
-    byebug
+    # byebug

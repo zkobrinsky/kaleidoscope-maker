@@ -448,3 +448,2413 @@ Migrating to RemoveBgColorFromSketches (20201217145653)
   [1m[36mSketch Create (1.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "new sketch"], ["created_at", "2020-12-17 15:04:14.313887"], ["updated_at", "2020-12-17 15:04:14.313887"]]
   [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (11.0ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[253, 0.23, 0.55]"], ["created_at", "2020-12-17 15:17:56.057711"], ["updated_at", "2020-12-17 15:17:56.057711"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[161, 0.44, 0.21]"], ["created_at", "2020-12-17 15:17:56.074365"], ["updated_at", "2020-12-17 15:17:56.074365"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[161, 0.1, 0.0]"], ["created_at", "2020-12-17 15:17:56.078391"], ["updated_at", "2020-12-17 15:17:56.078391"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[217, 0.08, 0.81]"], ["created_at", "2020-12-17 15:17:56.081751"], ["updated_at", "2020-12-17 15:17:56.081751"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (1.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[53, 0.62, 0.73]"], ["created_at", "2020-12-17 15:17:56.085042"], ["updated_at", "2020-12-17 15:17:56.085042"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[311, 0.4, 0.83]"], ["created_at", "2020-12-17 15:17:56.089725"], ["updated_at", "2020-12-17 15:17:56.089725"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[10, 0.49, 0.09]"], ["created_at", "2020-12-17 15:17:56.093532"], ["updated_at", "2020-12-17 15:17:56.093532"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[251, 0.7, 0.63]"], ["created_at", "2020-12-17 15:17:56.097428"], ["updated_at", "2020-12-17 15:17:56.097428"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[0, 0.99, 0.62]"], ["created_at", "2020-12-17 15:17:56.102349"], ["updated_at", "2020-12-17 15:17:56.102349"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[213, 0.05, 0.15]"], ["created_at", "2020-12-17 15:17:56.105998"], ["updated_at", "2020-12-17 15:17:56.105998"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.8ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[155, 0.87, 0.7]"], ["created_at", "2020-12-17 15:17:56.110161"], ["updated_at", "2020-12-17 15:17:56.110161"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.9ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[66, 0.7, 0.98]"], ["created_at", "2020-12-17 15:17:56.114779"], ["updated_at", "2020-12-17 15:17:56.114779"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.8ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[110, 0.66, 0.48]"], ["created_at", "2020-12-17 15:17:56.119646"], ["updated_at", "2020-12-17 15:17:56.119646"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[158, 0.61, 0.71]"], ["created_at", "2020-12-17 15:17:56.124004"], ["updated_at", "2020-12-17 15:17:56.124004"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[120, 0.7, 0.66]"], ["created_at", "2020-12-17 15:17:56.126805"], ["updated_at", "2020-12-17 15:17:56.126805"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.8ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[91, 0.11, 0.74]"], ["created_at", "2020-12-17 15:17:56.129837"], ["updated_at", "2020-12-17 15:17:56.129837"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.8ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[70, 0.59, 0.0]"], ["created_at", "2020-12-17 15:17:56.133556"], ["updated_at", "2020-12-17 15:17:56.133556"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[353, 0.85, 0.56]"], ["created_at", "2020-12-17 15:17:56.136928"], ["updated_at", "2020-12-17 15:17:56.136928"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[171, 0.39, 0.18]"], ["created_at", "2020-12-17 15:17:56.140131"], ["updated_at", "2020-12-17 15:17:56.140131"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[103, 0.23, 0.25]"], ["created_at", "2020-12-17 15:17:56.143259"], ["updated_at", "2020-12-17 15:17:56.143259"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (4.6ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "selfies pyxis cluster"], ["created_at", "2020-12-17 15:17:56.172375"], ["updated_at", "2020-12-17 15:17:56.172375"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (0.8ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "selvage earth"], ["created_at", "2020-12-17 15:17:56.179784"], ["updated_at", "2020-12-17 15:17:56.179784"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "pitchfork barnards star"], ["created_at", "2020-12-17 15:17:56.183909"], ["updated_at", "2020-12-17 15:17:56.183909"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "selfies pyxis cluster"], ["created_at", "2020-12-17 15:17:56.187557"], ["updated_at", "2020-12-17 15:17:56.187557"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "selvage earth"], ["created_at", "2020-12-17 15:17:56.190545"], ["updated_at", "2020-12-17 15:17:56.190545"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "pitchfork barnards star"], ["created_at", "2020-12-17 15:17:56.193682"], ["updated_at", "2020-12-17 15:17:56.193682"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "pitchfork barnards star"], ["created_at", "2020-12-17 15:17:56.197430"], ["updated_at", "2020-12-17 15:17:56.197430"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "selfies pyxis cluster"], ["created_at", "2020-12-17 15:17:56.200005"], ["updated_at", "2020-12-17 15:17:56.200005"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ennui ursa major"], ["created_at", "2020-12-17 15:17:56.202431"], ["updated_at", "2020-12-17 15:17:56.202431"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Create (1.6ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "selfies pyxis cluster"], ["created_at", "2020-12-17 15:17:56.205015"], ["updated_at", "2020-12-17 15:17:56.205015"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSketch Load (8.2ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (5.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSketch Load (3.2ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (2.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (5.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mSketch Load (0.4ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mColor Load (1.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (1.2ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.8ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.9ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (2.8ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (1.1ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.7ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (1.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (1.8ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 15]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (1.0ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (4.8ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSketch Load (0.9ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (1.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[228, 0.34, 0.96]"], ["created_at", "2020-12-17 15:22:06.988081"], ["updated_at", "2020-12-17 15:22:06.988081"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[262, 0.66, 0.65]"], ["created_at", "2020-12-17 15:22:06.993762"], ["updated_at", "2020-12-17 15:22:06.993762"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[245, 0.03, 0.31]"], ["created_at", "2020-12-17 15:22:06.996873"], ["updated_at", "2020-12-17 15:22:06.996873"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[299, 0.2, 0.81]"], ["created_at", "2020-12-17 15:22:06.999833"], ["updated_at", "2020-12-17 15:22:06.999833"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[353, 0.15, 0.25]"], ["created_at", "2020-12-17 15:22:07.002543"], ["updated_at", "2020-12-17 15:22:07.002543"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[350, 0.98, 0.04]"], ["created_at", "2020-12-17 15:22:07.005051"], ["updated_at", "2020-12-17 15:22:07.005051"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[334, 0.18, 0.75]"], ["created_at", "2020-12-17 15:22:07.007641"], ["updated_at", "2020-12-17 15:22:07.007641"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[268, 0.22, 0.83]"], ["created_at", "2020-12-17 15:22:07.010222"], ["updated_at", "2020-12-17 15:22:07.010222"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[224, 0.62, 0.9]"], ["created_at", "2020-12-17 15:22:07.013097"], ["updated_at", "2020-12-17 15:22:07.013097"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[250, 0.89, 0.01]"], ["created_at", "2020-12-17 15:22:07.017851"], ["updated_at", "2020-12-17 15:22:07.017851"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[120, 0.3, 0.95]"], ["created_at", "2020-12-17 15:22:07.021364"], ["updated_at", "2020-12-17 15:22:07.021364"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.9ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[189, 0.94, 0.83]"], ["created_at", "2020-12-17 15:22:07.024555"], ["updated_at", "2020-12-17 15:22:07.024555"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[195, 0.07, 0.4]"], ["created_at", "2020-12-17 15:22:07.027841"], ["updated_at", "2020-12-17 15:22:07.027841"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[89, 0.14, 0.11]"], ["created_at", "2020-12-17 15:22:07.030920"], ["updated_at", "2020-12-17 15:22:07.030920"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.8ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[99, 0.31, 0.32]"], ["created_at", "2020-12-17 15:22:07.033840"], ["updated_at", "2020-12-17 15:22:07.033840"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[146, 0.13, 0.78]"], ["created_at", "2020-12-17 15:22:07.037076"], ["updated_at", "2020-12-17 15:22:07.037076"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[124, 0.43, 0.7]"], ["created_at", "2020-12-17 15:22:07.040265"], ["updated_at", "2020-12-17 15:22:07.040265"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (1.2ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[294, 0.3, 0.99]"], ["created_at", "2020-12-17 15:22:07.043522"], ["updated_at", "2020-12-17 15:22:07.043522"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[265, 0.52, 0.92]"], ["created_at", "2020-12-17 15:22:07.047481"], ["updated_at", "2020-12-17 15:22:07.047481"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[30, 0.25, 0.89]"], ["created_at", "2020-12-17 15:22:07.051506"], ["updated_at", "2020-12-17 15:22:07.051506"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.8ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "gluten-free earth"], ["created_at", "2020-12-17 15:22:07.063718"], ["updated_at", "2020-12-17 15:22:07.063718"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.9ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "pickled palomar 4"], ["created_at", "2020-12-17 15:22:07.067186"], ["updated_at", "2020-12-17 15:22:07.067186"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "scenester polaris"], ["created_at", "2020-12-17 15:22:07.071360"], ["updated_at", "2020-12-17 15:22:07.071360"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "scenester polaris"], ["created_at", "2020-12-17 15:22:07.074284"], ["updated_at", "2020-12-17 15:22:07.074284"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "scenester polaris"], ["created_at", "2020-12-17 15:22:07.077869"], ["updated_at", "2020-12-17 15:22:07.077869"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "scenester polaris"], ["created_at", "2020-12-17 15:22:07.082128"], ["updated_at", "2020-12-17 15:22:07.082128"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "pickled palomar 4"], ["created_at", "2020-12-17 15:22:07.085089"], ["updated_at", "2020-12-17 15:22:07.085089"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (1.0ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "scenester polaris"], ["created_at", "2020-12-17 15:22:07.088136"], ["updated_at", "2020-12-17 15:22:07.088136"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "mixtape big dipper"], ["created_at", "2020-12-17 15:22:07.092938"], ["updated_at", "2020-12-17 15:22:07.092938"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "mixtape big dipper"], ["created_at", "2020-12-17 15:22:07.095858"], ["updated_at", "2020-12-17 15:22:07.095858"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mColor Load (1.8ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" ORDER BY "colors"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" ORDER BY "colors"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.9ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to RemoveBgColorFromSketches (20201217145653)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (18.0ms)[0m  [1m[35mALTER TABLE "sketches" ADD "bg_color" character varying[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201217145653"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to RemoveBgColorFromSketches (20201217145653)
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.1ms)[0m  [1m[35mALTER TABLE "sketches" DROP COLUMN "bg_color"[0m
+  ↳ db/migrate/20201217145653_remove_bg_color_from_sketches.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201217145653"]]
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSketch Load (1.1ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to RemoveBgColorFromSketches (20201217145653)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "sketches" ADD "bg_color" character varying[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201217145653"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (169.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (160.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (1060.0ms)[0m  [1m[35mCREATE DATABASE "backend_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (770.3ms)[0m  [1m[35mCREATE DATABASE "backend_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (24.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSketches (20201217142510)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "sketches" ("id" bigserial primary key, "title" character varying, "colors" character varying, "bg_color" character varying, "reflections" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201217142510_create_sketches.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201217142510"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateColors (20201217142542)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "colors" ("id" bigserial primary key, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201217142542_create_colors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201217142542"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateActiveStorageTables (20201217142844)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201217142844_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/migrate/20201217142844_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20201217142844_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/migrate/20201217142844_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20201217142844_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201217142844"]]
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateJoinTableSketchColor (20201217144644)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "colors_sketches" ("sketch_id" bigint NOT NULL, "color_id" bigint NOT NULL)[0m
+  ↳ db/migrate/20201217144644_create_join_table_sketch_color.rb:3
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE  INDEX  "index_colors_sketches_on_sketch_id_and_color_id" ON "colors_sketches"  ("sketch_id", "color_id")[0m
+  ↳ db/migrate/20201217144644_create_join_table_sketch_color.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_colors_sketches_on_color_id_and_sketch_id" ON "colors_sketches"  ("color_id", "sketch_id")[0m
+  ↳ db/migrate/20201217144644_create_join_table_sketch_color.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201217144644"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to RemoveColorsFromSketches (20201217145619)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "sketches" DROP COLUMN "colors"[0m
+  ↳ db/migrate/20201217145619_remove_colors_from_sketches.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201217145619"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to RemoveBgColorFromSketches (20201217145653)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "sketches" DROP COLUMN "bg_color"[0m
+  ↳ db/migrate/20201217145653_remove_bg_color_from_sketches.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201217145653"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-17 15:28:14.916374"], ["updated_at", "2020-12-17 15:28:14.916374"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSketch Load (1.2ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSketch Load (0.7ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.9ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[359, 0.88, 0.58]"], ["created_at", "2020-12-17 15:30:37.855351"], ["updated_at", "2020-12-17 15:30:37.855351"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[226, 0.59, 0.8]"], ["created_at", "2020-12-17 15:30:37.865478"], ["updated_at", "2020-12-17 15:30:37.865478"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[273, 0.65, 0.48]"], ["created_at", "2020-12-17 15:30:37.869322"], ["updated_at", "2020-12-17 15:30:37.869322"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[127, 0.28, 0.15]"], ["created_at", "2020-12-17 15:30:37.874515"], ["updated_at", "2020-12-17 15:30:37.874515"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[75, 0.58, 0.39]"], ["created_at", "2020-12-17 15:30:37.877320"], ["updated_at", "2020-12-17 15:30:37.877320"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[242, 0.49, 1.0]"], ["created_at", "2020-12-17 15:30:37.879937"], ["updated_at", "2020-12-17 15:30:37.879937"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[49, 0.6, 0.43]"], ["created_at", "2020-12-17 15:30:37.882398"], ["updated_at", "2020-12-17 15:30:37.882398"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[228, 0.82, 0.05]"], ["created_at", "2020-12-17 15:30:37.885465"], ["updated_at", "2020-12-17 15:30:37.885465"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[234, 0.48, 0.12]"], ["created_at", "2020-12-17 15:30:37.890005"], ["updated_at", "2020-12-17 15:30:37.890005"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[210, 0.42, 0.67]"], ["created_at", "2020-12-17 15:30:37.894487"], ["updated_at", "2020-12-17 15:30:37.894487"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[222, 0.53, 0.53]"], ["created_at", "2020-12-17 15:30:37.900100"], ["updated_at", "2020-12-17 15:30:37.900100"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[210, 0.74, 0.64]"], ["created_at", "2020-12-17 15:30:37.903476"], ["updated_at", "2020-12-17 15:30:37.903476"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[208, 0.66, 0.46]"], ["created_at", "2020-12-17 15:30:37.907609"], ["updated_at", "2020-12-17 15:30:37.907609"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[248, 0.81, 0.38]"], ["created_at", "2020-12-17 15:30:37.911467"], ["updated_at", "2020-12-17 15:30:37.911467"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[6, 0.21, 0.95]"], ["created_at", "2020-12-17 15:30:37.914513"], ["updated_at", "2020-12-17 15:30:37.914513"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[35, 0.58, 0.22]"], ["created_at", "2020-12-17 15:30:37.917897"], ["updated_at", "2020-12-17 15:30:37.917897"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[101, 0.27, 0.81]"], ["created_at", "2020-12-17 15:30:37.922232"], ["updated_at", "2020-12-17 15:30:37.922232"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[134, 0.81, 0.78]"], ["created_at", "2020-12-17 15:30:37.926439"], ["updated_at", "2020-12-17 15:30:37.926439"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[154, 0.04, 0.27]"], ["created_at", "2020-12-17 15:30:37.932028"], ["updated_at", "2020-12-17 15:30:37.932028"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[141, 0.71, 0.14]"], ["created_at", "2020-12-17 15:30:37.934783"], ["updated_at", "2020-12-17 15:30:37.934783"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (1.0ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "kickstarter lyra"], ["created_at", "2020-12-17 15:30:37.948037"], ["updated_at", "2020-12-17 15:30:37.948037"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "viral arp-madore 1"], ["created_at", "2020-12-17 15:30:37.952504"], ["updated_at", "2020-12-17 15:30:37.952504"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ugh polaris"], ["created_at", "2020-12-17 15:30:37.956730"], ["updated_at", "2020-12-17 15:30:37.956730"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "kickstarter lyra"], ["created_at", "2020-12-17 15:30:37.962207"], ["updated_at", "2020-12-17 15:30:37.962207"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.8ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ugh polaris"], ["created_at", "2020-12-17 15:30:37.964982"], ["updated_at", "2020-12-17 15:30:37.964982"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ugh polaris"], ["created_at", "2020-12-17 15:30:37.968225"], ["updated_at", "2020-12-17 15:30:37.968225"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "viral arp-madore 1"], ["created_at", "2020-12-17 15:30:37.971542"], ["updated_at", "2020-12-17 15:30:37.971542"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.7ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ugh polaris"], ["created_at", "2020-12-17 15:30:37.975362"], ["updated_at", "2020-12-17 15:30:37.975362"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "viral arp-madore 1"], ["created_at", "2020-12-17 15:30:37.978651"], ["updated_at", "2020-12-17 15:30:37.978651"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ugh polaris"], ["created_at", "2020-12-17 15:30:37.981641"], ["updated_at", "2020-12-17 15:30:37.981641"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSketch Load (1.1ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.8ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mColor Load (1.5ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1 LIMIT $2[0m  [["sketch_id", 10], ["LIMIT", 11]]
+  [1m[36mSketch Load (1.1ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" ORDER BY "colors"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.6ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" ORDER BY "colors"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColorsSketch Create (1.6ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 10], ["color_id", 20]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT  "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1 LIMIT $2[0m  [["sketch_id", 10], ["LIMIT", 11]]
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSketch Load (1.8ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.9ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (1.2ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.8ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mColor Load (2.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.8ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.7ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.9ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.9ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.7ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.7ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[161, 0.34, 0.01]"], ["created_at", "2020-12-17 15:35:15.281842"], ["updated_at", "2020-12-17 15:35:15.281842"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[269, 0.5, 0.3]"], ["created_at", "2020-12-17 15:35:15.292501"], ["updated_at", "2020-12-17 15:35:15.292501"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[335, 0.79, 0.23]"], ["created_at", "2020-12-17 15:35:15.296273"], ["updated_at", "2020-12-17 15:35:15.296273"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[293, 0.11, 0.51]"], ["created_at", "2020-12-17 15:35:15.300153"], ["updated_at", "2020-12-17 15:35:15.300153"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[335, 0.34, 0.1]"], ["created_at", "2020-12-17 15:35:15.302869"], ["updated_at", "2020-12-17 15:35:15.302869"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[22, 0.32, 0.08]"], ["created_at", "2020-12-17 15:35:15.305035"], ["updated_at", "2020-12-17 15:35:15.305035"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[324, 0.11, 0.26]"], ["created_at", "2020-12-17 15:35:15.307711"], ["updated_at", "2020-12-17 15:35:15.307711"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[349, 0.44, 0.6]"], ["created_at", "2020-12-17 15:35:15.311012"], ["updated_at", "2020-12-17 15:35:15.311012"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[81, 0.28, 0.88]"], ["created_at", "2020-12-17 15:35:15.314156"], ["updated_at", "2020-12-17 15:35:15.314156"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[26, 0.51, 0.93]"], ["created_at", "2020-12-17 15:35:15.316817"], ["updated_at", "2020-12-17 15:35:15.316817"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[318, 0.2, 0.33]"], ["created_at", "2020-12-17 15:35:15.319946"], ["updated_at", "2020-12-17 15:35:15.319946"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[117, 0.7, 0.58]"], ["created_at", "2020-12-17 15:35:15.322700"], ["updated_at", "2020-12-17 15:35:15.322700"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.8ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[33, 0.68, 0.57]"], ["created_at", "2020-12-17 15:35:15.325716"], ["updated_at", "2020-12-17 15:35:15.325716"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[56, 0.2, 0.21]"], ["created_at", "2020-12-17 15:35:15.328961"], ["updated_at", "2020-12-17 15:35:15.328961"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[184, 0.45, 0.32]"], ["created_at", "2020-12-17 15:35:15.331748"], ["updated_at", "2020-12-17 15:35:15.331748"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[268, 0.94, 0.45]"], ["created_at", "2020-12-17 15:35:15.334478"], ["updated_at", "2020-12-17 15:35:15.334478"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[86, 0.61, 0.52]"], ["created_at", "2020-12-17 15:35:15.337547"], ["updated_at", "2020-12-17 15:35:15.337547"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[298, 0.19, 0.91]"], ["created_at", "2020-12-17 15:35:15.340584"], ["updated_at", "2020-12-17 15:35:15.340584"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[251, 0.85, 0.56]"], ["created_at", "2020-12-17 15:35:15.342913"], ["updated_at", "2020-12-17 15:35:15.342913"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[60, 0.0, 0.1]"], ["created_at", "2020-12-17 15:35:15.346458"], ["updated_at", "2020-12-17 15:35:15.346458"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.9ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (1.1ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (1.0ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mSketch Load (0.8ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSketch Load (1.0ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.7ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.8ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 31]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 32]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 33]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 34]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 35]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 36]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.9ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 37]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 38]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 39]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 40]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[226, 0.6, 0.9]"], ["created_at", "2020-12-17 15:35:38.142516"], ["updated_at", "2020-12-17 15:35:38.142516"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[158, 0.83, 0.67]"], ["created_at", "2020-12-17 15:35:38.152355"], ["updated_at", "2020-12-17 15:35:38.152355"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[62, 0.88, 0.1]"], ["created_at", "2020-12-17 15:35:38.154807"], ["updated_at", "2020-12-17 15:35:38.154807"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[354, 0.26, 0.18]"], ["created_at", "2020-12-17 15:35:38.158872"], ["updated_at", "2020-12-17 15:35:38.158872"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[287, 0.68, 0.17]"], ["created_at", "2020-12-17 15:35:38.162158"], ["updated_at", "2020-12-17 15:35:38.162158"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[225, 0.51, 0.31]"], ["created_at", "2020-12-17 15:35:38.165681"], ["updated_at", "2020-12-17 15:35:38.165681"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[178, 0.02, 0.26]"], ["created_at", "2020-12-17 15:35:38.169567"], ["updated_at", "2020-12-17 15:35:38.169567"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[134, 0.48, 0.35]"], ["created_at", "2020-12-17 15:35:38.173015"], ["updated_at", "2020-12-17 15:35:38.173015"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[253, 0.68, 0.41]"], ["created_at", "2020-12-17 15:35:38.176378"], ["updated_at", "2020-12-17 15:35:38.176378"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[288, 0.62, 0.67]"], ["created_at", "2020-12-17 15:35:38.180342"], ["updated_at", "2020-12-17 15:35:38.180342"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[167, 0.96, 0.76]"], ["created_at", "2020-12-17 15:35:38.183003"], ["updated_at", "2020-12-17 15:35:38.183003"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[150, 0.07, 0.97]"], ["created_at", "2020-12-17 15:35:38.186132"], ["updated_at", "2020-12-17 15:35:38.186132"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[135, 0.16, 0.98]"], ["created_at", "2020-12-17 15:35:38.189518"], ["updated_at", "2020-12-17 15:35:38.189518"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[94, 0.25, 0.79]"], ["created_at", "2020-12-17 15:35:38.191598"], ["updated_at", "2020-12-17 15:35:38.191598"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.7ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[88, 0.43, 0.87]"], ["created_at", "2020-12-17 15:35:38.194352"], ["updated_at", "2020-12-17 15:35:38.194352"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[299, 0.58, 0.28]"], ["created_at", "2020-12-17 15:35:38.199546"], ["updated_at", "2020-12-17 15:35:38.199546"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[308, 0.94, 0.88]"], ["created_at", "2020-12-17 15:35:38.202326"], ["updated_at", "2020-12-17 15:35:38.202326"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[268, 0.22, 0.87]"], ["created_at", "2020-12-17 15:35:38.206062"], ["updated_at", "2020-12-17 15:35:38.206062"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[246, 0.83, 0.47]"], ["created_at", "2020-12-17 15:35:38.208468"], ["updated_at", "2020-12-17 15:35:38.208468"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[255, 0.71, 0.13]"], ["created_at", "2020-12-17 15:35:38.211089"], ["updated_at", "2020-12-17 15:35:38.211089"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "brooklyn beehive cluster"], ["created_at", "2020-12-17 15:35:38.263495"], ["updated_at", "2020-12-17 15:35:38.263495"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (1.6ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 11], ["color_id", 54]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 11], ["color_id", 49]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.2ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 11], ["color_id", 50]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.2ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 11], ["color_id", 52]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.2ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 11], ["color_id", 46]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "semiotics saturn"], ["created_at", "2020-12-17 15:35:38.287092"], ["updated_at", "2020-12-17 15:35:38.287092"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 12], ["color_id", 55]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 12], ["color_id", 58]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 12], ["color_id", 44]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 12], ["color_id", 53]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 12], ["color_id", 54]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "brooklyn beehive cluster"], ["created_at", "2020-12-17 15:35:38.307375"], ["updated_at", "2020-12-17 15:35:38.307375"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 13], ["color_id", 41]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 13], ["color_id", 60]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 13], ["color_id", 55]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 13], ["color_id", 47]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 13], ["color_id", 59]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "marfa aquarius"], ["created_at", "2020-12-17 15:35:38.336477"], ["updated_at", "2020-12-17 15:35:38.336477"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 14], ["color_id", 56]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 14], ["color_id", 56]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 14], ["color_id", 58]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 14], ["color_id", 42]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 14], ["color_id", 60]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "semiotics saturn"], ["created_at", "2020-12-17 15:35:38.357709"], ["updated_at", "2020-12-17 15:35:38.357709"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 15], ["color_id", 43]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 15], ["color_id", 42]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.2ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 15], ["color_id", 53]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 15], ["color_id", 46]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 15], ["color_id", 55]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "semiotics saturn"], ["created_at", "2020-12-17 15:35:38.381688"], ["updated_at", "2020-12-17 15:35:38.381688"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 16], ["color_id", 51]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 16], ["color_id", 51]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 16], ["color_id", 54]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 16], ["color_id", 55]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 16], ["color_id", 45]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "brooklyn beehive cluster"], ["created_at", "2020-12-17 15:35:38.405634"], ["updated_at", "2020-12-17 15:35:38.405634"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 17], ["color_id", 45]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 17], ["color_id", 53]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 17], ["color_id", 56]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 17], ["color_id", 50]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 17], ["color_id", 59]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "selfies vega"], ["created_at", "2020-12-17 15:35:38.428317"], ["updated_at", "2020-12-17 15:35:38.428317"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 18], ["color_id", 42]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 18], ["color_id", 43]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 18], ["color_id", 58]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 18], ["color_id", 43]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 18], ["color_id", 47]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "brooklyn beehive cluster"], ["created_at", "2020-12-17 15:35:38.448600"], ["updated_at", "2020-12-17 15:35:38.448600"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 19], ["color_id", 47]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 19], ["color_id", 42]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 19], ["color_id", 57]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 19], ["color_id", 57]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.8ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 19], ["color_id", 60]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "semiotics saturn"], ["created_at", "2020-12-17 15:35:38.478743"], ["updated_at", "2020-12-17 15:35:38.478743"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 20], ["color_id", 44]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 20], ["color_id", 46]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 20], ["color_id", 54]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 20], ["color_id", 42]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 20], ["color_id", 55]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Load (1.3ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (1.1ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSketch Load (0.9ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" ORDER BY "sketches"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mColor Create (1.2ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[228, 0.4, 0.99]"], ["created_at", "2020-12-17 15:36:16.238121"], ["updated_at", "2020-12-17 15:36:16.238121"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSketch Load (1.1ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.9ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:9
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 12], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 15], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.7ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 18], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSketch Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sketches" WHERE "sketches"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mColor Load (0.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 41]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 42]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 43]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 44]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 45]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 46]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 47]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 48]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 49]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 50]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 51]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 52]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 53]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 54]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 55]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 56]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 57]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 58]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 59]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 60]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mColor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colors" WHERE "colors"."id" = $1[0m  [["id", 61]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (1.2ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[268, 0.08, 0.92]"], ["created_at", "2020-12-17 15:36:30.058004"], ["updated_at", "2020-12-17 15:36:30.058004"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[18, 0.37, 0.65]"], ["created_at", "2020-12-17 15:36:30.067640"], ["updated_at", "2020-12-17 15:36:30.067640"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[75, 0.69, 0.24]"], ["created_at", "2020-12-17 15:36:30.070716"], ["updated_at", "2020-12-17 15:36:30.070716"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[297, 0.26, 0.52]"], ["created_at", "2020-12-17 15:36:30.073459"], ["updated_at", "2020-12-17 15:36:30.073459"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[360, 0.12, 0.47]"], ["created_at", "2020-12-17 15:36:30.076192"], ["updated_at", "2020-12-17 15:36:30.076192"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[152, 0.12, 0.79]"], ["created_at", "2020-12-17 15:36:30.078541"], ["updated_at", "2020-12-17 15:36:30.078541"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[351, 0.2, 0.57]"], ["created_at", "2020-12-17 15:36:30.081019"], ["updated_at", "2020-12-17 15:36:30.081019"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[280, 0.85, 0.98]"], ["created_at", "2020-12-17 15:36:30.083263"], ["updated_at", "2020-12-17 15:36:30.083263"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.5ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[356, 0.81, 0.88]"], ["created_at", "2020-12-17 15:36:30.085742"], ["updated_at", "2020-12-17 15:36:30.085742"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[132, 0.16, 0.05]"], ["created_at", "2020-12-17 15:36:30.088071"], ["updated_at", "2020-12-17 15:36:30.088071"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[136, 0.22, 0.54]"], ["created_at", "2020-12-17 15:36:30.090386"], ["updated_at", "2020-12-17 15:36:30.090386"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[327, 0.88, 0.97]"], ["created_at", "2020-12-17 15:36:30.092642"], ["updated_at", "2020-12-17 15:36:30.092642"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[282, 0.54, 0.55]"], ["created_at", "2020-12-17 15:36:30.095432"], ["updated_at", "2020-12-17 15:36:30.095432"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[98, 0.05, 0.31]"], ["created_at", "2020-12-17 15:36:30.098417"], ["updated_at", "2020-12-17 15:36:30.098417"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[240, 0.72, 0.46]"], ["created_at", "2020-12-17 15:36:30.101197"], ["updated_at", "2020-12-17 15:36:30.101197"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[237, 0.3, 0.27]"], ["created_at", "2020-12-17 15:36:30.103361"], ["updated_at", "2020-12-17 15:36:30.103361"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.6ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[205, 0.64, 0.62]"], ["created_at", "2020-12-17 15:36:30.105802"], ["updated_at", "2020-12-17 15:36:30.105802"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[39, 0.99, 0.06]"], ["created_at", "2020-12-17 15:36:30.108993"], ["updated_at", "2020-12-17 15:36:30.108993"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.4ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[202, 0.44, 0.65]"], ["created_at", "2020-12-17 15:36:30.111648"], ["updated_at", "2020-12-17 15:36:30.111648"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Create (0.3ms)[0m  [1m[32mINSERT INTO "colors" ("value", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["value", "[29, 0.74, 0.43]"], ["created_at", "2020-12-17 15:36:30.114471"], ["updated_at", "2020-12-17 15:36:30.114471"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "lo-fi rigel"], ["created_at", "2020-12-17 15:36:30.144498"], ["updated_at", "2020-12-17 15:36:30.144498"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (1.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 21], ["color_id", 66]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 21], ["color_id", 66]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 21], ["color_id", 71]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 21], ["color_id", 79]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 21], ["color_id", 73]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "lo-fi rigel"], ["created_at", "2020-12-17 15:36:30.164200"], ["updated_at", "2020-12-17 15:36:30.164200"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 22], ["color_id", 75]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 22], ["color_id", 73]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 22], ["color_id", 76]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 22], ["color_id", 68]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 22], ["color_id", 80]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "asymmetrical mars"], ["created_at", "2020-12-17 15:36:30.183515"], ["updated_at", "2020-12-17 15:36:30.183515"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 23], ["color_id", 70]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 23], ["color_id", 64]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 23], ["color_id", 72]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 23], ["color_id", 66]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 23], ["color_id", 74]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "butcher messier 70"], ["created_at", "2020-12-17 15:36:30.202353"], ["updated_at", "2020-12-17 15:36:30.202353"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 24], ["color_id", 74]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 24], ["color_id", 73]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 24], ["color_id", 66]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 24], ["color_id", 75]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 24], ["color_id", 68]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "yr libra"], ["created_at", "2020-12-17 15:36:30.222506"], ["updated_at", "2020-12-17 15:36:30.222506"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 25], ["color_id", 81]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 25], ["color_id", 81]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 25], ["color_id", 75]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 25], ["color_id", 67]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 25], ["color_id", 78]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "yr libra"], ["created_at", "2020-12-17 15:36:30.252903"], ["updated_at", "2020-12-17 15:36:30.252903"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.2ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 26], ["color_id", 69]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 26], ["color_id", 63]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 26], ["color_id", 76]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 26], ["color_id", 72]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 26], ["color_id", 64]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "asymmetrical mars"], ["created_at", "2020-12-17 15:36:30.271178"], ["updated_at", "2020-12-17 15:36:30.271178"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 27], ["color_id", 74]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 27], ["color_id", 76]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 27], ["color_id", 80]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 27], ["color_id", 65]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 27], ["color_id", 76]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.6ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "butcher messier 70"], ["created_at", "2020-12-17 15:36:30.290323"], ["updated_at", "2020-12-17 15:36:30.290323"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 28], ["color_id", 68]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 28], ["color_id", 63]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.2ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 28], ["color_id", 72]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 28], ["color_id", 80]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 28], ["color_id", 74]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "yr libra"], ["created_at", "2020-12-17 15:36:30.309786"], ["updated_at", "2020-12-17 15:36:30.309786"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 29], ["color_id", 65]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 29], ["color_id", 63]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.5ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 29], ["color_id", 69]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 29], ["color_id", 62]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.3ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 29], ["color_id", 80]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "sketches" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "butcher messier 70"], ["created_at", "2020-12-17 15:36:30.329424"], ["updated_at", "2020-12-17 15:36:30.329424"]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 30], ["color_id", 72]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 30], ["color_id", 74]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 30], ["color_id", 66]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 30], ["color_id", 66]]
+  ↳ db/seeds.rb:26
+  [1m[36mColorsSketch Create (0.4ms)[0m  [1m[32mINSERT INTO "colors_sketches" ("sketch_id", "color_id") VALUES ($1, $2)[0m  [["sketch_id", 30], ["color_id", 77]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
