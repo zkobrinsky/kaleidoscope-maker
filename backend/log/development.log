@@ -11844,3 +11844,313 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 200 OK in 28ms (ActiveRecord: 0.0ms)
 
 
+Started GET "/sketches" for ::1 at 2020-12-17 12:43:42 -0500
+Processing by SketchesController#index as HTML
+  [1m[36mSketch Load (1.3ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 50], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (2.0ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 50]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 51], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.9ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 51]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (2.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 52], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.9ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 52]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 53], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 53]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 54], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 54]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 55], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.9ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 55]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 56], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 56]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 57], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (1.0ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 57]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 58], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (1.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 58]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 59], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 59]]
+  ↳ app/controllers/sketches_controller.rb:5
+Completed 200 OK in 555ms (Views: 524.9ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/sketches/50" for ::1 at 2020-12-17 12:43:59 -0500
+Processing by SketchesController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mSketch Load (0.5ms)[0m  [1m[34mSELECT  "sketches".* FROM "sketches" WHERE "sketches"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/sketches_controller.rb:17
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 50], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 50]]
+  ↳ app/controllers/sketches_controller.rb:18
+Completed 200 OK in 66ms (Views: 53.9ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users" for ::1 at 2020-12-17 12:46:40 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-17 12:46:42 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-17 12:46:43 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-17 12:46:44 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-17 12:46:45 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sketches" for ::1 at 2020-12-17 12:57:19 -0500
+Processing by SketchesController#index as HTML
+  [1m[36mSketch Load (5.0ms)[0m  [1m[34mSELECT "sketches".* FROM "sketches"[0m
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 50], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (2.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 50]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 51], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 51]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 52], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 52]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 53], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (1.1ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 53]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 54], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (1.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 54]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 55], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 55]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 56], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 56]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 57], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.7ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 57]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 58], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 58]]
+  ↳ app/controllers/sketches_controller.rb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 59], ["record_type", "Sketch"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/sketch.rb:15
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors" INNER JOIN "colors_sketches" ON "colors"."id" = "colors_sketches"."color_id" WHERE "colors_sketches"."sketch_id" = $1[0m  [["sketch_id", 59]]
+  ↳ app/controllers/sketches_controller.rb:5
+Completed 200 OK in 329ms (Views: 297.7ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b66eb8f95467886ee1830ab9cf43360ee0cddef2/181112_01320.jpg" for ::1 at 2020-12-17 12:57:22 -0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b66eb8f95467886ee1830ab9cf43360ee0cddef2", "filename"=>"181112_01320"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 33gb2rwNsEogDbhttkazmEJK (http://localhost:3001/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRNek5uWWpKeWQwNXpSVzluUkdKb2RIUnJZWHB0UlVwTEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGd4TVRFeVh6QXhNekl3TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NVGd4TVRFeVh6QXhNekl3TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjAtMTItMTdUMTg6MDI6MjIuMTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--39070e1d66049d202423e71bfb61b9bc5e597ca5/181112_01320.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22181112_01320.jpg%22%3B+filename%2A%3DUTF-8%27%27181112_01320.jpg)[0m
+Redirected to http://localhost:3001/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRNek5uWWpKeWQwNXpSVzluUkdKb2RIUnJZWHB0UlVwTEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGd4TVRFeVh6QXhNekl3TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NVGd4TVRFeVh6QXhNekl3TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjAtMTItMTdUMTg6MDI6MjIuMTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--39070e1d66049d202423e71bfb61b9bc5e597ca5/181112_01320.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22181112_01320.jpg%22%3B+filename%2A%3DUTF-8%27%27181112_01320.jpg
+Completed 302 Found in 25ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRNek5uWWpKeWQwNXpSVzluUkdKb2RIUnJZWHB0UlVwTEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGd4TVRFeVh6QXhNekl3TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NVGd4TVRFeVh6QXhNekl3TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjAtMTItMTdUMTg6MDI6MjIuMTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--39070e1d66049d202423e71bfb61b9bc5e597ca5/181112_01320.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22181112_01320.jpg%22%3B+filename%2A%3DUTF-8%27%27181112_01320.jpg" for ::1 at 2020-12-17 12:57:22 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"181112_01320.jpg\"; filename*=UTF-8''181112_01320.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRNek5uWWpKeWQwNXpSVzluUkdKb2RIUnJZWHB0UlVwTEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGd4TVRFeVh6QXhNekl3TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NVGd4TVRFeVh6QXhNekl3TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjAtMTItMTdUMTg6MDI6MjIuMTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--39070e1d66049d202423e71bfb61b9bc5e597ca5", "filename"=>"181112_01320"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd65e2d45e718d5c9341f2f3fcd658c978e48da1/181112_01320.jpg" for ::1 at 2020-12-17 12:57:25 -0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd65e2d45e718d5c9341f2f3fcd658c978e48da1", "filename"=>"181112_01320"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/jaesar/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: HsviSX1UvekUvpypuZszx4ZD (http://localhost:3001/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRTSE4yYVZOWU1WVjJaV3RWZG5CNWNIVmFjM3A0TkZwRUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGd4TVRFeVh6QXhNekl3TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NVGd4TVRFeVh6QXhNekl3TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjAtMTItMTdUMTg6MDI6MjUuNTk5WiIsInB1ciI6ImJsb2Jfa2V5In19--b86142163d2b99a4fbddc2902ec369c8bddd2ccd/181112_01320.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22181112_01320.jpg%22%3B+filename%2A%3DUTF-8%27%27181112_01320.jpg)[0m
+Redirected to http://localhost:3001/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRTSE4yYVZOWU1WVjJaV3RWZG5CNWNIVmFjM3A0TkZwRUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGd4TVRFeVh6QXhNekl3TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NVGd4TVRFeVh6QXhNekl3TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjAtMTItMTdUMTg6MDI6MjUuNTk5WiIsInB1ciI6ImJsb2Jfa2V5In19--b86142163d2b99a4fbddc2902ec369c8bddd2ccd/181112_01320.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22181112_01320.jpg%22%3B+filename%2A%3DUTF-8%27%27181112_01320.jpg
+Completed 302 Found in 30ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRTSE4yYVZOWU1WVjJaV3RWZG5CNWNIVmFjM3A0TkZwRUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGd4TVRFeVh6QXhNekl3TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NVGd4TVRFeVh6QXhNekl3TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjAtMTItMTdUMTg6MDI6MjUuNTk5WiIsInB1ciI6ImJsb2Jfa2V5In19--b86142163d2b99a4fbddc2902ec369c8bddd2ccd/181112_01320.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22181112_01320.jpg%22%3B+filename%2A%3DUTF-8%27%27181112_01320.jpg" for ::1 at 2020-12-17 12:57:25 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"181112_01320.jpg\"; filename*=UTF-8''181112_01320.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRTSE4yYVZOWU1WVjJaV3RWZG5CNWNIVmFjM3A0TkZwRUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGd4TVRFeVh6QXhNekl3TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NVGd4TVRFeVh6QXhNekl3TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjAtMTItMTdUMTg6MDI6MjUuNTk5WiIsInB1ciI6ImJsb2Jfa2V5In19--b86142163d2b99a4fbddc2902ec369c8bddd2ccd", "filename"=>"181112_01320"}
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms)
+
+
