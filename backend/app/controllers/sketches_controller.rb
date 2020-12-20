@@ -1,7 +1,7 @@
 class SketchesController < ApplicationController
 
     def index
-        sketches = Sketch.all
+        sketches = Sketch.all.order('updated_at DESC')
         render json: sketches, methods: :image_url, include: {:colors => {only: [:value]}}
     end
 

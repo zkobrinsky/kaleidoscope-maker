@@ -9,10 +9,7 @@
 Sketch.destroy_all
 Color.destroy_all
 
-word_choices = [Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.planet.downcase, 
-Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.star.downcase,
-Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.constellation.downcase,
-Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.star_cluster.downcase]
+
 
 20.times do
     # creates random hsb values
@@ -20,6 +17,11 @@ Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.star_cluster.downcase
 end
 
 10.times do
+    word_choices = [Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.planet.downcase, 
+        Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.star.downcase,
+        Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.constellation.downcase,
+        Faker::Hipster.words(number: 1).join(" ")+" "+Faker::Space.star_cluster.downcase]
+        
     sketch = Sketch.new(title: word_choices.sample, reflections: rand(0..9))
     5.times do 
         sketch.colors << Color.all.sample
