@@ -9,14 +9,16 @@ export default (props) => {
   let angle = 360 / symmetry;
   let xoff = 0;
   let myP5;
+  let bg;
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
-    p5.createCanvas(p5.windowWidth, p5.windowHeight * 0.9).parent(canvasParentRef);
+    bg = [p5.random(0,360), p5.random(50,100), p5.random(0,60)]
+    p5.createCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.9).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
-    p5.background(200, 60, 60);
     p5.colorMode(p5.HSL, 360, 100, 100, 100);
+    p5.background(...bg);
     myP5 = p5;
   };
   
@@ -54,7 +56,8 @@ export default (props) => {
   };
 
   const windowResized = (p5) => {
-    p5.resizeCanvas(p5.windowWidth, p5.windowHeight * 0.9);
+    p5.resizeCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.9);
+    p5.background(bg);
   };
 
   const mouseClicked = (p5) => {
