@@ -32,8 +32,8 @@ export default (props) => {
         let pmy = p5.pmouseY - p5.height / 2;
 
         let hu = p5.map(p5.sin(xoff), -1,1,0,360);
-        let sat = p5.map(p5.sin(xoff), -1,1,60,75);
-        let light = p5.map(p5.sin(xoff), -1,1,40,80);
+        let sat = p5.map(p5.sin(xoff), -1,1,60,100);
+        let light = p5.map(p5.sin(xoff), -1,1,30,100);
         xoff += 1;
         
         p5.stroke(hu, sat, light, 40);

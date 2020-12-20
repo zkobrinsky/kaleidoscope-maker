@@ -1,7 +1,7 @@
 import React from 'react';
 import Sketch from './Sketch';
-import P5Wrapper from 'react-p5-wrapper';
-import WrapperPackageSketch from './WrapperPackageSketch'
+// import P5Wrapper from 'react-p5-wrapper';
+// import WrapperPackageSketch from './WrapperPackageSketch'
 import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
 
@@ -18,7 +18,8 @@ let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toL
 class  CreateSketch extends React.Component {
 
     state = {
-        title: placeHolder
+        title: placeHolder,
+        reflections: Math.floor(Math.random() * Math.floor(10))+1
     }
 
     handleOnChange = (props) => {
@@ -31,15 +32,27 @@ class  CreateSketch extends React.Component {
         
         <div className="justify-content-center">
             
-            <Sketch angle={0} symmetry="10" rotateRate={0.5} />
+            <Sketch angle={0} symmetry={this.state.reflections} rotateRate={0.5} />
             {/* <P5Wrapper sketch={WrapperPackageSketch} rotation={1}>
                 <p><Button variant="primary">Bootstrap button</Button>{' '}</p>
             </P5Wrapper> */}
 
 <Form className="newform">
+    <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Title: </Form.Label>
+    <Form.Control type="text" value={this.state.title} />
+  </Form.Group>
+<Form.Group controlId="exampleForm.ControlSelect1">
+    <Form.Label>Reflection Number</Form.Label>
+    <Form.Control as="select">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </Form.Control>
+  </Form.Group>
 
-      <Form.Label>Title:</Form.Label>
-      <Form.Control type="text" placeholder={this.state.title} onChange={this.handleOnChange}/>
       <Button as="input" type="submit" value="Save Your Creation" />{''}
   </Form>
 
