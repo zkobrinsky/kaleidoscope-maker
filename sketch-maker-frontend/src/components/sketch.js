@@ -16,13 +16,12 @@ export default (props) => {
     p5.createCanvas(p5.windowWidth, p5.windowHeight * 0.9).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
     p5.background(200, 60, 60);
-    p5.colorMode(p5.HSB);
+    p5.colorMode(p5.HSL, 360, 100, 100, 100);
     myP5 = p5;
   };
   
   const draw = (p5) => {
     p5.translate(p5.width * 0.5, p5.height * 0.5);
-    p5.fill(0)
 
     if (withinCanvas() && p5.mouseIsPressed) {
       console.log("clicked inside canvas")
@@ -32,10 +31,12 @@ export default (props) => {
         let pmx = p5.pmouseX - p5.width / 2;
         let pmy = p5.pmouseY - p5.height / 2;
 
-        let hu = p5.map(p5.sin(xoff), -1,1,0,255);
+        let hu = p5.map(p5.sin(xoff), -1,1,0,360);
+        let sat = p5.map(p5.sin(xoff), -1,1,60,75);
+        let light = p5.map(p5.sin(xoff), -1,1,40,80);
         xoff += 1;
         
-        p5.stroke(hu, 100);
+        p5.stroke(hu, sat, light, 40);
 
         for (let i = 0; i < symmetry; i++) {
           let angle = 360 / symmetry;

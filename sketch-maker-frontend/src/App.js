@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/"
           render={(props) => (
-            <Sketch {...props} angle={0} symmetry="10" rotateRate={0.5} />
+            <Sketch {...props} angle={0} symmetry="5" rotateRate={0.5} />
           )} 
             />
           <Route exact path="/sketches" component={Sketches}/>
