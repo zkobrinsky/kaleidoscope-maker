@@ -52,9 +52,7 @@ export default (props) => {
         body: formData,
       })
       .then(resp => resp.json())
-      .then(resp => {
-        debugger;
-      })
+      .then(resp => console.log(resp))
     })
   }
   return <Sketch setup={setup} draw={draw} windowResized={windowResized} mouseClicked={mouseClicked} />;

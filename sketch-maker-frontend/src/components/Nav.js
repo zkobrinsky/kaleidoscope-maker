@@ -6,6 +6,7 @@ import {Link}  from 'react-router-dom'
 const Nav = () => {
     return (
         // trying to get bootstrap navbar to work
+        
 //     <Navbar bg="primary" variant="dark">
 //         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
 //         <Nav className="mr-auto">
