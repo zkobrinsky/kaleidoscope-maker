@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 
 
+
 const { Faker } = require('fakergem');
 
 const CreateSketch = () => {
@@ -19,10 +20,14 @@ const CreateSketch = () => {
 
 
     return (
+        
         <div>
+            
             <Sketch angle={0} rotateRate={0.5} />
-            {/* <P5Wrapper sketch={WrapperPackageSketch} rotation={1} /> */}
-            <Button variant="primary">Bootstrap button</Button>{' '}
+            {/* <P5Wrapper sketch={WrapperPackageSketch} rotation={1}>
+                <p><Button variant="primary">Bootstrap button</Button>{' '}</p>
+            </P5Wrapper> */}
+            
             <form>
                 Title: <input type="text" value={placeHolder}/>
 
