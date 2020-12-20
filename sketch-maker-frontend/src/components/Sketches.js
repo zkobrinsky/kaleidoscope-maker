@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getSketches } from '../redux/actions/sketchActions'
+import { getSketches } from '../redux/actions/sketchActions';
+import SketchListItem from './SketchListItem.js'
 
 class Sketches extends React.Component {
     
@@ -14,14 +15,7 @@ class Sketches extends React.Component {
         <div>
             <h1>Kaleidescopes</h1>
             <ul className="kaleidescope_index">
-                {this.props.sketches.map(sketch => {
-                    return (
-                        <li>
-                            <img src={sketch.image_url} alt={sketch.title} className="photo"/>
-                            <p>{sketch.title}</p>
-                        </li>
-                    )
-                })}
+                {this.props.sketches.map(sketch => <SketchListItem sketch={sketch} />)}
             </ul>
         </div>
         )
