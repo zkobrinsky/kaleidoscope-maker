@@ -1,38 +1,55 @@
 import React from "react";
 import Sketch from "react-p5";
 
-const { Faker } = require('fakergem');
-
-let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toLowerCase(), 
-    Faker.Hipster.words(1).join(" ")+" "+Faker.Space.star().toLowerCase(), 
-    Faker.Hipster.words(1).join(" ")+" "+Faker.Space.constellation().toLowerCase(),
-    Faker.Hipster.words(1).join(" ")+" "+Faker.Space.starCluster().toLowerCase()]
-
 
 
 export default (props) => {
 
-  let placeHolder = wordChoices[parseInt(Math.random()*wordChoices.length)]
-  let angle = props.angle;
-  console.log(placeHolder)
+  let symmetry = props.symmetry;
+  let angle = 360 / symmetry;
+  let xoff = 0;
+  let myP5;
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
     p5.createCanvas(p5.windowWidth, p5.windowHeight * 0.9).parent(canvasParentRef);
-    // need to figure out how to map canvas size to div
     p5.angleMode(p5.DEGREES);
-    p5.rectMode(p5.CENTER);
+    p5.background(200, 60, 60);
+    p5.colorMode(p5.HSB);
+    myP5 = p5;
   };
   
   const draw = (p5) => {
-    p5.background(200, 60, 60);
     p5.translate(p5.width * 0.5, p5.height * 0.5);
-    p5.rotate(angle);
-    p5.textAlign(p5.CENTER, p5.CENTER);
-    p5.textSize(30);
-    p5.text("Hello from p5.js", 0, 0);
-    angle += props.rotateRate;
+    p5.fill(0)
+
+    if (withinCanvas() && p5.mouseIsPressed) {
+      console.log("clicked inside canvas")
+
+        let mx = p5.mouseX - p5.width / 2;
+        let my = p5.mouseY - p5.height / 2;
+        let pmx = p5.pmouseX - p5.width / 2;
+        let pmy = p5.pmouseY - p5.height / 2;
+
+        let hu = p5.map(p5.sin(xoff), -1,1,0,255);
+        xoff += 1;
+        
+        p5.stroke(hu, 100);
+
+        for (let i = 0; i < symmetry; i++) {
+          let angle = 360 / symmetry;
+          p5.rotate(angle);
+          p5.strokeWeight(10)
+          p5.line(mx, my, pmx, pmy);
+          p5.push();
+          p5.scale(1, -1);
+          p5.line(mx, my, pmx, pmy);
+          p5.pop();
+        }
+
+    }
+
   };
 
   const windowResized = (p5) => {
@@ -40,7 +57,11 @@ export default (props) => {
   };
 
   const mouseClicked = (p5) => {
-    postImage()
+    // postImage()
+  }
+
+  const withinCanvas = () => {
+     return (myP5.mouseX > 0 && myP5.mouseX < myP5.width && myP5.mouseY > 0 && myP5.mouseY < myP5.height) ? true : false
   }
 
   const postImage = () => {

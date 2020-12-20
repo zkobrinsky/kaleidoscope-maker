@@ -31,7 +31,7 @@ class  CreateSketch extends React.Component {
         
         <div className="justify-content-center">
             
-            <Sketch angle={0} rotateRate={0.5} />
+            <Sketch angle={0} symmetry="10" rotateRate={0.5} />
             {/* <P5Wrapper sketch={WrapperPackageSketch} rotation={1}>
                 <p><Button variant="primary">Bootstrap button</Button>{' '}</p>
             </P5Wrapper> */}
