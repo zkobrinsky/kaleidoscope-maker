@@ -17,3 +17,13 @@ code {
   width: 300px;
   object-fit: cover;
 }
+
+.navbar-custom { 
+  background-color: lightgreen; 
+} 
+
+.newform {
+  margin: 0 auto;
+  float: none;
+  width: 30%;
+}

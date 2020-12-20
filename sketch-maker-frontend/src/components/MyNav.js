@@ -7,7 +7,8 @@ const MyNav = () => {
     return (
         // trying to get bootstrap navbar to work
         <div>
-    <Navbar bg="primary" variant="dark">
+            {/* remove bg primary to set custom bg */}
+    <Navbar className="navbar-custom" bg="primary" variant="dark"> 
         {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
         <Nav className="mr-auto">
             <Nav.Link as={Link} to="/sketches/new" >Create</Nav.Link>

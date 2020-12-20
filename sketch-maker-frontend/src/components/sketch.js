@@ -19,7 +19,8 @@ export default (props) => {
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
-    p5.createCanvas(p5.windowHeight * 0.8, p5.windowHeight * 0.8).parent(canvasParentRef);
+    p5.createCanvas(p5.windowWidth, p5.windowHeight * 0.9).parent(canvasParentRef);
+    // need to figure out how to map canvas size to div
     p5.angleMode(p5.DEGREES);
     p5.rectMode(p5.CENTER);
   };
@@ -35,7 +36,7 @@ export default (props) => {
   };
 
   const windowResized = (p5) => {
-    p5.resizeCanvas(p5.windowHeight * 0.8, p5.windowHeight * 0.8);
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight * 0.9);
   };
 
   const mouseClicked = (p5) => {
@@ -55,6 +56,6 @@ export default (props) => {
       .then(resp => console.log(resp))
     })
   }
-  
+
   return <Sketch setup={setup} draw={draw} windowResized={windowResized} mouseClicked={mouseClicked} />;
 };
