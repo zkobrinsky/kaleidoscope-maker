@@ -7,9 +7,6 @@ export const getSketches = () => {
            }
        })
        .then(resp => resp.json())
-       .then(sketches => {
-           debugger;
-       })
        .then(sketches => dispatch({type: "FETCH_SKETCHES_SUCCESS", payload: sketches}))
    } 
 }
