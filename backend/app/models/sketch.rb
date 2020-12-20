@@ -13,7 +13,7 @@ class Sketch < ApplicationRecord
 
     def image_url
         if self.image.attached?
-            url_for(self.image.variant(:gravity=>"Center", resize: "300x300", crop: '400x300+0+0'))
+            url_for(self.image.variant(:gravity=>"Center", resize: "400x300>"))
             # url_for(self.image)
         end
     end
