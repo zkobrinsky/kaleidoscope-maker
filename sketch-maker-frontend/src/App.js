@@ -5,7 +5,7 @@ import Sketches from './components/Sketches'
 import CreateSketch from './components/CreateSketch'
 import Nav from './components/Nav'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 
 
@@ -24,10 +24,6 @@ function App() {
           <Route exact path="/sketches/new" component={CreateSketch}/>
         </Switch>
       </Router>
-      {/* <div className="p5_sketch">
-        < Sketch angle={0} rotateRate={0.5}/>
-      </div> */}
-      <Button variant="primary">Bootstrap button</Button>{' '}
     </div>
   );
 }

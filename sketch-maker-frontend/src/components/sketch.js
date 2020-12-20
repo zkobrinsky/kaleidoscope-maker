@@ -55,5 +55,6 @@ export default (props) => {
       .then(resp => console.log(resp))
     })
   }
+  
   return <Sketch setup={setup} draw={draw} windowResized={windowResized} mouseClicked={mouseClicked} />;
 };
