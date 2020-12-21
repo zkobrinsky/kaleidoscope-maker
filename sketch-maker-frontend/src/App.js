@@ -1,16 +1,24 @@
-
+import React from 'react';
 import './App.css';
 import SandboxSketch from './components/SandboxSketch'
 import Sketches from './components/Sketches'
 import CreateSketch from './components/CreateSketch'
 import MyNav from './components/MyNav'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { connect } from 'react-redux';
+import { getSketches } from './redux/actions/sketchActions';
 // import Button from 'react-bootstrap/Button';
 
 
 
-function App() {
-  return (
+class App extends React.Component {
+
+  componentDidMount() {
+    this.props.getSketches()
+  }
+
+  render () {
+    return (
     <div className="App">
       <Router >
       <MyNav />
@@ -25,7 +33,8 @@ function App() {
         </Switch>
       </Router>
     </div>
-  );
+    )
+  }
 }
 
-export default App;
+export default connect(null, { getSketches })(App)

@@ -12,7 +12,7 @@ const MyNav = () => {
         {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
         <Nav className="mr-auto">
             <Nav.Link as={Link} to="/sketches/new" >Create</Nav.Link>
-            <Nav.Link as={Link} to="/sketches" >Index</Nav.Link>
+            <Nav.Link as={Link} to="/sketches" >Gallery</Nav.Link>
             <Nav.Link as={Link} to="/" >Sandbox</Nav.Link>
         </Nav>
     {/* <Form inline>

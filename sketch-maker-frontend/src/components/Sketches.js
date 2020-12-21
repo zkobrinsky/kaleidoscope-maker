@@ -1,14 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getSketches } from '../redux/actions/sketchActions';
+// import { getSketches } from '../redux/actions/sketchActions';
 import SketchListItem from './SketchListItem.js'
 
 class Sketches extends React.Component {
-    
 
-    componentDidMount() {
-        this.props.getSketches()
-    }
     render () {
         return (
         <div>
@@ -26,5 +22,5 @@ const mapStateToProps = ({sketches}) => {
 }
 
 
-export default connect(mapStateToProps, { getSketches })(Sketches)
+export default connect(mapStateToProps)(Sketches)
 

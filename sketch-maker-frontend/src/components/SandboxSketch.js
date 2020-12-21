@@ -14,7 +14,7 @@ export default (props) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
     bg = [p5.random(0,360), p5.random(50,100), p5.random(0,60)]
-    p5.createCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.9).parent(canvasParentRef);
+    p5.createCanvas(p5.windowWidth, p5.windowHeight * 0.915).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
     p5.colorMode(p5.HSL, 360, 100, 100, 100);
     p5.background(...bg);
@@ -28,7 +28,7 @@ export default (props) => {
   const draw = (p5) => {
     p5.translate(p5.width * 0.5, p5.height * 0.5);
 
-    if ( p5.mouseIsPressed && p5.withinCanvas() ) {
+    if ( p5.withinCanvas() ) {
       // console.log("clicked inside canvas")
 
         let mx = p5.mouseX - p5.width / 2;
@@ -62,7 +62,7 @@ export default (props) => {
   };
 
   const windowResized = (p5) => {
-    p5.resizeCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.9);
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight * 0.915);
     p5.background(...bg);
   };
 
