@@ -14,10 +14,7 @@ export const getSketches = () => {
 export const createSketch = (formData) => {
     return dispatch => {
         fetch('http://localhost:3001/sketches', {
-            method: 'POST',
-            headers: {
-             'Content-Type': 'application/json'
-            }, 
+            method: 'POST', 
             body: formData
         })
         .then(resp => resp.json())

@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
 import { connect } from 'react-redux';
 import { createSketch } from '../redux/actions/sketchActions';
+import { Food } from 'fakergem/lib/faker/food';
 
 let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toLowerCase(), 
         Faker.Hipster.words(1).join(" ")+" "+Faker.Space.star().toLowerCase(), 
@@ -14,8 +15,8 @@ let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toL
 class  CreateSketch extends React.Component {
 
     state = {
-        title: this.props.sketch.title,
-        reflections: this.props.sketch.reflections /* change to dropdown value once onChange is set up*/
+        title: placeHolder,
+        reflections: 4 /* change to dropdown value once onChange is set up*/
     }
 
     handleOnChange = (e) => {
@@ -34,7 +35,9 @@ class  CreateSketch extends React.Component {
         canvas.toBlob((b) => {
           let form = new FormData();
           form.append("image", b);
-          form.append("formData", formData)
+          Object.keys(formData).forEach(key => {
+              form.append(key, formData[key])
+          })
           this.props.createSketch(form)
         })
       }
