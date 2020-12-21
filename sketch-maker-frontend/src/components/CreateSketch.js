@@ -4,7 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
 import { connect } from 'react-redux';
 import { createSketch } from '../redux/actions/sketchActions';
-import { Food } from 'fakergem/lib/faker/food';
+import { SliderPicker } from 'react-color';
 
 let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toLowerCase(), 
         Faker.Hipster.words(1).join(" ")+" "+Faker.Space.star().toLowerCase(), 
@@ -16,7 +16,9 @@ class  CreateSketch extends React.Component {
 
     state = {
         title: placeHolder,
-        reflections: 4 /* change to dropdown value once onChange is set up*/
+        reflections: 4,
+        currentColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()},
+        rainbow: false
     }
 
     handleOnChange = (e) => {
@@ -25,10 +27,20 @@ class  CreateSketch extends React.Component {
         this.setState({
             ...this.state,
             [key]: e.target.value
-        }, () => {
-            console.log(this.state)
         })
     }
+
+    handleColorChange = (color) => {
+        this.setState({
+            ...this.state,
+            currentColor: color.hsl
+        })
+    }
+
+    handleColorChangeComplete = (color) => {
+        // console.log(color.hsl)
+    }
+
 
     postData = (formData) => {
         let canvas = document.querySelector("#defaultCanvas0");
@@ -83,12 +95,13 @@ class  CreateSketch extends React.Component {
 
         <div className="justify-content-center">
             
-            <Sketch angle={0} symmetry={this.state.reflections} rotateRate={0.5} />
+            <Sketch angle={0} symmetry={this.state.reflections} rotateRate={0.5} color={this.state.currentColor}/>
             {/* <P5Wrapper sketch={WrapperPackageSketch} rotation={1}>
                 <p><Button variant="primary">Bootstrap button</Button>{' '}</p>
             </P5Wrapper> */}
-
+            <SliderPicker color={this.state.currentColor} onChangeComplete={ this.handleColorChangeComplete } onChange={this.handleColorChange}/>
             <Form className="newform" onSubmit={this.handleSubmit}>
+            
                 <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>Title: </Form.Label>
                 <Form.Control type="text" value={this.state.title} placeholder={placeHolder} name="title" onChange={this.handleOnChange}/>
@@ -101,6 +114,7 @@ class  CreateSketch extends React.Component {
             </Form.Group>
                 <Button as="input" type="submit" value="Save Your Creation" />{''}
             </Form>
+            
 
         </div>
     )

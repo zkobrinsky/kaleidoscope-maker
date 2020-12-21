@@ -9,14 +9,16 @@ export default (props) => {
   let angle = 360 / symmetry;
   let xoff = 0;
   let bg;
+  let color = [props.color["h"], props.color["s"], props.color["l"]]
+
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
-    bg = [p5.random(0,360), p5.random(50,100), p5.random(0,60)]
+    bg = [p5.random(0,360), p5.random(0, 1), p5.random(0,1)]
     p5.createCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.9).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
-    p5.colorMode(p5.HSL, 360, 100, 100, 100);
+    p5.colorMode(p5.HSL, 360, 1, 1, 100);
     p5.background(...bg);
 
     //declare p5 dependent functions here:
@@ -36,12 +38,13 @@ export default (props) => {
         let pmx = p5.pmouseX - p5.width / 2;
         let pmy = p5.pmouseY - p5.height / 2;
 
-        let hu = p5.map(p5.sin(xoff), -1,1,0,360);
-        let sat = p5.map(p5.sin(xoff), -1,1,60,100);
-        let light = p5.map(p5.sin(xoff), -1,1,30,100);
+        // let hu = p5.map(p5.sin(xoff), -1,1,0,360);
+        // let sat = p5.map(p5.sin(xoff), -1,1,60,100);
+        // let light = p5.map(p5.sin(xoff), -1,1,30,100);
         xoff += 1;
-        
-        p5.stroke(hu, sat, light, 100);
+        // debugger;
+        console.log(...color, 100)
+        p5.stroke(...color, 100);
 
         for (let i = 0; i < symmetry; i++) {
           let angle = 360 / symmetry;

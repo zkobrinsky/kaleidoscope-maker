@@ -6,11 +6,9 @@ class SketchesController < ApplicationController
     end
 
     def create
-        byebug
-        sketch = Sketch.last #for debugging only
-        # sketch = Sketch.create(sketch_params) # will be actual create method
-        # byebug
+        sketch = Sketch.new(title: params[:title], reflections: params[:reflections])
         sketch.image.attach(params[:image])
+        sketch.save
         render json: sketch, methods: :image_url, include: {:colors => {only: [:value]}}
     end
 
@@ -19,9 +17,4 @@ class SketchesController < ApplicationController
         render json: sketch, methods: :image_url, include: {:colors => {only: [:value]}}
     end
 
-    private
-
-        def sketch_params
-            
-        end
 end
