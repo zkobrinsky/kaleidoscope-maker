@@ -28,8 +28,24 @@ class  CreateSketch extends React.Component {
         })
     }
 
+    postData = (formData) => {
+        let canvas = document.querySelector("#defaultCanvas0");
+        canvas.toBlob((b) => {
+          var formData = new FormData();
+          formData.append("image", b);
+          fetch("http://localhost:3001/sketches", {
+            method: "POST",
+            body: formData,
+          })
+          .then(resp => resp.json())
+          .then(resp => console.log(resp))
+        })
+      }
+
     handleSubmit = (e) => {
         e.preventDefault()
+        this.postData()
+
 
         // save reflections to state
         this.setState({
