@@ -69,8 +69,16 @@ class  CreateSketch extends React.Component {
 
     }
 
+    renderOptions = (num) => {
+        const N = num;
+        const arr = Array.from({length: N}, (_, index) => index + 1)
+
+        return arr.map((val) => {
+            return <option value={val}>{val}</option>
+        })
+    }
+
     render () { 
-        
         return (
         
         <div className="justify-content-center">
@@ -88,18 +96,7 @@ class  CreateSketch extends React.Component {
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Reflection Number</Form.Label>
                 <Form.Control as="select" value={this.state.reflections} name="reflections" onChange={this.handleOnChange}>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9</option>
-                <option value='10'>10</option>
-                <option value='11'>11</option>
-                <option value='12'>12</option>
+                    {this.renderOptions(12)}
                 </Form.Control>
             </Form.Group>
                 <Button as="input" type="submit" value="Save Your Creation" />{''}
