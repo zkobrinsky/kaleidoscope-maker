@@ -19,7 +19,6 @@ class  CreateSketch extends React.Component {
     }
 
     handleOnChange = (e) => {
-        // debugger;
         const key = e.target.name;
 
         this.setState({
@@ -35,18 +34,16 @@ class  CreateSketch extends React.Component {
         canvas.toBlob((b) => {
           let form = new FormData();
           form.append("image", b);
-          fetch("http://localhost:3001/sketches", {
-            method: "POST",
-            body: form,
-          })
-          .then(resp => resp.json())
-          .then(resp => console.log(resp))
+          form.append(formData)
+
         })
       }
 
     handleSubmit = (e) => {
         e.preventDefault()
-        this.postData()
+        this.postData({
+
+        })
 
 
         // save reflections to state
@@ -75,13 +72,15 @@ class  CreateSketch extends React.Component {
         const N = num;
         const arr = Array.from({length: N}, (_, index) => index + 1)
 
-        return arr.map((val) => {
-            return <option value={val}>{val}</option>
+        return arr.map((val, i) => {
+            return <option value={val} key={i}>{val}</option>
         })
     }
 
     render () { 
+
         return (
+            
         
         <div className="justify-content-center">
             
@@ -109,11 +108,9 @@ class  CreateSketch extends React.Component {
         }
 }
 
-export default CreateSketch
-
-// const mapStateToProps = ({sketch}) => {
-//     return ({sketch})
-// }
+const mapStateToProps = (state) => {
+    return ({sketch: state.sketch})
+}
 
 
-// export default connect(mapStateToProps, { createSketch })(CreateSketch)
+export default connect(mapStateToProps, { createSketch })(CreateSketch)
