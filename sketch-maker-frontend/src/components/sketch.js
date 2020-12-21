@@ -47,7 +47,8 @@ export default (props) => {
           let angle = 360 / symmetry;
           p5.rotate(angle);
           let d = p5.dist(mx, my, pmx, pmy)
-          let sw = p5.map(d, 0, 20, 12, 1)
+          let sw = 8
+          // let sw = p5.map(d, 0, 20, 12, 1) variable strokeweight
           p5.strokeWeight(sw)
           p5.line(mx, my, pmx, pmy);
           p5.push();
