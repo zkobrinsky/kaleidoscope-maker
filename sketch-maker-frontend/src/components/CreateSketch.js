@@ -13,26 +13,28 @@ class  CreateSketch extends React.Component {
 
     state = {
         title: "",
-        reflections: Math.floor(Math.random() * Math.floor(10))+1
+        reflections: 4 /* change to dropdown value once onChange is set up*/
     }
 
     handleOnChange = (e) => {
+        // debugger;
+        const key = e.target.name;
+
         this.setState({
             ...this.state,
-            title: e.target.value
+            [key]: e.target.value
         }, () => {
-            console.log(this.state.title)
+            console.log(this.state)
         })
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
-        debugger;
 
         // save reflections to state
         this.setState({
             ...this.state,
-            reflections: e.target.querySelector("#exampleForm\\.ControlSelect1").value
+            reflections: parseInt(e.target.querySelector("#exampleForm\\.ControlSelect1").value)
         })
 
         // conditional title to state (placeholder vs value)
@@ -48,6 +50,7 @@ class  CreateSketch extends React.Component {
                 title: e.target.querySelector("#exampleForm\\.ControlInput1").placeholder
             })
         }
+
     }
 
     render () { 
@@ -64,15 +67,15 @@ class  CreateSketch extends React.Component {
             <Form className="newform" onSubmit={this.handleSubmit}>
                 <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>Title: </Form.Label>
-                <Form.Control type="text" value={this.state.title} placeholder={placeHolder} onChange={this.handleOnChange}/>
+                <Form.Control type="text" value={this.state.title} placeholder={placeHolder} name="title" onChange={this.handleOnChange}/>
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Reflection Number</Form.Label>
-                <Form.Control as="select">
+                <Form.Control as="select" value={this.state.reflections} name="reflections" onChange={this.handleOnChange}>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
-                <option value='4' selected>4</option>
+                <option value='4'>4</option>
                 <option value='5'>5</option>
                 <option value='6'>6</option>
                 <option value='7'>7</option>

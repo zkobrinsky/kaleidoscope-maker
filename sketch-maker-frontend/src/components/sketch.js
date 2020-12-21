@@ -62,7 +62,7 @@ export default (props) => {
 
   const windowResized = (p5) => {
     p5.resizeCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.9);
-    p5.background(bg);
+    p5.background(...bg);
   };
 
   const mouseClicked = (p5) => {
