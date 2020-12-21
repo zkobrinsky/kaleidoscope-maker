@@ -1,13 +1,7 @@
 import React from 'react';
 import Sketch from './Sketch';
-// import P5Wrapper from 'react-p5-wrapper';
-// import WrapperPackageSketch from './WrapperPackageSketch'
 import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
-
-
-
-// const { Faker } = require('fakergem');
 
 let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toLowerCase(), 
         Faker.Hipster.words(1).join(" ")+" "+Faker.Space.star().toLowerCase(), 
@@ -18,12 +12,11 @@ let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toL
 class  CreateSketch extends React.Component {
 
     state = {
-        title: placeHolder,
+        title: "",
         reflections: Math.floor(Math.random() * Math.floor(10))+1
     }
 
     handleOnChange = (e) => {
-        // debugger;
         this.setState({
             ...this.state,
             title: e.target.value
@@ -33,7 +26,19 @@ class  CreateSketch extends React.Component {
     }
 
     handleSubmit = (e) => {
-        debugger;
+        e.preventDefault()
+        if (e.target.querySelector("#exampleForm\\.ControlInput1").value !== "") {
+            this.setState({
+                ...this.state,
+                title: e.target.querySelector("#exampleForm\\.ControlInput1").value
+            }, () => console.log(this.state)) 
+
+        } else {
+            this.setState({
+                ...this.state,
+                title: e.target.querySelector("#exampleForm\\.ControlInput1").placeholder
+            }, () => console.log(this.state))
+        }
     }
 
     render () { 
@@ -47,10 +52,10 @@ class  CreateSketch extends React.Component {
                 <p><Button variant="primary">Bootstrap button</Button>{' '}</p>
             </P5Wrapper> */}
 
-            <Form className="newform">
+            <Form className="newform" onSubmit={this.handleSubmit}>
                 <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>Title: </Form.Label>
-                <Form.Control type="text" value={this.state.title} onChange={this.handleOnChange}/>
+                <Form.Control type="text" value={this.state.title} placeholder={placeHolder} onChange={this.handleOnChange}/>
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Reflection Number</Form.Label>
@@ -69,7 +74,7 @@ class  CreateSketch extends React.Component {
                 <option>12</option>
                 </Form.Control>
             </Form.Group>
-                <Button as="input" type="submit" value="Save Your Creation" onSubmit={this.handleSubmit}/>{''}
+                <Button as="input" type="submit" value="Save Your Creation" />{''}
             </Form>
 
         </div>
