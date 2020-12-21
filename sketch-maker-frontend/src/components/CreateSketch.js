@@ -2,6 +2,8 @@ import React from 'react';
 import Sketch from './Sketch';
 import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
+import { connect } from 'react-redux';
+import { createSketch } from '../redux/actions/sketchActions';
 
 let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toLowerCase(), 
         Faker.Hipster.words(1).join(" ")+" "+Faker.Space.star().toLowerCase(), 
@@ -31,11 +33,11 @@ class  CreateSketch extends React.Component {
     postData = (formData) => {
         let canvas = document.querySelector("#defaultCanvas0");
         canvas.toBlob((b) => {
-          var formData = new FormData();
-          formData.append("image", b);
+          let form = new FormData();
+          form.append("image", b);
           fetch("http://localhost:3001/sketches", {
             method: "POST",
-            body: formData,
+            body: form,
           })
           .then(resp => resp.json())
           .then(resp => console.log(resp))
@@ -108,3 +110,10 @@ class  CreateSketch extends React.Component {
 }
 
 export default CreateSketch
+
+// const mapStateToProps = ({sketch}) => {
+//     return ({sketch})
+// }
+
+
+// export default connect(mapStateToProps, { createSketch })(CreateSketch)
