@@ -22,8 +22,18 @@ class  CreateSketch extends React.Component {
         reflections: Math.floor(Math.random() * Math.floor(10))+1
     }
 
-    handleOnChange = (props) => {
+    handleOnChange = (e) => {
+        // debugger;
+        this.setState({
+            ...this.state,
+            title: e.target.value
+        }, () => {
+            console.log(this.state.title)
+        })
+    }
 
+    handleSubmit = (e) => {
+        debugger;
     }
 
     render () { 
@@ -37,31 +47,30 @@ class  CreateSketch extends React.Component {
                 <p><Button variant="primary">Bootstrap button</Button>{' '}</p>
             </P5Wrapper> */}
 
-<Form className="newform">
-    <Form.Group controlId="exampleForm.ControlInput1">
-    <Form.Label>Title: </Form.Label>
-    <Form.Control type="text" value={this.state.title} />
-  </Form.Group>
-<Form.Group controlId="exampleForm.ControlSelect1">
-    <Form.Label>Reflection Number</Form.Label>
-    <Form.Control as="select">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <option>8</option>
-      <option>9</option>
-      <option>10</option>
-      <option>11</option>
-      <option>12</option>
-    </Form.Control>
-  </Form.Group>
-
-      <Button as="input" type="submit" value="Save Your Creation" />{''}
-  </Form>
+            <Form className="newform">
+                <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Label>Title: </Form.Label>
+                <Form.Control type="text" value={this.state.title} onChange={this.handleOnChange}/>
+            </Form.Group>
+            <Form.Group controlId="exampleForm.ControlSelect1">
+                <Form.Label>Reflection Number</Form.Label>
+                <Form.Control as="select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                </Form.Control>
+            </Form.Group>
+                <Button as="input" type="submit" value="Save Your Creation" onSubmit={this.handleSubmit}/>{''}
+            </Form>
 
         </div>
     )

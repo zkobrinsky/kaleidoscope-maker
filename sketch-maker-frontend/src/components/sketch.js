@@ -12,6 +12,7 @@ export default (props) => {
   let bg;
 
   const setup = (p5, canvasParentRef) => {
+    myP5 = p5;
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
     bg = [p5.random(0,360), p5.random(50,100), p5.random(0,60)]
@@ -19,14 +20,18 @@ export default (props) => {
     p5.angleMode(p5.DEGREES);
     p5.colorMode(p5.HSL, 360, 100, 100, 100);
     p5.background(...bg);
-    myP5 = p5;
+
+    //declare p5 dependent functions here:
+    p5.withinCanvas = () => {
+      return (p5.mouseX > 0 && p5.mouseX < p5.width && p5.mouseY > 0 && p5.mouseY < p5.height) ? true : false
+    }
   };
   
   const draw = (p5) => {
     p5.translate(p5.width * 0.5, p5.height * 0.5);
 
-    if (withinCanvas() && p5.mouseIsPressed) {
-      console.log("clicked inside canvas")
+    if ( p5.mouseIsPressed && p5.withinCanvas() ) {
+      // console.log("clicked inside canvas")
 
         let mx = p5.mouseX - p5.width / 2;
         let my = p5.mouseY - p5.height / 2;
@@ -38,7 +43,7 @@ export default (props) => {
         let light = p5.map(p5.sin(xoff), -1,1,30,100);
         xoff += 1;
         
-        p5.stroke(hu, sat, light, 40);
+        p5.stroke(hu, sat, light, 100);
 
         for (let i = 0; i < symmetry; i++) {
           let angle = 360 / symmetry;
@@ -62,10 +67,6 @@ export default (props) => {
 
   const mouseClicked = (p5) => {
     // postImage()
-  }
-
-  const withinCanvas = () => {
-     return (myP5.mouseX > 0 && myP5.mouseX < myP5.width && myP5.mouseY > 0 && myP5.mouseY < myP5.height) ? true : false
   }
 
   const postImage = () => {
