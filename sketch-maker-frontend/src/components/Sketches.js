@@ -10,7 +10,6 @@ class Sketches extends React.Component {
         this.props.getSketches()
     }
     render () {
-        // debugger;
         return (
         <div>
             <h1>Kaleidescopes</h1>

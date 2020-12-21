@@ -34,16 +34,14 @@ class  CreateSketch extends React.Component {
         canvas.toBlob((b) => {
           let form = new FormData();
           form.append("image", b);
-          form.append(formData)
-
+          form.append("formData", formData)
+          this.props.createSketch(form)
         })
       }
 
     handleSubmit = (e) => {
         e.preventDefault()
-        this.postData({
-
-        })
+        this.postData(this.state)
 
 
         // save reflections to state
