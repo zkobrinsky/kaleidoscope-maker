@@ -8,11 +8,9 @@ export default (props) => {
   let symmetry = props.symmetry;
   let angle = 360 / symmetry;
   let xoff = 0;
-  let myP5;
   let bg;
 
   const setup = (p5, canvasParentRef) => {
-    myP5 = p5;
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
     bg = [p5.random(0,360), p5.random(50,100), p5.random(0,60)]

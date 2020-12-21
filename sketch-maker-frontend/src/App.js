@@ -1,6 +1,6 @@
 
 import './App.css';
-import Sketch from './components/Sketch'
+import SandboxSketch from './components/SandboxSketch'
 import Sketches from './components/Sketches'
 import CreateSketch from './components/CreateSketch'
 import MyNav from './components/MyNav'
@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/"
           render={(props) => (
-            <Sketch {...props} angle={0} symmetry="4" rotateRate={0.5} />
+            <SandboxSketch {...props} angle={0} rotateRate={0.5} />
           )} 
             />
           <Route exact path="/sketches" component={Sketches}/>

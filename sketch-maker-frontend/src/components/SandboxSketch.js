@@ -5,10 +5,9 @@ import Sketch from "react-p5";
 
 export default (props) => {
 
-  let symmetry = props.symmetry;
+  let symmetry = Math.floor(Math.random() * 12) + 1;
   let angle = 360 / symmetry;
   let xoff = 0;
-  let myP5;
   let bg;
 
   const setup = (p5, canvasParentRef) => {
@@ -19,14 +18,18 @@ export default (props) => {
     p5.angleMode(p5.DEGREES);
     p5.colorMode(p5.HSL, 360, 100, 100, 100);
     p5.background(...bg);
-    myP5 = p5;
+
+    //declare p5 dependent functions here:
+    p5.withinCanvas = () => {
+      return (p5.mouseX > 0 && p5.mouseX < p5.width && p5.mouseY > 0 && p5.mouseY < p5.height) ? true : false
+    }
   };
   
   const draw = (p5) => {
     p5.translate(p5.width * 0.5, p5.height * 0.5);
 
-    if (withinCanvas() && p5.mouseIsPressed) {
-      console.log("clicked inside canvas")
+    if ( p5.mouseIsPressed && p5.withinCanvas() ) {
+      // console.log("clicked inside canvas")
 
         let mx = p5.mouseX - p5.width / 2;
         let my = p5.mouseY - p5.height / 2;
@@ -57,30 +60,13 @@ export default (props) => {
 
   const windowResized = (p5) => {
     p5.resizeCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.9);
-    p5.background(bg);
+    p5.background(...bg);
   };
 
   const mouseClicked = (p5) => {
     // postImage()
   }
 
-  const withinCanvas = () => {
-     return (myP5.mouseX > 0 && myP5.mouseX < myP5.width && myP5.mouseY > 0 && myP5.mouseY < myP5.height) ? true : false
-  }
-
-  const postImage = () => {
-    let canvas = document.querySelector("#defaultCanvas0");
-    canvas.toBlob((b) => {
-      var formData = new FormData();
-      formData.append("image", b);
-      fetch("http://localhost:3001/sketches", {
-        method: "POST",
-        body: formData,
-      })
-      .then(resp => resp.json())
-      .then(resp => console.log(resp))
-    })
-  }
 
   return <Sketch setup={setup} draw={draw} windowResized={windowResized} mouseClicked={mouseClicked} />;
 };
