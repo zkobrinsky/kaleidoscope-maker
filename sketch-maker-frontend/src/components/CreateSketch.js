@@ -27,17 +27,26 @@ class  CreateSketch extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+        debugger;
+
+        // save reflections to state
+        this.setState({
+            ...this.state,
+            reflections: e.target.querySelector("#exampleForm\\.ControlSelect1").value
+        })
+
+        // conditional title to state (placeholder vs value)
         if (e.target.querySelector("#exampleForm\\.ControlInput1").value !== "") {
             this.setState({
                 ...this.state,
                 title: e.target.querySelector("#exampleForm\\.ControlInput1").value
-            }, () => console.log(this.state)) 
+            }) 
 
         } else {
             this.setState({
                 ...this.state,
                 title: e.target.querySelector("#exampleForm\\.ControlInput1").placeholder
-            }, () => console.log(this.state))
+            })
         }
     }
 
@@ -60,18 +69,18 @@ class  CreateSketch extends React.Component {
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Reflection Number</Form.Label>
                 <Form.Control as="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4' selected>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
                 </Form.Control>
             </Form.Group>
                 <Button as="input" type="submit" value="Save Your Creation" />{''}
