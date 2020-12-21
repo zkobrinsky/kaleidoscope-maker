@@ -14,8 +14,8 @@ let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toL
 class  CreateSketch extends React.Component {
 
     state = {
-        title: "",
-        reflections: 4 /* change to dropdown value once onChange is set up*/
+        title: this.props.sketch.title,
+        reflections: this.props.sketch.reflections /* change to dropdown value once onChange is set up*/
     }
 
     handleOnChange = (e) => {
@@ -78,10 +78,8 @@ class  CreateSketch extends React.Component {
     }
 
     render () { 
-
         return (
-            
-        
+
         <div className="justify-content-center">
             
             <Sketch angle={0} symmetry={this.state.reflections} rotateRate={0.5} />
@@ -108,8 +106,8 @@ class  CreateSketch extends React.Component {
         }
 }
 
-const mapStateToProps = (state) => {
-    return ({sketch: state.sketch})
+const mapStateToProps = ({sketches}) => {
+    return ({sketch: sketches.sketch})
 }
 
 
