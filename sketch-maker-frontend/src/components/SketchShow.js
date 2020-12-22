@@ -6,7 +6,7 @@ const SketchShow = (props) => {
     return (
         <div>
             <h1>{sketch.title}</h1>
-            <img src={sketch.image_url} alt={sketch.title} className="photo-medium" />
+            <img src={sketch.image_full} alt={sketch.title} className="photo-medium" />
         </div>
     )
 

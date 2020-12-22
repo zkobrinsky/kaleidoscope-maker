@@ -11,10 +11,15 @@ class Sketch < ApplicationRecord
     include Rails.application.routes.url_helpers
 
 
-    def image_url
+    def image_thumbnail
         if self.image.attached?
             url_for(self.image.variant(:gravity=>"Center", resize: "800x800>"))
-            # url_for(self.image)
+        end
+    end
+
+    def image_full
+        if self.image.attached?
+            url_for(self.image.variant(:gravity=>"Center"))
         end
     end
 
