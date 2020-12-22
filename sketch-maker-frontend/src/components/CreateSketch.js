@@ -15,7 +15,7 @@ let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toL
 class  CreateSketch extends React.Component {
 
     state = {
-        title: placeHolder,
+        title: "",
         reflections: 4,
         currentColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()},
         rainbow: false
@@ -52,34 +52,26 @@ class  CreateSketch extends React.Component {
           })
           this.props.createSketch(form)
         })
+        this.props.history.push("/sketches")
       }
 
     handleSubmit = (e) => {
-        e.preventDefault()
-        this.postData(this.state)
-
-
-        // save reflections to state
-        this.setState({
-            ...this.state,
-            reflections: parseInt(e.target.querySelector("#exampleForm\\.ControlSelect1").value)
-        })
-
+        e.preventDefault();
         // conditional title to state (placeholder vs value)
         if (e.target.querySelector("#exampleForm\\.ControlInput1").value !== "") {
             this.setState({
                 ...this.state,
-                title: e.target.querySelector("#exampleForm\\.ControlInput1").value
-            }) 
+                title: e.target.querySelector("#exampleForm\\.ControlInput1").value,
+                reflections: parseInt(e.target.querySelector("#exampleForm\\.ControlSelect1").value)
+            }, () => this.postData(this.state)) 
 
         } else {
             this.setState({
                 ...this.state,
-                title: e.target.querySelector("#exampleForm\\.ControlInput1").placeholder
-            })
+                title: e.target.querySelector("#exampleForm\\.ControlInput1").placeholder,
+                reflections: parseInt(e.target.querySelector("#exampleForm\\.ControlSelect1").value)
+            }, () => this.postData(this.state))
         }
-        // redirect to gallery
-        this.props.history.push("/sketches")
     }
 
     renderOptions = (num) => {
