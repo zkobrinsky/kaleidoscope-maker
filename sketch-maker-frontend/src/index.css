@@ -12,9 +12,15 @@ code {
     monospace;
 }
 
-.photo {
+.thumbnail {
   height: 300px;
   width: 300px;
+  object-fit: cover;
+}
+
+.photo-medium {
+  height: 600px;
+  width: 600px;
   object-fit: cover;
 }
 
