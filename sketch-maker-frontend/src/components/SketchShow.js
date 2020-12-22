@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-function SketchShow (props) {
+const SketchShow = (props) => {
+    // debugger;
+    console.log(props.sketches)
 
     return (
         <div>
