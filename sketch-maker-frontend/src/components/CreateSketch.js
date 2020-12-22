@@ -78,7 +78,8 @@ class  CreateSketch extends React.Component {
                 title: e.target.querySelector("#exampleForm\\.ControlInput1").placeholder
             })
         }
-
+        // redirect to gallery
+        this.props.history.push("/sketches")
     }
 
     renderOptions = (num) => {
