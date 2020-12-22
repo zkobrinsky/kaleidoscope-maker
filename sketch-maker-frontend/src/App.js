@@ -31,7 +31,8 @@ class App extends React.Component {
             />
           <Route exact path="/sketches" component={Sketches}/>
           <Route exact path="/sketches/new" component={CreateSketch}/>
-          <Route exact path="/sketches/:id" component={SketchShow}/>
+          <Route exact path="/sketches/:id" render={(routerProps) => <SketchShow {...routerProps}/>}/>
+
         </Switch>
       </Router>
     </div>

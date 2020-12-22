@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux'
 
 const SketchShow = (props) => {
+    const sketch = props.sketches.find(sketch => sketch.id == +props.match.params.id)
+    console.log(sketch)
     // debugger;
-    console.log(props.sketches)
-
     return (
         <div>
-            <h1>hello from sketchshow</h1>
+            <h1>{sketch.title}</h1>
         </div>
     )
 
