@@ -3,6 +3,7 @@ import './App.css';
 import SandboxSketch from './components/SandboxSketch'
 import Sketches from './components/Sketches'
 import CreateSketch from './components/CreateSketch'
+import SketchShow from './components/SketchShow'
 import MyNav from './components/MyNav'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import { connect } from 'react-redux';
@@ -30,6 +31,7 @@ class App extends React.Component {
             />
           <Route exact path="/sketches" component={Sketches}/>
           <Route exact path="/sketches/new" component={CreateSketch}/>
+          <Route exact path="/sketches/:id" component={SketchShow}/>
         </Switch>
       </Router>
     </div>
