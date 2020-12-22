@@ -6,11 +6,7 @@ import { connect } from 'react-redux';
 import { createSketch } from '../redux/actions/sketchActions';
 import { SliderPicker } from 'react-color';
 
-let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toLowerCase(), 
-        Faker.Hipster.words(1).join(" ")+" "+Faker.Space.star().toLowerCase(), 
-        Faker.Hipster.words(1).join(" ")+" "+Faker.Space.constellation().toLowerCase(),
-        Faker.Hipster.words(1).join(" ")+" "+Faker.Space.starCluster().toLowerCase()]
-    let placeHolder = wordChoices[parseInt(Math.random()*wordChoices.length)]
+
 
 class  CreateSketch extends React.Component {
 
@@ -18,8 +14,25 @@ class  CreateSketch extends React.Component {
         title: "",
         reflections: 4,
         currentColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()},
-        rainbow: false
+        rainbow: false,
+        placeHolder: ""
     }
+
+    componentDidMount() {
+        this.setState({
+            ...this.state,
+            placeHolder: this.placeHolder()
+        })
+    }
+
+    placeHolder = () => {
+        let wordChoices = [Faker.Hipster.words(1).join(" ")+" "+Faker.Space.planet().toLowerCase(), 
+            Faker.Hipster.words(1).join(" ")+" "+Faker.Space.star().toLowerCase(), 
+            Faker.Hipster.words(1).join(" ")+" "+Faker.Space.constellation().toLowerCase(),
+            Faker.Hipster.words(1).join(" ")+" "+Faker.Space.starCluster().toLowerCase()]
+        return wordChoices[parseInt(Math.random()*wordChoices.length)]
+    }
+
 
     handleOnChange = (e) => {
         const key = e.target.name;
@@ -97,7 +110,7 @@ class  CreateSketch extends React.Component {
             
                 <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Label>Title: </Form.Label>
-                <Form.Control type="text" value={this.state.title} placeholder={placeHolder} name="title" onChange={this.handleOnChange}/>
+                <Form.Control type="text" value={this.state.title} placeholder={this.state.placeHolder} name="title" onChange={this.handleOnChange}/>
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Reflection Number</Form.Label>
