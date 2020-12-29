@@ -5,6 +5,8 @@ import Faker from 'fakergem';
 import { connect } from 'react-redux';
 import { createSketch, updateColor } from '../redux/actions/sketchActions';
 import { SliderPicker } from 'react-color';
+import Slider from 'react-rangeslider';
+import 'react-rangeslider/lib/index.css';
 
 
 
@@ -99,6 +101,14 @@ class  CreateSketch extends React.Component {
         })
     }
 
+    handleLineWidthChange = (value) => {
+        debugger;
+        // this.setState({
+        //     ...this.state,
+        //     lineWidth:
+        // })
+    }
+
     renderOptions = (num) => {
         const N = num;
         const arr = Array.from({length: N}, (_, index) => index + 1)
@@ -116,10 +126,12 @@ class  CreateSketch extends React.Component {
             <Sketch state={this.state} />
             <SliderPicker color={this.state.currentColor} onChangeComplete={ this.handleColorChangeComplete } onChange={this.handleColorChange}/>
             <br></br>
-            <Form.Group controlId="formBasicRange">
-                <Form.Label>Line Width</Form.Label>
-                <Form.Control type="range" />
-            </Form.Group>
+            <Slider 
+                min={1}
+                max={20}
+                step={1}
+                onChange={value => this.setState({...this.state, lineWidth: value})}
+                value={this.state.lineWidth}/>
             <br></br>
             <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button><br></br>
 

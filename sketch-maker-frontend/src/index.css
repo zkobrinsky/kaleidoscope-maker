@@ -46,15 +46,7 @@ code {
   font-size:3vw;
   font-weight:bold;
 }
-/* .rainbow-button:after {
-  content:attr(alt);
-  width:20vw;
-  height:8vw;
-  background-color:#191919;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-} */
+
 
 .rainbow-button:hover {
   animation:slidebg 2s linear infinite;
