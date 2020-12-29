@@ -103,11 +103,17 @@ class  CreateSketch extends React.Component {
     }
 
     handleClearCanvas = () => {
-        this.setState({...this.state, clearCanvas: !this.state.clearCanvas})
+        this.setState({
+            ...this.state, 
+            clearCanvas: !this.state.clearCanvas
+        })
     }
 
     handleVariableLW = () => {
-        // for the variable line width button i haven't made yet
+        this.setState({
+            ...this.state, 
+            variableLineWidth: !this.state.variableLineWidth
+        }, () => console.log(this.state.variableLineWidth))
 
     }
 
@@ -140,6 +146,8 @@ class  CreateSketch extends React.Component {
             
             <br></br>
             <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button>
+            <br></br><br></br>
+            <Button onClick={this.handleVariableLW} >Variable Width</Button>
             <br></br>
             <br></br>
 

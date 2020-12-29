@@ -33,6 +33,7 @@ export default (props) => {
         let light = p5.map(p5.sin(xoff), -1,1,0.3,1);
         return [hu, sat, light, 100]
       }
+
   };
   
   const draw = (p5) => {
@@ -50,12 +51,16 @@ export default (props) => {
         props.state.rainbow ? p5.stroke(p5.drawRainbow()) : p5.stroke(...color, 100);
 
         for (let i = 0; i < symmetry; i++) {
+          
           let angle = 360 / symmetry;
           p5.rotate(angle);
           let d = p5.dist(mx, my, pmx, pmy)
-          let sw = props.state.lineWidth
-          // let sw = p5.map(d, 0, 20, 12, 1) variable strokeweight
-          p5.strokeWeight(sw)
+          if (props.state.variableLineWidth) {
+            // debugger;
+          }
+          props.state.variableLineWidth ? p5.strokeWeight(p5.map(d, 0, 20, 20, 3)) : p5.strokeWeight(props.state.lineWidth)
+          
+          // p5.strokeWeight(sw)
           p5.line(mx, my, pmx, pmy);
           p5.push();
           p5.scale(1, -1);
