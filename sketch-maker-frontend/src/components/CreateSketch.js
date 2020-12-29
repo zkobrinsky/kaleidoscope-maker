@@ -58,7 +58,7 @@ class  CreateSketch extends React.Component {
     }
 
     handleColorChangeComplete = (color) => {
-        // this.props.updateColor(color)
+        // will send color selection redux sketch colors array
         // console.log(color.hsl)
     }
 
@@ -107,6 +107,7 @@ class  CreateSketch extends React.Component {
     }
 
     handleVariableLW = () => {
+        // for the variable line width button i haven't made yet
 
     }
 
