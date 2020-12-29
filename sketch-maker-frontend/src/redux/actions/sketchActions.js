@@ -21,3 +21,7 @@ export const createSketch = (formData) => {
         .then(sketch => dispatch({type: "CREATE_SKETCH_SUCCESS", payload: sketch}))
     } 
 }
+
+export const updateColor = (color) => {
+    return {type: "UPDATE_SKETCH_COLOR", payload: color}
+}

@@ -3,7 +3,7 @@ import Sketch from './Sketch';
 import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
 import { connect } from 'react-redux';
-import { createSketch } from '../redux/actions/sketchActions';
+import { createSketch, updateColor } from '../redux/actions/sketchActions';
 import { SliderPicker } from 'react-color';
 
 
@@ -14,6 +14,8 @@ class  CreateSketch extends React.Component {
         title: "",
         reflections: 4,
         currentColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()},
+        colors: [],
+        bgColor: "",
         rainbow: false,
         placeHolder: ""
     }
@@ -21,7 +23,8 @@ class  CreateSketch extends React.Component {
     componentDidMount() {
         this.setState({
             ...this.state,
-            placeHolder: this.placeHolder()
+            placeHolder: this.placeHolder(),
+            bgColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()}
         })
     }
 
@@ -43,14 +46,15 @@ class  CreateSketch extends React.Component {
         })
     }
 
-    handleColorChange = (color) => {
+    handleColorChange = ({hsl}) => {
         this.setState({
             ...this.state,
-            currentColor: color.hsl
-        })
+            currentColor: hsl
+        }, () => console.log(this.state.currentColor))
     }
 
     handleColorChangeComplete = (color) => {
+        // this.props.updateColor(color)
         // console.log(color.hsl)
     }
 
@@ -87,6 +91,13 @@ class  CreateSketch extends React.Component {
         }
     }
 
+    handleRainbowButton = () => {
+        this.setState({
+            ...this.state,
+            rainbow: !this.state.rainbow
+        })
+    }
+
     renderOptions = (num) => {
         const N = num;
         const arr = Array.from({length: N}, (_, index) => index + 1)
@@ -101,11 +112,12 @@ class  CreateSketch extends React.Component {
 
         <div className="justify-content-center">
             
-            <Sketch angle={0} symmetry={this.state.reflections} rotateRate={0.5} color={this.state.currentColor}/>
-            {/* <P5Wrapper sketch={WrapperPackageSketch} rotation={1}>
-                <p><Button variant="primary">Bootstrap button</Button>{' '}</p>
-            </P5Wrapper> */}
+            <Sketch state={this.state} />
             <SliderPicker color={this.state.currentColor} onChangeComplete={ this.handleColorChangeComplete } onChange={this.handleColorChange}/>
+            {/* <Button as="input" type="submit" value="Save Your Creation" />{''} */}
+            <br></br>
+            <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button>
+
             <Form className="newform" onSubmit={this.handleSubmit}>
             
                 <Form.Group controlId="exampleForm.ControlInput1">
@@ -132,4 +144,4 @@ const mapStateToProps = ({sketches}) => {
 }
 
 
-export default connect(mapStateToProps, { createSketch })(CreateSketch)
+export default connect(mapStateToProps, { createSketch, updateColor })(CreateSketch)

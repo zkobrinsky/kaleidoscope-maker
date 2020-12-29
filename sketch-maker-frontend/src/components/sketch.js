@@ -5,12 +5,11 @@ import Sketch from "react-p5";
 
 export default (props) => {
 
-  let symmetry = props.symmetry;
+  let symmetry = props.state.reflections;
   let angle = 360 / symmetry;
   let xoff = 0;
   let bg;
-  let color = [props.color["h"], props.color["s"], props.color["l"]]
-
+  let color = [props.state.currentColor["h"], props.state.currentColor["s"], props.state.currentColor["l"]]
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
@@ -25,26 +24,27 @@ export default (props) => {
     p5.withinCanvas = () => {
       return (p5.mouseX > 0 && p5.mouseX < p5.width && p5.mouseY > 0 && p5.mouseY < p5.height) ? true : false
     }
+
+    p5.drawRainbow = () => {
+        xoff += 1;
+        let hu = p5.map(p5.sin(xoff), -1,1,0,360);
+        let sat = p5.map(p5.sin(xoff), -1,1,0.6,1);
+        let light = p5.map(p5.sin(xoff), -1,1,0.3,1);
+        return [hu, sat, light, 100]
+      }
   };
   
   const draw = (p5) => {
     p5.translate(p5.width * 0.5, p5.height * 0.5);
 
     if ( p5.mouseIsPressed && p5.withinCanvas() ) {
-      // console.log("clicked inside canvas")
-
         let mx = p5.mouseX - p5.width / 2;
         let my = p5.mouseY - p5.height / 2;
         let pmx = p5.pmouseX - p5.width / 2;
         let pmy = p5.pmouseY - p5.height / 2;
+        console.log(props.state.rainbow)
 
-        // let hu = p5.map(p5.sin(xoff), -1,1,0,360);
-        // let sat = p5.map(p5.sin(xoff), -1,1,60,100);
-        // let light = p5.map(p5.sin(xoff), -1,1,30,100);
-        xoff += 1;
-        // debugger;
-        console.log(...color, 100)
-        p5.stroke(...color, 100);
+        props.state.rainbow ? p5.stroke(p5.drawRainbow()) : p5.stroke(...color, 100);
 
         for (let i = 0; i < symmetry; i++) {
           let angle = 360 / symmetry;
