@@ -18,7 +18,7 @@ class  CreateSketch extends React.Component {
         // needs to hsl keys for color slider to work
         currentColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()},
         colors: [],
-        bgColor: "",
+        bgColor: [parseInt(Math.random()*360+1), Math.random(), Math.random()],
         rainbow: false,
         placeHolder: "",
         lineWidth: 8,
@@ -29,7 +29,6 @@ class  CreateSketch extends React.Component {
         this.setState({
             ...this.state,
             placeHolder: this.placeHolder(),
-            bgColor: [parseInt(Math.random()*360+1), Math.random(), Math.random()]
         })
     }
 
