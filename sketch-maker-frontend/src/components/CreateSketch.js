@@ -51,10 +51,10 @@ class  CreateSketch extends React.Component {
     }
 
     handleColorChange = ({hsl}) => {
-        this.setState({
-            ...this.state,
-            currentColor: hsl
-        })
+            this.setState({
+                ...this.state,
+                currentColor: hsl
+            })
     }
 
     handleColorChangeComplete = (color) => {
@@ -64,9 +64,6 @@ class  CreateSketch extends React.Component {
             })
     }
 
-    handleSwatchPick = (color) => {
-        console.log(color)
-    }
 
 
     postData = (formData) => {
@@ -152,7 +149,7 @@ class  CreateSketch extends React.Component {
             
             <br></br>
             {this.state.colors.length > 0 ? <GithubPicker 
-                onChangeComplete={this.handleSwatchPick}
+                onChangeComplete={this.handleColorChange}
                 width={window.innerWidth * 0.25} 
                 triangle={"hide"} 
                 colors={this.state.colors.map(color => color.hex)}
