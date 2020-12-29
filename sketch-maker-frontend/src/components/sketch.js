@@ -55,12 +55,8 @@ export default (props) => {
           let angle = 360 / symmetry;
           p5.rotate(angle);
           let d = p5.dist(mx, my, pmx, pmy)
-          if (props.state.variableLineWidth) {
-            // debugger;
-          }
           props.state.variableLineWidth ? p5.strokeWeight(p5.map(d, 0, 20, 20, 3)) : p5.strokeWeight(props.state.lineWidth)
           
-          // p5.strokeWeight(sw)
           p5.line(mx, my, pmx, pmy);
           p5.push();
           p5.scale(1, -1);
