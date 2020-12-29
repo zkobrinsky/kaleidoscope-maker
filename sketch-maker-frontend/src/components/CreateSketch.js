@@ -20,7 +20,8 @@ class  CreateSketch extends React.Component {
         bgColor: "",
         rainbow: false,
         placeHolder: "",
-        lineWidth: 8
+        lineWidth: 8,
+        variableLineWidth: false
     }
 
     componentDidMount() {
@@ -101,13 +102,10 @@ class  CreateSketch extends React.Component {
         })
     }
 
-    handleLineWidthChange = (value) => {
-        debugger;
-        // this.setState({
-        //     ...this.state,
-        //     lineWidth:
-        // })
+    handleVariableLW = () => {
+        
     }
+
 
     renderOptions = (num) => {
         const N = num;
