@@ -54,14 +54,18 @@ class  CreateSketch extends React.Component {
         this.setState({
             ...this.state,
             currentColor: hsl
-        }, () => console.log(this.state.currentColor))
+        })
     }
 
     handleColorChangeComplete = (color) => {
             this.setState({
                 ...this.state,
                 colors: [...this.state.colors.concat(color)]
-            }, () => console.log(this.state.colors))
+            })
+    }
+
+    handleSwatchPick = (color) => {
+        console.log(color)
     }
 
 
@@ -147,7 +151,12 @@ class  CreateSketch extends React.Component {
                 value={this.state.lineWidth}/>
             
             <br></br>
-            {this.state.colors.length > 0 ? <GithubPicker width={window.innerWidth * 0.25} triangle={"hide"} colors={this.state.colors.map(color => color.hex)}/> : null }
+            {this.state.colors.length > 0 ? <GithubPicker 
+                onChangeComplete={this.handleSwatchPick}
+                width={window.innerWidth * 0.25} 
+                triangle={"hide"} 
+                colors={this.state.colors.map(color => color.hex)}
+            /> : null }
             <br></br>
             <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button>
             <br></br><br></br>
