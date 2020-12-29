@@ -126,14 +126,19 @@ class  CreateSketch extends React.Component {
             <Sketch state={this.state} />
             <SliderPicker color={this.state.currentColor} onChangeComplete={ this.handleColorChangeComplete } onChange={this.handleColorChange}/>
             <br></br>
-            <Slider 
+            <Form.Label className={"lineWidth"}>Line Width</Form.Label>
+                <Slider className="linewidth"
+                label={"Line Width"}
                 min={1}
-                max={20}
+                max={25}
                 step={1}
                 onChange={value => this.setState({...this.state, lineWidth: value})}
                 value={this.state.lineWidth}/>
+            
             <br></br>
-            <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button><br></br>
+            <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button>
+            <br></br>
+            <br></br>
 
             <Form className="newform" onSubmit={this.handleSubmit}>
             <Form.Group controlId="exampleForm.ControlSelect1">
