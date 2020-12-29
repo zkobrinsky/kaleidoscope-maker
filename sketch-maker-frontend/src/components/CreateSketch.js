@@ -102,8 +102,12 @@ class  CreateSketch extends React.Component {
         })
     }
 
+    handleClearCanvas = () => {
+        this.setState({...this.state, clearCanvas: !this.state.clearCanvas})
+    }
+
     handleVariableLW = () => {
-        
+
     }
 
 
@@ -149,6 +153,8 @@ class  CreateSketch extends React.Component {
                 <Form.Label>Title: </Form.Label>
                 <Form.Control type="text" value={this.state.title} placeholder={this.state.placeHolder} name="title" onChange={this.handleOnChange}/>
             </Form.Group>
+                <Button as="input" value="Clear Canvas" onFocus={this.handleClearCanvas} onClick={this.handleClearCanvas} />{''}
+                <br></br><br></br>
                 <Button as="input" type="submit" value="Save Your Creation" />{''}
             </Form>
             

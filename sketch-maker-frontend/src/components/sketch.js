@@ -6,24 +6,32 @@ import Sketch from "react-p5";
 export default (props) => {
 
   let symmetry = props.state.reflections;
-  // let angle = 360 / symmetry;
   let xoff = 0;
-  let bg;
+  let bg = [Math.random()*360+1, Math.random(), Math.random()]
   let color = [props.state.currentColor["h"], props.state.currentColor["s"], props.state.currentColor["l"]]
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
-    bg = [p5.random(0,360), p5.random(0, 1), p5.random(0,1)]
+    // bg = [p5.random(0,360), p5.random(0, 1), p5.random(0,1)]
     p5.createCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.8).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
     p5.colorMode(p5.HSL, 360, 1, 1, 100);
-    p5.background(...bg);
+    p5.background(...bg, 100);
 
     //declare p5 dependent functions here:
     p5.withinCanvas = () => {
       return (p5.mouseX > 0 && p5.mouseX < p5.width && p5.mouseY > 0 && p5.mouseY < p5.height) ? true : false
     }
+
+    p5.clearCanvas = () => {
+      p5.background(...bg, 100);
+      // props.state.setState({
+      //   ...props.state,
+      //   clearCanvas: false
+      // }, console.log(props.state.clearCanvas))
+    }
+    
 
     p5.drawRainbow = () => {
         xoff += 1;
@@ -36,14 +44,15 @@ export default (props) => {
   
   const draw = (p5) => {
     p5.translate(p5.width * 0.5, p5.height * 0.5);
-    
+    if (props.state.clearCanvas) {
+      p5.clearCanvas()
+    }
 
     if ( p5.mouseIsPressed && p5.withinCanvas() ) {
         let mx = p5.mouseX - p5.width / 2;
         let my = p5.mouseY - p5.height / 2;
         let pmx = p5.pmouseX - p5.width / 2;
         let pmy = p5.pmouseY - p5.height / 2;
-        console.log(props.state.rainbow)
 
         props.state.rainbow ? p5.stroke(p5.drawRainbow()) : p5.stroke(...color, 100);
 
@@ -67,7 +76,7 @@ export default (props) => {
 
   const windowResized = (p5) => {
     p5.resizeCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.8);
-    p5.background(...bg);
+    p5.background(...bg, 100);
   };
 
 
