@@ -7,17 +7,15 @@ export default (props) => {
 
   let symmetry = props.state.reflections;
   let xoff = 0;
-  let bg = [Math.random()*360+1, Math.random(), Math.random()]
   let color = [props.state.currentColor["h"], props.state.currentColor["s"], props.state.currentColor["l"]]
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
-    // bg = [p5.random(0,360), p5.random(0, 1), p5.random(0,1)]
     p5.createCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.8).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
     p5.colorMode(p5.HSL, 360, 1, 1, 100);
-    p5.background(...bg, 100);
+    p5.background(...props.state.bgColor, 100);
 
     //declare p5 dependent functions here:
     p5.withinCanvas = () => {
@@ -25,11 +23,7 @@ export default (props) => {
     }
 
     p5.clearCanvas = () => {
-      p5.background(...bg, 100);
-      // props.state.setState({
-      //   ...props.state,
-      //   clearCanvas: false
-      // }, console.log(props.state.clearCanvas))
+      p5.background(...props.state.bgColor, 100);
     }
     
 

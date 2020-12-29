@@ -15,6 +15,7 @@ class  CreateSketch extends React.Component {
     state = {
         title: "",
         reflections: 4,
+        // needs to hsl keys for color slider to work
         currentColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()},
         colors: [],
         bgColor: "",
@@ -28,7 +29,7 @@ class  CreateSketch extends React.Component {
         this.setState({
             ...this.state,
             placeHolder: this.placeHolder(),
-            bgColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()}
+            bgColor: [parseInt(Math.random()*360+1), Math.random(), Math.random()]
         })
     }
 
@@ -153,7 +154,7 @@ class  CreateSketch extends React.Component {
                 <Form.Label>Title: </Form.Label>
                 <Form.Control type="text" value={this.state.title} placeholder={this.state.placeHolder} name="title" onChange={this.handleOnChange}/>
             </Form.Group>
-                <Button as="input" value="Clear Canvas" onFocus={this.handleClearCanvas} onClick={this.handleClearCanvas} />{''}
+                <Button href="#" onFocus={this.handleClearCanvas} onClick={this.handleClearCanvas} >Clear Canvas</Button>{''}
                 <br></br><br></br>
                 <Button as="input" type="submit" value="Save Your Creation" />{''}
             </Form>
