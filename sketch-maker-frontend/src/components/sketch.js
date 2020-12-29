@@ -2,7 +2,6 @@ import React from "react";
 import Sketch from "react-p5";
 
 
-
 export default (props) => {
 
   let symmetry = props.state.reflections;
@@ -70,7 +69,7 @@ export default (props) => {
 
   const windowResized = (p5) => {
     p5.resizeCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.8);
-    p5.background(...bg, 100);
+    p5.background(...props.state.bgColor, 100);
   };
 
 
