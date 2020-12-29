@@ -4,7 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
 import { connect } from 'react-redux';
 import { createSketch, updateColor } from '../redux/actions/sketchActions';
-import { SliderPicker } from 'react-color';
+import { SliderPicker, GithubPicker } from 'react-color';
 import Slider from 'react-rangeslider';
 import 'react-rangeslider/lib/index.css';
 
@@ -60,7 +60,7 @@ class  CreateSketch extends React.Component {
     handleColorChangeComplete = (color) => {
             this.setState({
                 ...this.state,
-                colors: [...this.state.colors.concat(color.hsl)]
+                colors: [...this.state.colors.concat(color)]
             }, () => console.log(this.state.colors))
     }
 
@@ -146,6 +146,8 @@ class  CreateSketch extends React.Component {
                 onChange={value => this.setState({...this.state, lineWidth: value})}
                 value={this.state.lineWidth}/>
             
+            <br></br>
+            {this.state.colors.length > 0 ? <GithubPicker width={window.innerWidth * 0.25} triangle={"hide"} colors={this.state.colors.map(color => color.hex)}/> : null }
             <br></br>
             <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button>
             <br></br><br></br>
