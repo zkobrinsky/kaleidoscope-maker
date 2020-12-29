@@ -6,7 +6,7 @@ import Sketch from "react-p5";
 export default (props) => {
 
   let symmetry = props.state.reflections;
-  let angle = 360 / symmetry;
+  // let angle = 360 / symmetry;
   let xoff = 0;
   let bg;
   let color = [props.state.currentColor["h"], props.state.currentColor["s"], props.state.currentColor["l"]]
@@ -36,6 +36,7 @@ export default (props) => {
   
   const draw = (p5) => {
     p5.translate(p5.width * 0.5, p5.height * 0.5);
+    
 
     if ( p5.mouseIsPressed && p5.withinCanvas() ) {
         let mx = p5.mouseX - p5.width / 2;
@@ -50,7 +51,7 @@ export default (props) => {
           let angle = 360 / symmetry;
           p5.rotate(angle);
           let d = p5.dist(mx, my, pmx, pmy)
-          let sw = 8
+          let sw = props.state.lineWidth
           // let sw = p5.map(d, 0, 20, 12, 1) variable strokeweight
           p5.strokeWeight(sw)
           p5.line(mx, my, pmx, pmy);

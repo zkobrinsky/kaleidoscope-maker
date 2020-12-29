@@ -17,7 +17,8 @@ class  CreateSketch extends React.Component {
         colors: [],
         bgColor: "",
         rainbow: false,
-        placeHolder: ""
+        placeHolder: "",
+        lineWidth: 8
     }
 
     componentDidMount() {
@@ -114,21 +115,24 @@ class  CreateSketch extends React.Component {
             
             <Sketch state={this.state} />
             <SliderPicker color={this.state.currentColor} onChangeComplete={ this.handleColorChangeComplete } onChange={this.handleColorChange}/>
-            {/* <Button as="input" type="submit" value="Save Your Creation" />{''} */}
             <br></br>
-            <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button>
+            <Form.Group controlId="formBasicRange">
+                <Form.Label>Line Width</Form.Label>
+                <Form.Control type="range" />
+            </Form.Group>
+            <br></br>
+            <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button><br></br>
 
             <Form className="newform" onSubmit={this.handleSubmit}>
-            
-                <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Title: </Form.Label>
-                <Form.Control type="text" value={this.state.title} placeholder={this.state.placeHolder} name="title" onChange={this.handleOnChange}/>
-            </Form.Group>
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Reflection Number</Form.Label>
                 <Form.Control as="select" value={this.state.reflections} name="reflections" onChange={this.handleOnChange}>
                     {this.renderOptions(12)}
                 </Form.Control>
+            </Form.Group>
+            <Form.Group controlId="exampleForm.ControlInput1">
+                <Form.Label>Title: </Form.Label>
+                <Form.Control type="text" value={this.state.title} placeholder={this.state.placeHolder} name="title" onChange={this.handleOnChange}/>
             </Form.Group>
                 <Button as="input" type="submit" value="Save Your Creation" />{''}
             </Form>
