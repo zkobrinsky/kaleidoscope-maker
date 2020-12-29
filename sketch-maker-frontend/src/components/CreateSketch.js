@@ -58,8 +58,10 @@ class  CreateSketch extends React.Component {
     }
 
     handleColorChangeComplete = (color) => {
-        // will send color selection redux sketch colors array
-        // console.log(color.hsl)
+            this.setState({
+                ...this.state,
+                colors: [...this.state.colors.concat(color.hsl)]
+            }, () => console.log(this.state.colors))
     }
 
 
