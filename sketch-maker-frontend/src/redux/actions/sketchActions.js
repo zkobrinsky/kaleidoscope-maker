@@ -46,3 +46,7 @@ export const addSketchColor = (color) => {
     return {type: "ADD_SKETCH_COLOR", payload: color}
 }
 
+export const resetSketch = () => {
+    return {type: "RESET_SKETCH"}
+}
+

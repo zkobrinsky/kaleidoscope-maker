@@ -1,6 +1,7 @@
 const sketchReducer = (state = { 
     all: [],
     sketch: {
+        title: "",
         colors: [],
         currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
         reflections: 4,
@@ -59,6 +60,18 @@ const sketchReducer = (state = {
                     colors: state.sketch.colors.concat(action.payload)
                 }
             }
+        
+        case "RESET_SKETCH":
+            return {...state,
+                sketch: {
+                    title: "",
+                    colors: [],
+                    currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
+                    reflections: 4,
+                    bgColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
+                    lineWidth: 8
+                }
+            } 
 
         default:
             return state

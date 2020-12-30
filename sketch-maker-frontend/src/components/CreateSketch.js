@@ -9,7 +9,8 @@ import { createSketch,
     refreshStartColor,
     refreshStartBgColor,
     updateLineWidth,
-    addSketchColor
+    addSketchColor,
+    resetSketch
  } from '../redux/actions/sketchActions';
 
 import { SliderPicker, GithubPicker } from 'react-color';
@@ -22,17 +23,17 @@ class  CreateSketch extends React.Component {
 
     state = {
         title: "",
-        colors: [],
-        bgColor: [parseInt(Math.random()*360+1), Math.random(), Math.random()],
         rainbow: false,
         placeHolder: "",
-        lineWidth: 8,
         variableLineWidth: false
     }
 
     componentDidMount() {
-        this.props.refreshStartColor()
-        this.props.refreshStartBgColor()
+        // Might still use to create sketch from existing palette:
+        // this.props.refreshStartColor()
+        // this.props.refreshStartBgColor()
+        
+        this.props.resetSketch()
 
         this.setState({
             ...this.state,
@@ -68,10 +69,6 @@ class  CreateSketch extends React.Component {
 
     handleColorChangeComplete = (color) => {
         this.props.addSketchColor(color)
-            // this.setState({
-            //     ...this.state,
-            //     colors: [...this.state.colors.concat(color)]
-            // })
     }
 
 
@@ -205,4 +202,6 @@ export default connect(mapStateToProps, {
     refreshStartColor,
     refreshStartBgColor,
     updateLineWidth,
-    addSketchColor })(CreateSketch)
+    addSketchColor,
+    resetSketch
+ })(CreateSketch)
