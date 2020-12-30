@@ -37,15 +37,15 @@ yarn start
 The app should start in your browser automatically. If not, navigate to [http://localhost:3000](http://localhost:3000) in Chrome.
 
 ## Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/zkobrinsky/Impossible-Questionnaire. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/zkobrinsky/covid_stories/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/zkobrinsky/p5-sketch-maker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/zkobrinsky/p5-sketch-maker/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Code of Conduct
-Everyone interacting in the Impossible Questionnaire project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/zkobrinsky/covid_stories/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Impossible Questionnaire project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/zkobrinsky/p5-sketch-maker/blob/main/CODE_OF_CONDUCT.md).
 
 ## Acknowledgements
-Thanks to my wife, my family, and my fellow Flatiron compatriots for their never-ending support, perspective and guidance. 
+Thanks to my wife, my family, and my fellow Flatiron compatriots for their never-ending support, perspective and guidance. I also want to thank Allison Parrish and Dan Shiffman from NYU ITP for introducing me to javascript and creative coding, and their continued mentorship. I also want to thank the Processing Foundation for existing, for creating p5.js, and for encouraging creativity through computing worldwide. 
 
 
