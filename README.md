@@ -1,10 +1,10 @@
 # p5-sketch-maker
-This project started out as an experiment in incorporating p5.js into React, so the title of this repo reflects that. In the end, this ended up as a kaleidescope / mandala maker of sorts, based on [The Coding Train's Coding Challenge #155: Kaleidescope Snowflake Design](https://www.youtube.com/watch?v=R3C2giDfmO8).
+This project started out as an experiment in incorporating p5.js into React, so the title of this repo reflects that. In the end, this ended up as a kaleidescope / mandala maker of sorts, based on [The Coding Train's Coding Challenge #155: Kaleidescope Snowflake Design](<a href="https://www.youtube.com/watch?v=R3C2giDfmO8" target="_blank">Hello, world!</a>).
 
 
 
 ## Requirements
-Must have a local postgres server running
+Must have a local postgres server running.
 This application is built on Rails 5.2.4.4.
 **Important Note:**
 You **must** run Rails 5.2 in order for ActiveStorage to work. Newer versions of Rails **will not work**.
@@ -12,6 +12,13 @@ You **must** run Rails 5.2 in order for ActiveStorage to work. Newer versions of
 ## Installation
 ```bash
 cd into "backend" and run:
+bundle install
+```
+This app utilized the "dot-env" gem to obscure your postgres credentials. After bundling, the gem should be available to you. Create a .env file in "backend," and there you can input your postgres login credentials in the following format:
+POSTGRES_USER=your_postgres_username
+POSTGRES_PASS=your_postgres_password
+
+```bash
 rails db:migrate
 cd into "sketch-maker-frontend" and run:
 yarn install
