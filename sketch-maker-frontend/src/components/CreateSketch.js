@@ -8,7 +8,8 @@ import { createSketch,
     updateReflections,
     refreshStartColor,
     refreshStartBgColor,
-    updateLineWidth
+    updateLineWidth,
+    addSketchColor
  } from '../redux/actions/sketchActions';
 
 import { SliderPicker, GithubPicker } from 'react-color';
@@ -63,17 +64,14 @@ class  CreateSketch extends React.Component {
 
     handleColorChange = ({hsl}) => {
         this.props.updateColor(hsl)
-            // this.setState({
-            //     ...this.state,
-            //     currentColor: hsl
-            // })
     }
 
     handleColorChangeComplete = (color) => {
-            this.setState({
-                ...this.state,
-                colors: [...this.state.colors.concat(color)]
-            })
+        this.props.addSketchColor(color)
+            // this.setState({
+            //     ...this.state,
+            //     colors: [...this.state.colors.concat(color)]
+            // })
     }
 
 
@@ -160,11 +158,11 @@ class  CreateSketch extends React.Component {
                 value={this.props.sketch.lineWidth}/>
             
             <br></br>
-            {this.state.colors.length > 0 ? <GithubPicker 
+            {this.props.sketch.colors.length > 0 ? <GithubPicker 
                 onChangeComplete={this.handleColorChange}
                 width={window.innerWidth * 0.25} 
                 triangle={"hide"} 
-                colors={this.state.colors.map(color => color.hex)}
+                colors={this.props.sketch.colors.map(color => color.hex)}
             /> : null }
             <br></br>
             <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button>
@@ -200,9 +198,11 @@ const mapStateToProps = ({sketches}) => {
 }
 
 
-export default connect(mapStateToProps, { createSketch,
+export default connect(mapStateToProps, { 
+    createSketch,
     updateColor,
     updateReflections,
     refreshStartColor,
     refreshStartBgColor,
-    updateLineWidth })(CreateSketch)
+    updateLineWidth,
+    addSketchColor })(CreateSketch)

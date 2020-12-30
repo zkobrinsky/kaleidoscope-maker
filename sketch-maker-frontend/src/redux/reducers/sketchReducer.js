@@ -52,6 +52,14 @@ const sketchReducer = (state = {
                 }
             }
 
+        case "ADD_SKETCH_COLOR":
+            return {...state,
+                sketch: {
+                    ...state.sketch,
+                    colors: state.sketch.colors.concat(action.payload)
+                }
+            }
+
         default:
             return state
     }

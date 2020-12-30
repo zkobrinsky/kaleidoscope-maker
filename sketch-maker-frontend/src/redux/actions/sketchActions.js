@@ -41,3 +41,8 @@ export const refreshStartBgColor = () => {
 export const updateLineWidth = (lineWidth) => {
     return {type: "UPDATE_LINE_WIDTH", payload: lineWidth}
 }
+
+export const addSketchColor = (color) => {
+    return {type: "ADD_SKETCH_COLOR", payload: color}
+}
+
