@@ -1,8 +1,10 @@
 import React from "react";
 import Sketch from "react-p5";
+import { connect } from 'react-redux';
+import { createSketch, updateColor } from '../redux/actions/sketchActions';
 
 
-export default (props) => {
+const sketch = (props) => {
 
   let symmetry = props.state.reflections;
   let xoff = 0;
@@ -76,3 +78,12 @@ export default (props) => {
 
   return <Sketch setup={setup} draw={draw} windowResized={windowResized}  />;
 };
+
+
+const mapStateToProps = ({sketches}) => {
+  return ({sketch: sketches.sketch})
+}
+
+
+export default connect(mapStateToProps, { createSketch, updateColor })(sketch)
+
