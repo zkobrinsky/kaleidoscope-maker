@@ -1,5 +1,5 @@
 # p5-sketch-maker
-This project started out as an experiment in incorporating p5.js into React, so the title of this repo reflects that. In the end, this ended up as a kaleidescope / mandala maker of sorts, based on [The Coding Train's Coding Challenge #155: Kaleidescope Snowflake Design](<a href="https://www.youtube.com/watch?v=R3C2giDfmO8" target="_blank">Hello, world!</a>).
+This project started out as an experiment in incorporating p5.js into React, so the title of this repo reflects that. In the end, this ended up as a kaleidescope / mandala maker of sorts, based on [The Coding Train's Coding Challenge #155: Kaleidescope Snowflake Design](https://www.youtube.com/watch?v=R3C2giDfmO8).
 
 
 
