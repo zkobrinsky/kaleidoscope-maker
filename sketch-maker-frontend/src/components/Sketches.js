@@ -10,6 +10,7 @@ class Sketches extends React.Component {
 
         return (
         <div>
+            <br></br>
             <ul className="kaleidescope_index">
                 {sorted.map(sketch => <SketchListItem sketch={sketch} />)}
             </ul>
