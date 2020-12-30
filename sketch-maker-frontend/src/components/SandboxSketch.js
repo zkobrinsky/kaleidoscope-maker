@@ -3,13 +3,11 @@ import Sketch from "react-p5";
 
 
 
-export default (props) => {
+export default () => {
   let symmetry = Math.floor(Math.random() * (12 - 2) + 2);
-  let angle = 360 / symmetry;
   let xoff = 0;
   let bgAlpha = 0;
   let bg;
-  let blackSwitch = true;
   
 
   const setup = (p5, canvasParentRef) => {
