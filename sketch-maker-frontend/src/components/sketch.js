@@ -8,6 +8,7 @@ const sketch = (props) => {
   let symmetry = props.sketch.reflections;
   let xoff = 0;
   let color = [props.sketch.currentColor["h"], props.sketch.currentColor["s"], props.sketch.currentColor["l"]]
+  let bgColor = [props.sketch.bgColor["h"], props.sketch.bgColor["s"], props.sketch.bgColor["l"]]
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
@@ -15,7 +16,7 @@ const sketch = (props) => {
     p5.createCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.8).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
     p5.colorMode(p5.HSL, 360, 1, 1, 100);
-    p5.background(...props.state.bgColor, 100);
+    p5.background(...bgColor, 100);
 
     //declare p5 dependent functions here:
     p5.withinCanvas = () => {
@@ -71,7 +72,7 @@ const sketch = (props) => {
 
   const windowResized = (p5) => {
     p5.resizeCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.8);
-    p5.background(...props.state.bgColor, 100);
+    p5.background(...bgColor, 100);
   };
 
 

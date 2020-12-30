@@ -33,3 +33,7 @@ export const updateColor = (color) => {
 export const refreshStartColor = () => {
     return {type: "REFRESH_START_COLOR"}
 }
+
+export const refreshStartBgColor = () => {
+    return {type: "REFRESH_START_BG_COLOR"}
+}
