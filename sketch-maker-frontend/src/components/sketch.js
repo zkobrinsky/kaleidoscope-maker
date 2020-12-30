@@ -7,7 +7,7 @@ const sketch = (props) => {
 
   let symmetry = props.sketch.reflections;
   let xoff = 0;
-  let color = [props.state.currentColor["h"], props.state.currentColor["s"], props.state.currentColor["l"]]
+  let color = [props.sketch.currentColor["h"], props.sketch.currentColor["s"], props.sketch.currentColor["l"]]
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref

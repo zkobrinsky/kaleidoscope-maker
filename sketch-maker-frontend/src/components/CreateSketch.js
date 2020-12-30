@@ -55,10 +55,11 @@ class  CreateSketch extends React.Component {
     }
 
     handleColorChange = ({hsl}) => {
-            this.setState({
-                ...this.state,
-                currentColor: hsl
-            })
+        this.props.updateColor(hsl)
+            // this.setState({
+            //     ...this.state,
+            //     currentColor: hsl
+            // })
     }
 
     handleColorChangeComplete = (color) => {
@@ -140,7 +141,7 @@ class  CreateSketch extends React.Component {
         <div className="justify-content-center">
             
             <Sketch state={this.state} />
-            <SliderPicker color={this.state.currentColor} onChangeComplete={ this.handleColorChangeComplete } onChange={this.handleColorChange}/>
+            <SliderPicker color={this.props.sketch.currentColor} onChangeComplete={ this.handleColorChangeComplete } onChange={this.handleColorChange}/>
             <br></br>
             <Form.Label className={"lineWidth"}>Line Width</Form.Label>
                 <Slider className="linewidth"
