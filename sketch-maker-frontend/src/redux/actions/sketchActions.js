@@ -22,6 +22,11 @@ export const createSketch = (formData) => {
     } 
 }
 
+export const updateReflections = (reflections) => {
+    debugger;
+    return {type: "UPDATE_REFLECTIONS", payload: reflections}
+}
+
 export const updateColor = (color) => {
     return {type: "UPDATE_SKETCH_COLOR", payload: color}
 }

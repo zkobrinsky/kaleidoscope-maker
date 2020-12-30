@@ -3,7 +3,7 @@ import Sketch from './Sketch';
 import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
 import { connect } from 'react-redux';
-import { createSketch, updateColor } from '../redux/actions/sketchActions';
+import { createSketch, updateColor, updateReflections } from '../redux/actions/sketchActions';
 import { SliderPicker, GithubPicker } from 'react-color';
 import Slider from 'react-rangeslider';
 import 'react-rangeslider/lib/index.css';
@@ -48,6 +48,10 @@ class  CreateSketch extends React.Component {
             ...this.state,
             [key]: e.target.value
         })
+    }
+    
+    handleReflectionChange = (e) => {
+        this.props.updateReflections(+e.target.value)
     }
 
     handleColorChange = ({hsl}) => {
@@ -164,7 +168,7 @@ class  CreateSketch extends React.Component {
             <Form className="newform" onSubmit={this.handleSubmit}>
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Reflection Number</Form.Label>
-                <Form.Control as="select" value={this.state.reflections} name="reflections" onChange={this.handleOnChange}>
+                <Form.Control as="select" value={this.state.reflections} name="reflections" onChange={this.handleReflectionChange}>
                     {this.renderOptions(12)}
                 </Form.Control>
             </Form.Group>
@@ -188,4 +192,4 @@ const mapStateToProps = ({sketches}) => {
 }
 
 
-export default connect(mapStateToProps, { createSketch, updateColor })(CreateSketch)
+export default connect(mapStateToProps, { createSketch, updateColor, updateReflections })(CreateSketch)
