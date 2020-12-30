@@ -5,6 +5,7 @@ const sketchReducer = (state = {
         currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
         reflections: 4,
         bgColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
+        lineWidth: 8
     }
  }, action) => {
     switch(action.type) {
@@ -36,12 +37,20 @@ const sketchReducer = (state = {
             }
 
         case "REFRESH_START_BG_COLOR":
-        return {...state,
-            sketch: {
-                ...state.sketch,
-                bgColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()}
+            return {...state,
+                sketch: {
+                    ...state.sketch,
+                    bgColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()}
+                }
             }
-        }
+
+        case "UPDATE_LINE_WIDTH":
+            return {...state,
+                sketch: {
+                    ...state.sketch,
+                    lineWidth: action.payload
+                }
+            }
 
         default:
             return state

@@ -24,7 +24,7 @@ const sketch = (props) => {
     }
 
     p5.clearCanvas = () => {
-      p5.background(...props.state.bgColor, 100);
+      p5.background(...bgColor, 100);
     }
     
 
@@ -57,7 +57,7 @@ const sketch = (props) => {
           let angle = 360 / symmetry;
           p5.rotate(angle);
           let d = p5.dist(mx, my, pmx, pmy)
-          props.state.variableLineWidth ? p5.strokeWeight(p5.map(d, 0, 20, 20, 3)) : p5.strokeWeight(props.state.lineWidth)
+          props.state.variableLineWidth ? p5.strokeWeight(p5.map(d, 0, 20, 20, 3)) : p5.strokeWeight(props.sketch.lineWidth)
           
           p5.line(mx, my, pmx, pmy);
           p5.push();

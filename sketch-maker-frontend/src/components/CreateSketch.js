@@ -7,7 +7,8 @@ import { createSketch,
     updateColor,
     updateReflections,
     refreshStartColor,
-    refreshStartBgColor
+    refreshStartBgColor,
+    updateLineWidth
  } from '../redux/actions/sketchActions';
 
 import { SliderPicker, GithubPicker } from 'react-color';
@@ -155,8 +156,8 @@ class  CreateSketch extends React.Component {
                 min={1}
                 max={25}
                 step={1}
-                onChange={value => this.setState({...this.state, lineWidth: value})}
-                value={this.state.lineWidth}/>
+                onChange={value => this.props.updateLineWidth(value)}
+                value={this.props.sketch.lineWidth}/>
             
             <br></br>
             {this.state.colors.length > 0 ? <GithubPicker 
@@ -175,7 +176,7 @@ class  CreateSketch extends React.Component {
             <Form className="newform" onSubmit={this.handleSubmit}>
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Reflection Number</Form.Label>
-                <Form.Control as="select" value={this.state.reflections} name="reflections" onChange={this.handleReflectionChange}>
+                <Form.Control as="select" value={this.props.sketch.reflections} name="reflections" onChange={this.handleReflectionChange}>
                     {this.renderOptions(12)}
                 </Form.Control>
             </Form.Group>
@@ -203,4 +204,5 @@ export default connect(mapStateToProps, { createSketch,
     updateColor,
     updateReflections,
     refreshStartColor,
-    refreshStartBgColor })(CreateSketch)
+    refreshStartBgColor,
+    updateLineWidth })(CreateSketch)

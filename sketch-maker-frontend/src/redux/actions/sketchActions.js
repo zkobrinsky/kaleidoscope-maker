@@ -37,3 +37,7 @@ export const refreshStartColor = () => {
 export const refreshStartBgColor = () => {
     return {type: "REFRESH_START_BG_COLOR"}
 }
+
+export const updateLineWidth = (lineWidth) => {
+    return {type: "UPDATE_LINE_WIDTH", payload: lineWidth}
+}
