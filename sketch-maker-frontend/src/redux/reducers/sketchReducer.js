@@ -1,9 +1,12 @@
 const sketchReducer = (state = { 
     all: [],
     sketch: {
+        title: "",
         colors: [],
+        currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
         reflections: 4,
-        bgColor: [Math.random()*360+1, Math.random(), Math.random()],
+        bgColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
+        lineWidth: 8
     }
  }, action) => {
     switch(action.type) {
@@ -11,8 +14,65 @@ const sketchReducer = (state = {
             return {...state, all: action.payload};
         case "CREATE_SKETCH_SUCCESS":
             return {...state, all: [...state.all, action.payload] };
-            // case "UPDATE_SKETCH_COLOR":
-            //     debugger;
+        case "UPDATE_REFLECTIONS":
+            return {...state,
+                    sketch: {
+                        ...state.sketch,
+                        reflections: action.payload
+                    }
+                }
+        case "UPDATE_SKETCH_COLOR":
+            return {...state,
+                sketch: {
+                    ...state.sketch,
+                    currentColor: action.payload
+                }
+            }
+
+        case "REFRESH_START_COLOR":
+            return {...state,
+                sketch: {
+                    ...state.sketch,
+                    currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()}
+                }
+            }
+
+        case "REFRESH_START_BG_COLOR":
+            return {...state,
+                sketch: {
+                    ...state.sketch,
+                    bgColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()}
+                }
+            }
+
+        case "UPDATE_LINE_WIDTH":
+            return {...state,
+                sketch: {
+                    ...state.sketch,
+                    lineWidth: action.payload
+                }
+            }
+
+        case "ADD_SKETCH_COLOR":
+            return {...state,
+                sketch: {
+                    ...state.sketch,
+                    colors: state.sketch.colors.concat(action.payload)
+                }
+            }
+        
+        case "RESET_SKETCH":
+            return {...state,
+                sketch: {
+                    title: "",
+                    colors: [],
+                    currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
+                    reflections: 4,
+                    bgColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
+                    lineWidth: 8
+                }
+            } 
+
         default:
             return state
     }

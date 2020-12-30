@@ -1,12 +1,14 @@
 import React from "react";
 import Sketch from "react-p5";
+import { connect } from 'react-redux';
 
 
-export default (props) => {
+const sketch = (props) => {
 
-  let symmetry = props.state.reflections;
+  let symmetry = props.sketch.reflections;
   let xoff = 0;
-  let color = [props.state.currentColor["h"], props.state.currentColor["s"], props.state.currentColor["l"]]
+  let color = [props.sketch.currentColor["h"], props.sketch.currentColor["s"], props.sketch.currentColor["l"]]
+  let bgColor = [props.sketch.bgColor["h"], props.sketch.bgColor["s"], props.sketch.bgColor["l"]]
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
@@ -14,7 +16,7 @@ export default (props) => {
     p5.createCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.8).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
     p5.colorMode(p5.HSL, 360, 1, 1, 100);
-    p5.background(...props.state.bgColor, 100);
+    p5.background(...bgColor, 100);
 
     //declare p5 dependent functions here:
     p5.withinCanvas = () => {
@@ -22,7 +24,7 @@ export default (props) => {
     }
 
     p5.clearCanvas = () => {
-      p5.background(...props.state.bgColor, 100);
+      p5.background(...bgColor, 100);
     }
     
 
@@ -55,7 +57,7 @@ export default (props) => {
           let angle = 360 / symmetry;
           p5.rotate(angle);
           let d = p5.dist(mx, my, pmx, pmy)
-          props.state.variableLineWidth ? p5.strokeWeight(p5.map(d, 0, 20, 20, 3)) : p5.strokeWeight(props.state.lineWidth)
+          props.state.variableLineWidth ? p5.strokeWeight(p5.map(d, 0, 20, 20, 3)) : p5.strokeWeight(props.sketch.lineWidth)
           
           p5.line(mx, my, pmx, pmy);
           p5.push();
@@ -70,9 +72,18 @@ export default (props) => {
 
   const windowResized = (p5) => {
     p5.resizeCanvas(p5.windowWidth*0.995, p5.windowHeight * 0.8);
-    p5.background(...props.state.bgColor, 100);
+    p5.background(...bgColor, 100);
   };
 
 
   return <Sketch setup={setup} draw={draw} windowResized={windowResized}  />;
 };
+
+
+const mapStateToProps = ({sketches}) => {
+  return ({sketch: sketches.sketch})
+}
+
+
+export default connect(mapStateToProps)(sketch)
+

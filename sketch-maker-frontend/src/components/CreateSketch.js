@@ -3,7 +3,16 @@ import Sketch from './Sketch';
 import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
 import { connect } from 'react-redux';
-import { createSketch, updateColor } from '../redux/actions/sketchActions';
+import { createSketch,
+    updateColor,
+    updateReflections,
+    refreshStartColor,
+    refreshStartBgColor,
+    updateLineWidth,
+    addSketchColor,
+    resetSketch
+ } from '../redux/actions/sketchActions';
+
 import { SliderPicker, GithubPicker } from 'react-color';
 import Slider from 'react-rangeslider';
 import 'react-rangeslider/lib/index.css';
@@ -14,18 +23,18 @@ class  CreateSketch extends React.Component {
 
     state = {
         title: "",
-        reflections: 4,
-        // needs to hsl keys for color slider to work
-        currentColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()},
-        colors: [],
-        bgColor: [parseInt(Math.random()*360+1), Math.random(), Math.random()],
         rainbow: false,
         placeHolder: "",
-        lineWidth: 8,
         variableLineWidth: false
     }
 
     componentDidMount() {
+        // Might still use to create sketch from existing palette:
+        // this.props.refreshStartColor()
+        // this.props.refreshStartBgColor()
+        
+        this.props.resetSketch()
+
         this.setState({
             ...this.state,
             placeHolder: this.placeHolder(),
@@ -49,19 +58,17 @@ class  CreateSketch extends React.Component {
             [key]: e.target.value
         })
     }
+    
+    handleReflectionChange = (e) => {
+        this.props.updateReflections(+e.target.value)
+    }
 
     handleColorChange = ({hsl}) => {
-            this.setState({
-                ...this.state,
-                currentColor: hsl
-            })
+        this.props.updateColor(hsl)
     }
 
     handleColorChangeComplete = (color) => {
-            this.setState({
-                ...this.state,
-                colors: [...this.state.colors.concat(color)]
-            })
+        this.props.addSketchColor(color)
     }
 
 
@@ -136,7 +143,7 @@ class  CreateSketch extends React.Component {
         <div className="justify-content-center">
             
             <Sketch state={this.state} />
-            <SliderPicker color={this.state.currentColor} onChangeComplete={ this.handleColorChangeComplete } onChange={this.handleColorChange}/>
+            <SliderPicker color={this.props.sketch.currentColor} onChangeComplete={ this.handleColorChangeComplete } onChange={this.handleColorChange}/>
             <br></br>
             <Form.Label className={"lineWidth"}>Line Width</Form.Label>
                 <Slider className="linewidth"
@@ -144,15 +151,15 @@ class  CreateSketch extends React.Component {
                 min={1}
                 max={25}
                 step={1}
-                onChange={value => this.setState({...this.state, lineWidth: value})}
-                value={this.state.lineWidth}/>
+                onChange={value => this.props.updateLineWidth(value)}
+                value={this.props.sketch.lineWidth}/>
             
             <br></br>
-            {this.state.colors.length > 0 ? <GithubPicker 
+            {this.props.sketch.colors.length > 0 ? <GithubPicker 
                 onChangeComplete={this.handleColorChange}
                 width={window.innerWidth * 0.25} 
                 triangle={"hide"} 
-                colors={this.state.colors.map(color => color.hex)}
+                colors={this.props.sketch.colors.map(color => color.hex)}
             /> : null }
             <br></br>
             <button onClick={this.handleRainbowButton} className="rainbow-button">Rainbow</button>
@@ -164,7 +171,7 @@ class  CreateSketch extends React.Component {
             <Form className="newform" onSubmit={this.handleSubmit}>
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Reflection Number</Form.Label>
-                <Form.Control as="select" value={this.state.reflections} name="reflections" onChange={this.handleOnChange}>
+                <Form.Control as="select" value={this.props.sketch.reflections} name="reflections" onChange={this.handleReflectionChange}>
                     {this.renderOptions(12)}
                 </Form.Control>
             </Form.Group>
@@ -188,4 +195,13 @@ const mapStateToProps = ({sketches}) => {
 }
 
 
-export default connect(mapStateToProps, { createSketch, updateColor })(CreateSketch)
+export default connect(mapStateToProps, { 
+    createSketch,
+    updateColor,
+    updateReflections,
+    refreshStartColor,
+    refreshStartBgColor,
+    updateLineWidth,
+    addSketchColor,
+    resetSketch
+ })(CreateSketch)

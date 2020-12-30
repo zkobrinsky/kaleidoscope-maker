@@ -22,6 +22,31 @@ export const createSketch = (formData) => {
     } 
 }
 
+export const updateReflections = (reflections) => {
+    return {type: "UPDATE_REFLECTIONS", payload: reflections}
+}
+
 export const updateColor = (color) => {
     return {type: "UPDATE_SKETCH_COLOR", payload: color}
 }
+
+export const refreshStartColor = () => {
+    return {type: "REFRESH_START_COLOR"}
+}
+
+export const refreshStartBgColor = () => {
+    return {type: "REFRESH_START_BG_COLOR"}
+}
+
+export const updateLineWidth = (lineWidth) => {
+    return {type: "UPDATE_LINE_WIDTH", payload: lineWidth}
+}
+
+export const addSketchColor = (color) => {
+    return {type: "ADD_SKETCH_COLOR", payload: color}
+}
+
+export const resetSketch = () => {
+    return {type: "RESET_SKETCH"}
+}
+
