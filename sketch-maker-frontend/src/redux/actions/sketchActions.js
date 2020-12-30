@@ -29,3 +29,7 @@ export const updateReflections = (reflections) => {
 export const updateColor = (color) => {
     return {type: "UPDATE_SKETCH_COLOR", payload: color}
 }
+
+export const refreshStartColor = () => {
+    return {type: "REFRESH_START_COLOR"}
+}

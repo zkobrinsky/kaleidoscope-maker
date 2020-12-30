@@ -2,7 +2,7 @@ const sketchReducer = (state = {
     all: [],
     sketch: {
         colors: [],
-        currentColor: "",
+        currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
         reflections: 4,
         bgColor: [Math.random()*360+1, Math.random(), Math.random()],
     }
@@ -24,6 +24,14 @@ const sketchReducer = (state = {
                 sketch: {
                     ...state.sketch,
                     currentColor: action.payload
+                }
+            }
+
+        case "REFRESH_START_COLOR":
+            return {...state,
+                sketch: {
+                    ...state.sketch,
+                    currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()}
                 }
             }
 

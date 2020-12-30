@@ -3,7 +3,7 @@ import Sketch from './Sketch';
 import { Button, Form } from 'react-bootstrap';
 import Faker from 'fakergem';
 import { connect } from 'react-redux';
-import { createSketch, updateColor, updateReflections } from '../redux/actions/sketchActions';
+import { createSketch, updateColor, updateReflections, refreshStartColor } from '../redux/actions/sketchActions';
 import { SliderPicker, GithubPicker } from 'react-color';
 import Slider from 'react-rangeslider';
 import 'react-rangeslider/lib/index.css';
@@ -14,9 +14,6 @@ class  CreateSketch extends React.Component {
 
     state = {
         title: "",
-        reflections: 4,
-        // needs to hsl keys for color slider to work
-        currentColor: {h: parseInt(Math.random()*360+1), s: Math.random(), l: Math.random()},
         colors: [],
         bgColor: [parseInt(Math.random()*360+1), Math.random(), Math.random()],
         rainbow: false,
@@ -26,6 +23,8 @@ class  CreateSketch extends React.Component {
     }
 
     componentDidMount() {
+        this.props.refreshStartColor()
+
         this.setState({
             ...this.state,
             placeHolder: this.placeHolder(),
@@ -193,4 +192,4 @@ const mapStateToProps = ({sketches}) => {
 }
 
 
-export default connect(mapStateToProps, { createSketch, updateColor, updateReflections })(CreateSketch)
+export default connect(mapStateToProps, { createSketch, updateColor, updateReflections, refreshStartColor })(CreateSketch)
