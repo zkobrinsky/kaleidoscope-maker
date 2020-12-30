@@ -15,7 +15,7 @@ import { createSketch,
 
 import { SliderPicker, GithubPicker } from 'react-color';
 import Slider from 'react-rangeslider';
-import 'react-rangeslider/lib/index.css';
+import 'react-rangeslider/lib/index.css'; 
 
 
 
