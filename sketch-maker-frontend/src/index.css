@@ -67,6 +67,12 @@ code {
 
 .grid-item {
   margin: auto;
+  transition: all .2s ease-in-out;
+}
+
+.grid-item:hover {
+  opacity: 70%;
+  transform: scale(1.05);
 }
 
 
