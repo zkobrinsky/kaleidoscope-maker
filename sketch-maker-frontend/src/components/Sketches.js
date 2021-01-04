@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SketchListItem from './SketchListItem.js';
-import { Form, FormControl } from 'react-bootstrap'; 
+import { Form, FormControl, Row, Container } from 'react-bootstrap'; 
 
 class Sketches extends React.Component {
 
@@ -22,10 +22,13 @@ class Sketches extends React.Component {
             <br></br>
             <Form className="searchbar">
                 <FormControl type="text" value={this.state.value} onChange={event => this.setState({ value: event.target.value})} placeholder="Filter Sketches by Title" className="mr-sm-2" />
+            <br></br>
             </Form>
-            <ul className="kaleidescope_index">
+            <Container >
+            <Row >
                 {filtered.map(sketch => <SketchListItem sketch={sketch} />)}
-            </ul>
+            </Row>
+            </Container>
         </div>
         )
     }
