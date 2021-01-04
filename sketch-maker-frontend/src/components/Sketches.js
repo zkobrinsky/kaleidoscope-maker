@@ -21,7 +21,7 @@ class Sketches extends React.Component {
         <div>
             <br></br>
             <Form className="searchbar">
-                <FormControl type="text" value={this.state.value} onChange={event => this.setState({ value: event.target.value})} placeholder="Filter Sketches by Title" className="mr-sm-2" />
+                <FormControl type="text" value={this.state.value} onChange={event => this.setState({ value: event.target.value})} placeholder="Filter sketches by title" className="mr-sm-2" />
             <br></br>
             </Form>
             <Container >
