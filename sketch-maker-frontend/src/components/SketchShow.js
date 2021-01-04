@@ -9,7 +9,6 @@ const SketchShow = (props) => {
             <img src={sketch.image_full} alt={sketch.title} className="photo-medium" />
         </div>
     )
-
 }
 
 const mapStateToProps = ({sketches}) => {

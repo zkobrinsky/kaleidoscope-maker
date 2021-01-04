@@ -75,15 +75,16 @@ class  CreateSketch extends React.Component {
 
     postData = (formData) => {
         let canvas = document.querySelector("#defaultCanvas0");
-        canvas.toBlob((b) => {
+        canvas.toBlob(b => {
           let form = new FormData();
           form.append("image", b);
           Object.keys(formData).forEach(key => {
               form.append(key, formData[key])
           })
           this.props.createSketch(form)
+          .then(() => this.props.history.push("/sketches"))
         })
-        this.props.history.push("/sketches")
+        
       }
 
     handleSubmit = (e) => {

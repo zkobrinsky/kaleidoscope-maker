@@ -57,3 +57,14 @@ code {
     background-position:20vw;
   }
 }
+
+.searchbar {
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kaleidescope_index {
+  display: inline;
+}

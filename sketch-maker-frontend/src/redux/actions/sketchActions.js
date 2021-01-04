@@ -13,12 +13,14 @@ export const getSketches = () => {
 
 export const createSketch = (formData) => {
     return dispatch => {
-        fetch('http://localhost:3001/sketches', {
+        return fetch('http://localhost:3001/sketches', {
             method: 'POST', 
             body: formData
         })
         .then(resp => resp.json())
-        .then(sketch => dispatch({type: "CREATE_SKETCH_SUCCESS", payload: sketch}))
+        .then(sketch => {
+            return dispatch({type: "CREATE_SKETCH_SUCCESS", payload: sketch})
+        }) 
     } 
 }
 

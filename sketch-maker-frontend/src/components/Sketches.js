@@ -1,18 +1,30 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import SketchListItem from './SketchListItem.js'
+import SketchListItem from './SketchListItem.js';
+import { Form, FormControl } from 'react-bootstrap'; 
 
 class Sketches extends React.Component {
+
+    state = {
+        value: ""
+    }
 
     render () {
 
         const sorted = this.props.sketches.sort((a, b) => b.id - a.id)
 
+        let filtered = sorted.filter(sketch => {
+            return sketch.title.toLowerCase().includes(this.state.value.toLowerCase())
+        })
+
         return (
         <div>
             <br></br>
+            <Form className="searchbar">
+                <FormControl type="text" value={this.state.value} onChange={event => this.setState({ value: event.target.value})} placeholder="Filter Sketches by Title" className="mr-sm-2" />
+            </Form>
             <ul className="kaleidescope_index">
-                {sorted.map(sketch => <SketchListItem sketch={sketch} />)}
+                {filtered.map(sketch => <SketchListItem sketch={sketch} />)}
             </ul>
         </div>
         )
