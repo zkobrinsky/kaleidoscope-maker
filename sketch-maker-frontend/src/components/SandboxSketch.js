@@ -77,7 +77,8 @@ export default () => {
 
   const windowResized = (p5) => {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight * 0.915);
-    p5.background(...bg);
+    p5.background(0)
+    p5.background(...bg, bgAlpha);
   };
 
 
