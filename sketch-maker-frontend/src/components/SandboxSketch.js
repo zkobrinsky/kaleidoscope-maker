@@ -7,13 +7,12 @@ export default () => {
   let symmetry = Math.floor(Math.random() * (12 - 2) + 2);
   let xoff = 0;
   let bgAlpha = 0;
-  let bg;
+  let bg = [Math.random()*360+1, Math.random(), Math.random()]
   
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
-    bg = [p5.random(0,360), p5.random(0.5, 1), p5.random(0,0.6)]
     p5.noCursor()
     p5.createCanvas(p5.windowWidth, p5.windowHeight * 0.915).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
