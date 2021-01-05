@@ -11,6 +11,19 @@ export const getSketches = () => {
    } 
 }
 
+export const getSketch = (id) => {
+    return dispatch => {
+        return fetch(`http://localhost:3001/sketches/${id}`, {
+            method: 'GET',
+            headers: {
+             'Content-Type': 'application/json'
+            }
+        })
+        .then(resp => resp.json())
+        // .then(sketch => dispatch({type: "FETCH_SKETCH_SUCCESS", payload: sketch}))
+    } 
+ }
+
 export const createSketch = (formData) => {
     return dispatch => {
         return fetch('http://localhost:3001/sketches', {

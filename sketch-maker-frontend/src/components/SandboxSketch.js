@@ -65,7 +65,7 @@ export default () => {
     }
     bgAlpha+= 0.00005;
     if (p5.frameCount % 30 == 0) {
-      console.log(bgAlpha)
+      // console.log(bgAlpha)
     }
 
     if (bgAlpha > 0.02) {
