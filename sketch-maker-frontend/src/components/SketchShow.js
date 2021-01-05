@@ -6,25 +6,32 @@ class SketchShow extends React.Component {
 
     constructor(props) {
         super(props);
-        this.sketch = this.props.sketch;
+    }
+
+    state = {
+        sketch: this.props.sketch
     }
 
 
     componentDidMount() {
-        if (this.sketch === undefined) {
+        if (this.state.sketch === undefined) {
             this.props.getSketch(this.props.match.params.id)
             .then(foundSketch => {
-                this.sketch = foundSketch
+                if (foundSketch) {
+                this.setState({
+                    sketch: foundSketch
+                })
+            }
             })
         }
     }
     
     render() {
-        if (this.sketch !== undefined) {
+        if (this.state.sketch) {
             return (
                 <div>
-                    <h1>{this.sketch.title}</h1>
-                    <img src={this.sketch.image_full} alt={this.sketch.title} className="photo-medium" />
+                    <h1>{this.state.sketch.title}</h1>
+                    <img src={this.state.sketch.image_full} alt={this.state.sketch.title} className="photo-medium" />
                 </div>
             )
         } else {
