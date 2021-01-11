@@ -19,6 +19,8 @@ gem 'puma', '~> 3.11'
 # Use ActiveStorage variant
 gem 'image_magick'
 gem 'mini_magick', '~> 4.8'
+# for amazon s3 image storage:
+gem "aws-sdk-s3", require: false
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
