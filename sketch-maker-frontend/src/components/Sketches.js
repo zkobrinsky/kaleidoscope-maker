@@ -29,6 +29,7 @@ class Sketches extends React.Component {
                 {filtered.map(sketch => <SketchListItem sketch={sketch} />)}
             </Row>
             </Container>
+            <br></br>
         </div>
         )
     }
