@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SketchListItem from './SketchListItem.js';
-import { Form, FormControl, Row, Container } from 'react-bootstrap'; 
+import { Form, FormControl, Row, Container } from 'react-bootstrap';
+import ReactLoading from 'react-loading';
 
 class Sketches extends React.Component {
 
@@ -18,9 +19,17 @@ class Sketches extends React.Component {
         })
 
         return (
+        
         <div>
             <br></br>
-            <Form className="searchbar">
+            {this.props.sketches.length === 0 ? (
+                <div >
+                <br></br>
+                <ReactLoading className="loading" type={'spinningBubbles'} color={'#0275d8'} height={'10%'} width={'10%'} />
+                </div>
+            ) : (
+                <div>
+            <Form className="searchbar" onSubmit={ event => event.preventDefault() } >
                 <FormControl type="text" value={this.state.value} onChange={event => this.setState({ value: event.target.value})} placeholder="Filter by title" className="mr-sm-2" />
             <br></br>
             </Form>
@@ -29,7 +38,8 @@ class Sketches extends React.Component {
                 {filtered.map(sketch => <SketchListItem sketch={sketch} />)}
             </Row>
             </Container>
-            <br></br>
+            </div>
+            )}
         </div>
         )
     }

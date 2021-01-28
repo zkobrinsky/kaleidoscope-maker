@@ -4,7 +4,7 @@ const sketchReducer = (state = {
         title: "",
         colors: [],
         currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
-        reflections: 4,
+        reflections: parseInt(Math.random()*(12-4)+4),
         bgColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
         lineWidth: 8
     }
@@ -67,7 +67,7 @@ const sketchReducer = (state = {
                     title: "",
                     colors: [],
                     currentColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
-                    reflections: 4,
+                    reflections: parseInt(Math.random()*(12-4)+4),
                     bgColor: {h: Math.random()*360+1, s: Math.random(), l: Math.random()},
                     lineWidth: 8
                 }

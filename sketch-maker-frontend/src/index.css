@@ -71,10 +71,21 @@ code {
 }
 
 .grid-item:hover {
-  opacity: 70%;
+  /* opacity: 70%; */
   transform: scale(1.05);
 }
 
+
+/* .col:hover {
+  transition: .2s ease-in-out;
+  opacity: 70%
+} */
+
+/* .photo-medium {
+  width: 600;
+  height: 600;
+  object-fit: contain;
+}  */
 
 
 

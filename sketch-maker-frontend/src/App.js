@@ -24,14 +24,14 @@ class App extends React.Component {
       <Router >
       <MyNav />
         <Switch>
-          <Route exact path="/"
-          render={(props) => (
-            <SandboxSketch {...props} angle={0} rotateRate={0.5} />
-          )} 
-            />
-          <Route exact path="/sketches" component={Sketches}/>
-          <Route exact path="/sketches/new" component={CreateSketch}/>
-          <Route exact path="/sketches/:id" render={(routerProps) => <SketchShow {...routerProps}/>}/>
+          <Route path="/sketches/new">{(routerProps) => <CreateSketch {...routerProps}/>}</Route>
+          <Route path="/sketches/:id">{(routerProps) => <SketchShow {...routerProps}/>}</Route>
+          <Route path="/sketches"><Sketches/></Route> 
+          <Route path="/">
+            {(props) => (
+              <SandboxSketch {...props} angle={0} rotateRate={0.5} />
+            )} 
+          </Route>
 
         </Switch>
       </Router>

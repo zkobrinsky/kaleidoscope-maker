@@ -4,7 +4,7 @@ import Sketch from "react-p5";
 
 
 export default () => {
-  let symmetry = Math.floor(Math.random() * (12 - 2) + 2);
+  let symmetry = Math.floor(Math.random() * (12 - 4) + 4);
   let xoff = 0;
   let bgAlpha = 0;
   let bg = [Math.random()*360+1, Math.random(), Math.random()]

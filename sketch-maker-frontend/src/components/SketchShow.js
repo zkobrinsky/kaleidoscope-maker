@@ -29,7 +29,7 @@ class SketchShow extends React.Component {
     render() {
         if (this.state.sketch) {
             return (
-                <div>
+                <div className="image-large">
                     <h1>{this.state.sketch.title}</h1>
                     <img src={this.state.sketch.image_full} alt={this.state.sketch.title} className="photo-medium" />
                 </div>
