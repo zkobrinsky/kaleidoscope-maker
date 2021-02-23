@@ -50,7 +50,7 @@ The app should start in your browser automatically. If not, navigate to [http://
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/zkobrinsky/p5-sketch-maker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/zkobrinsky/p5-sketch-maker/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/zkobrinsky/kaleidoscope-maker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/zkobrinsky/kaleidoscope-maker/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -58,7 +58,7 @@ The app is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Impossible Questionnaire project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/zkobrinsky/p5-sketch-maker/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Impossible Questionnaire project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/zkobrinsky/kaleidoscope-maker/blob/main/CODE_OF_CONDUCT.md).
 
 ## Acknowledgements
 
