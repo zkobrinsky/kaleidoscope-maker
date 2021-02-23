@@ -26,3 +26,5 @@
 /sketch-maker-frontend/node_modules
 
 notes.md
+
+.env

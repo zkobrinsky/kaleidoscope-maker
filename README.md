@@ -13,7 +13,10 @@ You **must** run Rails 5.2 in order for ActiveStorage to work. Newer versions of
 
 ## Installation
 
+If you are confident you have imagemagick installed, you can ignore step one.
+
 ```bash
+sudo apt-get install imagemagick
 cd into "backend" and run:
 bundle install
 ```
@@ -59,4 +62,4 @@ Everyone interacting in the Impossible Questionnaire project's codebases, issue 
 
 ## Acknowledgements
 
-Thanks to my wife, my family, and my fellow Flatiron compatriots for their never-ending support, perspective and guidance. I also want to thank Allison Parrish and Dan Shiffman from NYU ITP for introducing me to javascript and creative coding, and their continued mentorship. I also want to thank the Processing Foundation for existing, for creating p5.js, and for encouraging creativity through computing worldwide.
+Thanks to my wife, my family, and my fellow Flatiron compatriots for their never-ending support, perspective and guidance. I also want to thank Allison Parrish and Dan Shiffman from NYU ITP for introducing me to javascript and creative coding, and their continued mentorship. I also want to thank the Processing Foundation for existing, for creating p5.js, and for encouraging creativity through computation worldwide.
