@@ -19,9 +19,10 @@ code {
 }
 
 .photo-medium {
-  height: 600px;
-  width: 600px;
+  height: 75vh;
+  width: 75vh;
   object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .navbar-custom { 
@@ -86,6 +87,29 @@ code {
   height: 600;
   object-fit: contain;
 }  */
+
+@media only screen and (max-width: 400px) {
+.thumbnail {
+  height: 90vw;
+  width: 90vw;
+  object-fit: cover;
+}
+}
+
+@media only screen and (max-width: 600px) {
+.photo-medium {
+  height: 50vh;
+  width: 50vh;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+}
+
+.image-large h1{
+  margin-bottom: 20px;
+}
+
+
 
 
 

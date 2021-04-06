@@ -20,7 +20,7 @@ const sketch = (props) => {
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
-    p5.createCanvas(p5.windowWidth * 0.995, p5.windowHeight * 0.8).parent(
+    p5.createCanvas(p5.windowWidth * 0.99, p5.windowHeight * 0.8).parent(
       canvasParentRef
     );
     p5.angleMode(p5.DEGREES);
@@ -84,7 +84,7 @@ const sketch = (props) => {
   };
 
   const windowResized = (p5) => {
-    p5.resizeCanvas(p5.windowWidth * 0.995, p5.windowHeight * 0.8);
+    p5.resizeCanvas(p5.windowWidth * 0.99, p5.windowHeight * 0.8);
     p5.background(...bgColor, 100);
   };
 

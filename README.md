@@ -1,5 +1,7 @@
 # Kaleidoscope Maker
 
+![Animation of the app in action](projects/kaleidoscope-maker/assets/2021-04-06_10-43-39.gif)
+
 This project started out as an experiment in incorporating p5.js into React, and ended up as a kaleidescope / mandala maker of sorts, based on [The Coding Train's Coding Challenge #155: Kaleidescope Snowflake Design](https://www.youtube.com/watch?v=R3C2giDfmO8).
 
 The app relies heavily on this [react-p5 package](https://www.npmjs.com/package/react-p5) by sagetarius to create p5 sketches as React Components.
